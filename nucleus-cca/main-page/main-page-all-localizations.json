@@ -1,0 +1,338 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
+        "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
+        "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
+        "Fill": 1
+    },
+    "Info": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$LOC_INFO_TITLE"
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
+                    "FontSize": 15,
+                    "Padding": [
+                        0,
+                        0,
+                        0,
+                        8
+                    ]
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
+                    "FontSize": 15,
+                    "Padding": [
+                        0,
+                        0,
+                        0,
+                        8
+                    ]
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
+                    "FontSize": 15,
+                    "Padding": [
+                        0,
+                        0,
+                        0,
+                        8
+                    ]
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
+                    "FontSize": 15,
+                    "Padding": [
+                        0,
+                        0,
+                        0,
+                        8
+                    ]
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
+                    "FontSize": 16,
+                    "Color": "ALERT_COLOR",
+                    "Fill": 1
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK"
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ]
+    },
+    "Buttons": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$LOC_IMPORT_TITLE"
+                },
+                "DataSource": {
+                    "Name": "Ark-Nucleus/GET/Localization/Import",
+                    "ResponseKey": "Data.LocImportData"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Localization/Import",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "LocImport",
+                                "ValueKey": "Data.LocImportData"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_StringMultiLine_v1.DU_Edit_StringMultiLine_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$LOC_IMP_JSON",
+                            "Note": "$$Ark-Nucleus$:$LOC_IMP_JSON_NOTE",
+                            "BindValue": "Data.LocImportData.JSON",
+                            "Fill": 1,
+                            "Padding": [
+                                0,
+                                0,
+                                0,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$IMPORT",
+                            "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import"
+                        },
+                        "OnClickEvent": {
+                            "PostData": "Ark-Nucleus/POST/Localization/Import"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_Export.T_Nucleus_Export",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$LOC_EXPORT_TITLE"
+                },
+                "DataSource": {
+                    "Name": "Ark-Nucleus/GET/Localization/Export",
+                    "ResponseKey": "Data.LocExportData"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Localization/Export",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "LocExport",
+                                "ValueKey": "Data.LocExportData"
+                            }
+                        ],
+                        "ResponseKey": "Data.LocExportData"
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$LOC_EXP_INC_EN",
+                            "Note": "$$Ark-Nucleus$:$LOC_EXP_INC_EN_NOTE",
+                            "BindValue": "Data.LocExportData.IncludeEN",
+                            "Padding": [
+                                0,
+                                0,
+                                0,
+                                2
+                            ]
+                        },
+                        "OnValueChanged": {
+                            "PostData": "Ark-Nucleus/POST/Localization/Export"
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_StringMultiLine_v1.DU_Edit_StringMultiLine_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$LOC_EXP_JSON",
+                            "Note": "$$Ark-Nucleus$:$LOC_EXP_JSON_NOTE",
+                            "BindValue": "Data.LocExportData.JSON",
+                            "Fill": 1,
+                            "Padding": [
+                                0,
+                                0,
+                                0,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_LanguageDropDown_v1.DU_Edit_LanguageDropDown_v1_C",
+            "Props": {
+                "Label": "$$Ark-Nucleus$:$NUCLEUS_LANGUAGE",
+                "Note": "$$Ark-Nucleus$:$NUCLEUS_LANGUAGE_NOTE",
+                "BindValue": "BaseData.Nucleus.ClientSettings.LOCALIZATION.LANGUAGE",
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "OptionalPostRequests": [
+                {
+                    "Name": "Ark-Nucleus/POST/Localization/Language",
+                    "RequestParams": [
+                        {
+                            "RequestKey": "LocData",
+                            "ValueKey": "BaseData.Nucleus.ClientSettings.LOCALIZATION"
+                        }
+                    ]
+                }
+            ],
+            "OnValueChanged": {
+                "PostData": "Ark-Nucleus/POST/Localization/Language"
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+            "DataSource": {
+                "Name": "Ark-Nucleus/GET/Localization",
+                "ResponseKey": "Data.Localization"
+            },
+            "Props": {
+                "Fill": 1,
+                "BindValue": "Data.Localization",
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ],
+                "FilterKeys": [
+                    "ModUID"
+                ]
+            },
+            "ItemWidget": {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/Nucleus_Item_LocalizationItem_v1.Nucleus_Item_LocalizationItem_v1_C",
+                "Modal": {
+                    "Props": {
+                        "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Props": {
+                                "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                "FontSize": 15,
+                                "Padding": [
+                                    0,
+                                    0,
+                                    0,
+                                    8
+                                ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Props": {
+                                "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                "FontSize": 15,
+                                "Padding": [
+                                    0,
+                                    0,
+                                    0,
+                                    8
+                                ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Props": {
+                                "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                "FontSize": 15,
+                                "Fill": 1
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$DELETE",
+                                        "Fill": 1,
+                                        "Color": "DANGER_COLOR_DARK",
+                                        "ContentColor": "DANGER_COLOR_LIGHT"
+                                    },
+                                    "OnClickEvent": {
+                                        "EventUID": "Ark-Nucleus/UI/DeleteLocalization"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$CANCEL",
+                                        "Fill": 1
+                                    },
+                                    "OnClickEvent": {
+                                        "EventUID": "CloseModal"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

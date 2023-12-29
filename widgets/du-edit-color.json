@@ -1,0 +1,8 @@
+{
+    "Title": "$$ArkNucleus$:$COLOR_PICKER",
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_RGBColor_v1.DU_Misc_RGBColor_v1_C"
+        }
+    ]
+}

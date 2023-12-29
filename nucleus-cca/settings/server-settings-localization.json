@@ -1,0 +1,12 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_SETTINGS_DESC",
+    "SETTINGS": {
+        "CUSTOM_LOCALIZATION_URL": {
+            "TYPE": "STRING",
+            "DEFAULT_VALUE": "",
+            "LABEL": "$$Ark-Nucleus$:$CUSTOM_LOCALIZATION_URL",
+            "DESCRIPTION": "$$Ark-Nucleus$:$CUSTOM_LOCALIZATION_URL_DESC"
+        }
+    }
+}

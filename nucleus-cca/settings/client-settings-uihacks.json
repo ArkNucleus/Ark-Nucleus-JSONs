@@ -1,0 +1,48 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$UI_HACKS_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$UI_HACKS_SETTINGS_DESC",
+    "SETTINGS": {
+        "NUCLEUS_BUTTON_LOCATION": {
+            "TYPE": "STRING",
+            "DEFAULT_VALUE": "TOP-RIGHT",
+            "LABEL": "$$Ark-Nucleus$:$NUCLEUS_BUTTON_LOCATION",
+            "DESCRIPTION": "$$Ark-Nucleus$:$NUCLEUS_BUTTON_LOCATION_DESC",
+            "OPTIONS": [
+                {
+                    "$$Ark-Nucleus$:$TOP-LEFT": "TOP-LEFT"
+                },
+                {
+                    "$$Ark-Nucleus$:$TOP-CENTER": "TOP-CENTER"
+                },
+                {
+                    "$$Ark-Nucleus$:$TOP-RIGHT": "TOP-RIGHT"
+                },
+                {
+                    "$$Ark-Nucleus$:$BOTTOM-RIGHT": "BOTTOM-RIGHT"
+                },
+                {
+                    "$$Ark-Nucleus$:$BOTTOM-LEFT": "BOTTOM-LEFT"
+                }
+            ],
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_DropDown_v1.DU_Edit_DropDown_v1_C"
+        },
+        "SHOW_PLAYER_ALLOCATED_STAT_POINTS": {
+            "TYPE": "BOOLEAN",
+            "DEFAULT_VALUE": true,
+            "LABEL": "$$Ark-Nucleus$:$SHOW_PLAYER_ALLOCATED_STAT_POINTS",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SHOW_PLAYER_ALLOCATED_STAT_POINTS_DESC"
+        },
+        "SHOW_DINO_ALLOCATED_STAT_POINTS": {
+            "TYPE": "BOOLEAN",
+            "DEFAULT_VALUE": true,
+            "LABEL": "$$Ark-Nucleus$:$SHOW_DINO_ALLOCATED_STAT_POINTS",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SHOW_DINO_ALLOCATED_STAT_POINTS_DESC"
+        },
+        "SHOW_DINO_STAT_BOOKMARK": {
+            "TYPE": "BOOLEAN",
+            "DEFAULT_VALUE": true,
+            "LABEL": "$$Ark-Nucleus$:$SHOW_DINO_BOOKMARK_STAT_POINTS",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SHOW_DINO_BOOKMARK_STAT_POINTS_DESC"
+        }
+    }
+}

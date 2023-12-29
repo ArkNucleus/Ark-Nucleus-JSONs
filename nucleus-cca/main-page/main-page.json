@@ -1,0 +1,249 @@
+{
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$ARK_NUCLEUS_DASHBOARD"
+    },
+    "ResetOnEvents": {
+        "Events": [
+            "Ark-Nucleus/NOTIFY/Localization",
+            "Ark-Nucleus/NOTIFY/Settings"
+        ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Nucleus_v1.DU_Panel_Nucleus_v1",
+            "Props": {
+                "Fill": 1
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Props": {
+                        "Fill": 1
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
+                            "UICache": {
+                                "SaveFile": "Ark-Nucleus-MainPage"
+                            },
+                            "Props": {
+                                "UUID": "MainMenu",
+                                "Title": "$$Ark-Nucleus$:$MAIN_MENU",
+                                "CompactWidth": 32,
+                                "ExpandedFill": 1
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$SERVER_INFO",
+                                        "UUID": "ServerInfo",
+                                        "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/House_Icon_White.House_Icon_White",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            15,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$INSTALLED_MODS",
+                                        "UUID": "InstalledMods",
+                                        "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_EmptyLogo.T_Nucleus_EmptyLogo",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA",
+                                        "UUID": "Encyclopedia",
+                                        "Image": "/Game/PrimalEarth/UI/Textures/HubSurviviorIcon.HubSurviviorIcon",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$LOGS",
+                                        "UUID": "AllLogs",
+                                        "Image": "/Game/PrimalEarth/UI/Textures/T_UI_Missions_ActiveMissionIcon.T_UI_Missions_ActiveMissionIcon",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$SERVER_COMMUNITY",
+                                        "UUID": "AllSurvivors",
+                                        "Image": "/Game/PrimalEarth/UI/Textures/HubTribeIcon.HubTribeIcon",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "UICache": {
+                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION",
+                                        "UUID": "AllLocalization",
+                                        "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                                    "Props": {
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                                    "Props": {
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Props": {
+                                "Padding": [
+                                    5,
+                                    0,
+                                    5,
+                                    0
+                                ],
+                                "Color": "PRIMARY_COLOR"
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                            "Props": {
+                                "Fill": 6,
+                                "BindValue": "Data.PageUIConfig.UIItems"
+                            },
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/MainPage/ActivePage",
+                                "ResponseKey": "Data.PageUIConfig"
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/MainPage"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

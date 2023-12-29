@@ -1,0 +1,258 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$COLORS_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$COLORS_SETTINGS_DESC",
+    "SETTINGS": {
+        "TEXT_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$TEXT_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$TEXT_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "PRIMARY_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.098958,
+                0.690736,
+                1,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$PRIMARY_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$PRIMARY_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "PRIMARY_COLOR_DARK": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.019792,
+                0.1381471,
+                0.27,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$PRIMARY_COLOR_DARK",
+            "DESCRIPTION": "$$Ark-Nucleus$:$PRIMARY_COLOR_DARK_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "PRIMARY_COLOR_LIGHT": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.65,
+                0.95,
+                1,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$PRIMARY_COLOR_LIGHT",
+            "DESCRIPTION": "$$Ark-Nucleus$:$PRIMARY_COLOR_LIGHT_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "SECONDARY_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0,
+                0.374496,
+                0.9,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$SECONDARY_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SECONDARY_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "SECONDARY_COLOR_DARK": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.001821,
+                0.043735,
+                0.1356332,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$SECONDARY_COLOR_DARK",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SECONDARY_COLOR_DARK_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "SECONDARY_COLOR_LIGHT": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.004025,
+                0.672,
+                0.471608,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$SECONDARY_COLOR_LIGHT",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SECONDARY_COLOR_LIGHT_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ACCENT_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.066667,
+                1.000000,
+                0.596079,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ACCENT_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ACCENT_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ACCENT_COLOR_DARK": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.013333,
+                0.200000,
+                0.119216,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ACCENT_COLOR_DARK",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ACCENT_COLOR_DARK_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ACCENT_COLOR_LIGHT": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.65,
+                1,
+                0.95,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ACCENT_COLOR_LIGHT",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ACCENT_COLOR_LIGHT_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ATTENTION_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                1.000000,
+                1.000000,
+                0.000000,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ATTENTION_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ATTENTION_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ATTENTION_COLOR_DARK": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.200000,
+                0.200000,
+                0.000000,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ATTENTION_COLOR_DARK",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ATTENTION_COLOR_DARK_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ATTENTION_COLOR_LIGHT": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                1,
+                1,
+                0.800000,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ATTENTION_COLOR_LIGHT",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ATTENTION_COLOR_LIGHT_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "DANGER_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.450000,
+                0.000000,
+                0.025000,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$DANGER_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$DANGER_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "DANGER_COLOR_DARK": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.200000,
+                0.000000,
+                0.011111,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$DANGER_COLOR_DARK",
+            "DESCRIPTION": "$$Ark-Nucleus$:$DANGER_COLOR_DARK_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "DANGER_COLOR_LIGHT": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.95,
+                0.65,
+                0.65,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$DANGER_COLOR_LIGHT",
+            "DESCRIPTION": "$$Ark-Nucleus$:$DANGER_COLOR_LIGHT_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "INFO_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$INFO_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$INFO_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "SUCCESS_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.067,
+                1,
+                0.6,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$SUCCESS_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$SUCCESS_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ALERT_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                1.000000,
+                0.971014,
+                0.000000,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ALERT_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ALERT_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "ERROR_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.450000,
+                0.000000,
+                0.025000,
+                1.000000
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ERROR_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ERROR_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        },
+        "CRITICAL_COLOR": {
+            "TYPE": "ARRAY-FLOAT",
+            "DEFAULT_VALUE": [
+                0.45,
+                0,
+                0.1597,
+                1
+            ],
+            "LABEL": "$$Ark-Nucleus$:$CRITICAL_COLOR",
+            "DESCRIPTION": "$$Ark-Nucleus$:$CRITICAL_COLOR_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C"
+        }
+    }
+}

@@ -1,0 +1,1219 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_TITLE",
+        "Note": "$$Ark-Nucleus$:$INSTALLED_MODS_TITLE_NOTE",
+        "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_EmptyLogo.T_Nucleus_EmptyLogo",
+        "Fill": 1
+    },
+    "Info": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALIZATION_INFO_LINE0",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALIZATION_INFO_LINE1",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALIZATION_INFO_LINE2",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALIZATION_INFO_LINE3",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALIZATION_INFO_LINE4",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK"
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+            "Props": {
+                "Fill": 1
+            },
+            "DataSource": {
+                "Name": "Ark-Nucleus/GET/InstalledMods",
+                "ResponseKey": "Data.ModsData"
+            },
+            "UICache": {
+                "SaveFile": "Nucleus-ModsHub"
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
+                    "UICache": {
+                        "SaveFile": "Nucleus-ModsHub"
+                    },
+                    "Props": {
+                        "UUID": "ModsList",
+                        "Title": "$$Ark-Nucleus$:$INSTALLED_MODS",
+                        "CompactWidth": 188,
+                        "ExpandHorizontalSize": 1
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                            "UICache": {
+                                "SaveFile": "Nucleus-ModsHub",
+                                "BindViewMode": "UICache.ModsList.ViewMode"
+                            },
+                            "Props": {
+                                "BindValue": "Data.ModsData.Items",
+                                "Fill": 1,
+                                "ViewMode": "MEDIUM",
+                                "FilterKeys": [
+                                    "CCAData.IntegrationFlags.Localization",
+                                    "CCAData.IntegrationFlags.Configuration",
+                                    "CCAData.IntegrationFlags.Logs"
+                                ],
+                                "FilterKeysDisplayText": {
+                                    "Localization": "$$Ark-Nucleus$:$MOD_SUP_LOC",
+                                    "Configuration": "$$Ark-Nucleus$:$MOD_SUP_CONF",
+                                    "Logs": "$$Ark-Nucleus$:$MOD_SUP_LOG"
+                                }
+                            },
+                            "ItemWidget": {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/Nucleus_Item_ModConfigItem_v1.Nucleus_Item_ModConfigItem_v1_C",
+                                "UICache": {
+                                    "SaveFile": "Nucleus-ModsHub",
+                                    "BindViewMode": "UICache.ModsList.ViewMode"
+                                },
+                                "Props": {
+                                    "ItemKey": "ModUID",
+                                    "SetValueKey": "Data.SelectedMod"
+                                },
+                                "OnClickEvent": {
+                                    "PostUrl": "Ark-Nucleus/NOTIFY/InstalledMods/Selected"
+                                },
+                                "UpdateOnEvents": {
+                                    "Events": [
+                                        "Ark-Nucleus/NOTIFY/InstalledMods/Selected"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                    "Props": {
+                        "Padding": [
+                            5,
+                            0,
+                            5,
+                            0
+                        ]
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
+                    "UICache": {
+                        "SaveFile": "Nucleus-ModsHub"
+                    },
+                    "ResetOnEvents": {
+                        "Events": [
+                            "Ark-Nucleus/NOTIFY/InstalledMods/Selected"
+                        ]
+                    },
+                    "Props": {
+                        "Fill": 3
+                    },
+                    "Tabs": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$MOD_INFO",
+                                "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconToolTip.IconToolTip",
+                                "Fill": 1
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/PreBuiltComps/DU_PreBuilt_ModInfo_v1.DU_PreBuilt_ModInfo_v1_C",
+                                    "Props": {
+                                        "Fill": 0.5,
+                                        "BindValue": "Data.SelectedMod",
+                                        "Padding": [
+                                            0,
+                                            0,
+                                            2,
+                                            0
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Props": {
+                                        "BindValue": "Data.CustomInfoPage.Items",
+                                        "Fill": 1
+                                    },
+                                    "DataSource": {
+                                        "Name": "Ark-Nucleus/GET/InstalledMods/InfoUI",
+                                        "RequestParams": [
+                                            {
+                                                "RequestKey": "SelectedMod",
+                                                "ValueKey": "Data.SelectedMod"
+                                            }
+                                        ],
+                                        "ResponseKey": "Data.CustomInfoPage"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$SERVER_SETTINGS",
+                                "Note": "$$Ark-Nucleus$:$SERVER_SETTINGS_NOTE",
+                                "BindIsEnabled": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_S_Settings.T_Nucleus_S_Settings",
+                                "Fill": 1
+                            },
+                            "OptionalPostRequests": [
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/ServerSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        },
+                                        {
+                                            "RequestKey": "Settings",
+                                            "ValueKey": "Data.ModServerSettings._VALUES"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                },
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/ResetServerSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                }
+                            ],
+                            "Buttons": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                        "Color": "ACCENT_COLOR_DARK",
+                                        "ContentColor": "ACCENT_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ACCENT_COLOR_DARK",
+                                                            "ContentColor": "ACCENT_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ServerSettings"
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RAW_JSON_EDIT",
+                                        "Color": "ATTENTION_COLOR_DARK",
+                                        "ContentColor": "ATTENTION_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RAW_JSON_EDIT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RAW_JSON_EDIT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                "Props": {
+                                                    "Fill": 1
+                                                },
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                                        "Props": {
+                                                            "BindValue": "Data.ModServerSettings._VALUES",
+                                                            "Label": "$$Ark-Nucleus$:$SERVER_SETTINGS",
+                                                            "Padding": [
+                                                                0,
+                                                                0,
+                                                                0,
+                                                                8
+                                                            ],
+                                                            "Fill": 1
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ATTENTION_COLOR_DARK",
+                                                            "ContentColor": "ATTENTION_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ServerSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                        "Color": "DANGER_COLOR_DARK",
+                                        "ContentColor": "DANGER_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                                            "Fill": 1,
+                                                            "Color": "DANGER_COLOR_DARK",
+                                                            "ContentColor": "DANGER_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ResetServerSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "Info": {
+                                "Props": {
+                                    "Title": "$$Ark-Nucleus$:$SERVER_SETTINGS_INFO_TITLE"
+                                },
+                                "UIItems": [
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                        "Props": {
+                                            "Fill": 1
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$SERVER_SETTINGS_INFO_LINE0",
+                                                    "FontSize": 15
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                        "Props": {
+                                            "Label": "$$Ark-Nucleus$:$OK"
+                                        },
+                                        "OnClickEvent": {
+                                            "EventUID": "CloseModal"
+                                        }
+                                    }
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Props": {
+                                        "BindIsVisible": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Magic_v1.DU_Edit_Magic_v1_C",
+                                            "Props": {
+                                                "LockNavigationOnDirty": true,
+                                                "BindValue": "Data.ModServerSettings"
+                                            },
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/InstalledMods/ServerSettings",
+                                                "ResponseKey": "Data.ModServerSettings",
+                                                "RequestParams": [
+                                                    {
+                                                        "RequestKey": "SelectedMod",
+                                                        "ValueKey": "Data.SelectedMod"
+                                                    }
+                                                ]
+                                            },
+                                            "ResetOnEvents": {
+                                                "Events": [
+                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$PLAYER_SETTINGS",
+                                "Note": "$$Ark-Nucleus$:$PLAYER_SETTINGS_NOTE",
+                                "BindIsEnabled": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_P_Settings.T_Nucleus_P_Settings",
+                                "Fill": 1
+                            },
+                            "OptionalPostRequests": [
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/PlayerSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        },
+                                        {
+                                            "RequestKey": "Settings",
+                                            "ValueKey": "Data.ModPlayerSettings._VALUES"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                },
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/ResetPlayerSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                }
+                            ],
+                            "Buttons": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                        "Color": "ACCENT_COLOR_DARK",
+                                        "ContentColor": "ACCENT_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ACCENT_COLOR_DARK",
+                                                            "ContentColor": "ACCENT_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/PlayerSettings"
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RAW_JSON_EDIT",
+                                        "Color": "ATTENTION_COLOR_DARK",
+                                        "ContentColor": "ATTENTION_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RAW_JSON_EDIT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RAW_JSON_EDIT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                "Props": {
+                                                    "Fill": 1
+                                                },
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                                        "Props": {
+                                                            "BindValue": "Data.ModPlayerSettings._VALUES",
+                                                            "Label": "$$Ark-Nucleus$:$PLAYER_SETTINGS",
+                                                            "Padding": [
+                                                                0,
+                                                                0,
+                                                                0,
+                                                                8
+                                                            ],
+                                                            "Fill": 1
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ATTENTION_COLOR_DARK",
+                                                            "ContentColor": "ATTENTION_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/PlayerSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                        "Color": "DANGER_COLOR_DARK",
+                                        "ContentColor": "DANGER_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                                            "Fill": 1,
+                                                            "Color": "DANGER_COLOR_DARK",
+                                                            "ContentColor": "DANGER_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ResetPlayerSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "Info": {
+                                "Props": {
+                                    "Title": "$$Ark-Nucleus$:$PLAYER_SETTINGS_INFO_TITLE"
+                                },
+                                "UIItems": [
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                        "Props": {
+                                            "Fill": 1
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$PLAYER_SETTINGS_INFO_LINE0",
+                                                    "FontSize": 15
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                        "Props": {
+                                            "Label": "$$Ark-Nucleus$:$OK"
+                                        },
+                                        "OnClickEvent": {
+                                            "EventUID": "CloseModal"
+                                        }
+                                    }
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Props": {
+                                        "BindIsVisible": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Magic_v1.DU_Edit_Magic_v1_C",
+                                            "Props": {
+                                                "LockNavigationOnDirty": true,
+                                                "BindValue": "Data.ModPlayerSettings"
+                                            },
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/InstalledMods/PlayerSettings",
+                                                "ResponseKey": "Data.ModPlayerSettings",
+                                                "RequestParams": [
+                                                    {
+                                                        "RequestKey": "SelectedMod",
+                                                        "ValueKey": "Data.SelectedMod"
+                                                    }
+                                                ]
+                                            },
+                                            "ResetOnEvents": {
+                                                "Events": [
+                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$CLIENT_SETTINGS",
+                                "Note": "$$Ark-Nucleus$:$CLIENT_SETTINGS_NOTE",
+                                "BindIsEnabled": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_C_Settings.T_Nucleus_C_Settings",
+                                "Fill": 1
+                            },
+                            "OptionalPostRequests": [
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/ClientSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        },
+                                        {
+                                            "RequestKey": "Settings",
+                                            "ValueKey": "Data.ModClientSettings._VALUES"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                },
+                                {
+                                    "Name": "Ark-Nucleus/POST/InstalledMods/ResetClientSettings",
+                                    "RequestParams": [
+                                        {
+                                            "RequestKey": "SelectedMod",
+                                            "ValueKey": "Data.SelectedMod"
+                                        }
+                                    ],
+                                    "CloseModal": true
+                                }
+                            ],
+                            "Buttons": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                        "Color": "ACCENT_COLOR_DARK",
+                                        "ContentColor": "ACCENT_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ACCENT_COLOR_DARK",
+                                                            "ContentColor": "ACCENT_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ClientSettings"
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RAW_JSON_EDIT",
+                                        "Color": "ATTENTION_COLOR_DARK",
+                                        "ContentColor": "ATTENTION_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RAW_JSON_EDIT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RAW_JSON_EDIT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                "Props": {
+                                                    "Fill": 1
+                                                },
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                                        "Props": {
+                                                            "BindValue": "Data.ModClientSettings._VALUES",
+                                                            "Label": "$$Ark-Nucleus$:$CLIENT_SETTINGS",
+                                                            "Padding": [
+                                                                0,
+                                                                0,
+                                                                0,
+                                                                8
+                                                            ],
+                                                            "Fill": 1
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                                            "Fill": 1,
+                                                            "Color": "ATTENTION_COLOR_DARK",
+                                                            "ContentColor": "ATTENTION_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ClientSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                        "Color": "DANGER_COLOR_DARK",
+                                        "ContentColor": "DANGER_COLOR_LIGHT",
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "Modal": {
+                                        "Props": {
+                                            "Title": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_TITLE",
+                                            "Note": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_NOTE"
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE0",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE1",
+                                                    "FontSize": 15,
+                                                    "Padding": [
+                                                        0,
+                                                        0,
+                                                        0,
+                                                        8
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$RESET_TO_DEFAULT_LINE2",
+                                                    "FontSize": 15,
+                                                    "Fill": 1
+                                                }
+                                            },
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$RESET_TO_DEFAULT",
+                                                            "Fill": 1,
+                                                            "Color": "DANGER_COLOR_DARK",
+                                                            "ContentColor": "DANGER_COLOR_LIGHT"
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ResetClientSettings",
+                                                            "CloseModal": true
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "EventUID": "CloseModal"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "Info": {
+                                "Props": {
+                                    "Title": "$$Ark-Nucleus$:$CLIENT_SETTINGS_INFO_TITLE"
+                                },
+                                "UIItems": [
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                        "Props": {
+                                            "Fill": 1
+                                        },
+                                        "UIItems": [
+                                            {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                "Props": {
+                                                    "Text": "$$Ark-Nucleus$:$CLIENT_SETTINGS_INFO_LINE0",
+                                                    "FontSize": 15
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                        "Props": {
+                                            "Label": "$$Ark-Nucleus$:$OK"
+                                        },
+                                        "OnClickEvent": {
+                                            "EventUID": "CloseModal"
+                                        }
+                                    }
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Props": {
+                                        "BindIsVisible": "Data.SelectedMod.CCAData.IntegrationFlags.Configuration",
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Magic_v1.DU_Edit_Magic_v1_C",
+                                            "Props": {
+                                                "LockNavigationOnDirty": true,
+                                                "BindValue": "Data.ModClientSettings"
+                                            },
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/InstalledMods/ClientSettings",
+                                                "ResponseKey": "Data.ModClientSettings",
+                                                "RequestParams": [
+                                                    {
+                                                        "RequestKey": "SelectedMod",
+                                                        "ValueKey": "Data.SelectedMod"
+                                                    }
+                                                ]
+                                            },
+                                            "ResetOnEvents": {
+                                                "Events": [
+                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

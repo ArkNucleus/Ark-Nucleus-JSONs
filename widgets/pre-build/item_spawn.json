@@ -1,0 +1,216 @@
+{
+    "QUANTITY": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_QUANTITY",
+            "BindValue": "ItemData.Quantity",
+            "Min": 1,
+            "MaxSlide": 1000
+        }
+    },
+    "QUALITY_INDEX": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_QUALITY_INDEX",
+            "HideIfBroken": true,
+            "ItemKey": "EnumID",
+            "Items": [
+                {
+                    "EnumID": "0",
+                    "Name": "Primitive"
+                },
+                {
+                    "EnumID": "1",
+                    "Name": "Ramshackle"
+                },
+                {
+                    "EnumID": "2",
+                    "Name": "Apprentice"
+                },
+                {
+                    "EnumID": "3",
+                    "Name": "Journeyman"
+                },
+                {
+                    "EnumID": "4",
+                    "Name": "Mastercraft"
+                },
+                {
+                    "EnumID": "5",
+                    "Name": "Ascendant"
+                }
+            ],
+            "BindValue": "ItemData.QualityIndex"
+        },
+        "ItemWidget": {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Props": {
+                "BindLabel": "ItemData.Name",
+                "BindValue": "ItemData.EnumID"
+            }
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "QUALITY": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_QUALITY",
+            "BindValue": "ItemData.Quality",
+            "Min": 0,
+            "MaxSlide": 100,
+            "HideIfBroken": true
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "IS_BP": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_IS_BP",
+            "BindValue": "ItemData.IsBlueprint",
+            "HideIfBroken": true
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "CUSTOM_NAME": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_CUSTOM_NAME",
+            "BindValue": "ItemData.CustomName"
+        }
+    },
+    "OWNER": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_OWNER",
+            "ItemKey": "LinkedPlayerId",
+            "BindItems": "Data.AllPlayersList.Items",
+            "BindValue": "ItemData.OwnerId"
+        },
+        "ItemWidget": {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Props": {
+                "BindLabel": "ItemData.PlayerName",
+                "BindNote": "ItemData.UUID",
+                "BindValue": "ItemData.LinkedPlayerId"
+            }
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "GENERIC_QUALITY": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_GENERIC_QUALITY",
+            "BindValue": "ItemData.GenericQuality",
+            "HideIfBroken": true,
+            "MaxSlide": 1000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "ARMOR": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_ARMOR",
+            "BindMin": "ItemData.Armor_Min",
+            "BindValue": "ItemData.Armor",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "MAX_DURABILITY": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_MAX_DURABILITY",
+            "BindMin": "ItemData.MaxDurability_Min",
+            "BindValue": "ItemData.MaxDurability",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "DMG": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_DMG",
+            "BindMin": "ItemData.WeaponDamagePercent_Min",
+            "BindValue": "ItemData.WeaponDamagePercent",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "CLIP_AMMO": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_CLIP_AMMO",
+            "BindMin": "ItemData.WeaponClipAmmo_Min",
+            "BindValue": "ItemData.WeaponClipAmmo",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "HYPOTHERMAL": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_HYPOTHERMAL",
+            "Min": 0,
+            "BindValue": "ItemData.HypothermalInsulation",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "HYPERTHERMIA": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_HYPERTHERMIA",
+            "MinSlide": -2000,
+            "BindValue": "ItemData.HyperthermalInsulation",
+            "HideIfBroken": true,
+            "Max": 0
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "WEIGHT": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_WEIGHT",
+            "BindMin": "ItemData.Weight_Min",
+            "BindValue": "ItemData.Weight",
+            "HideIfBroken": true,
+            "MaxSlide": 2000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nuclues/DinoSpawner/StatChange"
+        }
+    },
+    "SPAWN_BTN": {
+        "Props": {
+            "BindIsEnabled": "ItemData.IsValid",
+            "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER",
+            "Permission": "Nucleus_SpawnItems"
+        },
+        "OnClickEvent": {
+            "PostData": "Ark-Nucleus/POST/Encyclopedia/Spawn"
+        }
+    },
+    "DRONE_BTN": {
+        "Props": {
+            "IsEnabled": false,
+            "Label": "_USE_SPAWN_DRONE_",
+            "Permission": "Nucleus_SpawnItems"
+        },
+        "OnClickEvent": {
+            "EventUID": "Nuclues/DinoSpawner/SaveToDrone"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "CATEGORY_NAME":"$$Ark-Nucleus$:$LOCALIZATION_SETTINGS",
+    "CATEGORY_DESC":"$$Ark-Nucleus$:$LOCALIZATION_SETTINGS_DESC",
+    "SETTINGS": {
+        "LANGUAGE": {
+            "TYPE": "STRING",
+            "DEFAULT_VALUE": "EN",
+            "LABEL": "$$Ark-Nucleus$:$LANGUAGE",
+            "DESCRIPTION": "$$Ark-Nucleus$:$LANGUAGE_DESC",
+            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_LanguageDropDown_v1.DU_Edit_LanguageDropDown_v1_C"
+        }
+    }
+}

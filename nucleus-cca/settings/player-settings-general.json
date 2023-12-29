@@ -1,0 +1,18 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$LOCALIZATION_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$LOCALIZATION_SETTINGS_DESC",
+    "SETTINGS": {
+        "PROFILE_DESC": {
+            "TYPE": "STRING",
+            "DEFAULT_VALUE": "Introduce yourself to the community.",
+            "LABEL": "$$Ark-Nucleus$:$PROFILE_DESC",
+            "DESCRIPTION": "$$Ark-Nucleus$:$PROFILE_DESC_DESC"
+        },
+        "ALLOW_MESSAGING": {
+            "TYPE": "BOOLEAN",
+            "DEFAULT_VALUE": true,
+            "LABEL": "$$Ark-Nucleus$:$ALLOW_MESSAGING",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ALLOW_MESSAGING_DESC"
+        }
+    }
+}

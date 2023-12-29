@@ -1,0 +1,53 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$ENCYCLOPEDIA_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$ENCYCLOPEDIA_SETTINGS_DESC",
+    "SETTINGS": {
+        "DINO_SOURCES": {
+            "TYPE": "ARRAY-STRING",
+            "DEFAULT_VALUE": [
+                "/Game/Aberration/Boss",
+                "/Game/Aberration/Dinos",
+                "/Game/EndGame/Dinos",
+                "/Game/Extinction/Dinos",
+                "/Game/Fjordur/Boss",
+                "/Game/Fjordur/Dinos",
+                "/Game/Genesis/Dinos",
+                "/Game/Genesis2/Dinos",
+                "/Game/Genesis2/Missions",
+                "/Game/LostIsland/Boss",
+                "/Game/LostIsland/Dinos",
+                "/Game/Mods/CrystalIsles/Assets/Dinos",
+                "/Game/Mods/Ragnarok/Custom_Assets/Bosses",
+                "/Game/Mods/Ragnarok/Custom_Assets/Dinos",
+                "/Game/Mods/Valguero/Assets/CoreBlueprints/Boss",
+                "/Game/Mods/Valguero/Assets/Dinos",
+                "/Game/PrimalEarth/Dinos",
+                "/Game/ScorchedEarth/Dinos",
+                "/Game/Valguero/Dinos"
+            ],
+            "LABEL": "$$Ark-Nucleus$:$DINO_SOURCES",
+            "DESCRIPTION": "$$Ark-Nucleus$:$DINO_SOURCES_DESC"
+        },
+        "ITEM_SOURCES": {
+            "TYPE": "ARRAY-STRING",
+            "DEFAULT_VALUE": [
+                "/Game/Aberration",
+                "/Game/Extinction",
+                "/Game/Fjordur",
+                "/Game/Genesis",
+                "/Game/Genesis2",
+                "/Game/LostIsland",
+                "/Game/Mods/CrystalIsles/Assets",
+                "/Game/Mods/FjordurOfficial/Assets",
+                "/Game/Mods/LostIsland/Assets",
+                "/Game/Mods/Ragnarok/Custom_Assets",
+                "/Game/Mods/Valguero/Assets",
+                "/Game/PrimalEarth",
+                "/Game/ScorchedEarth",
+                "/Game/Valguero"
+            ],
+            "LABEL": "$$Ark-Nucleus$:$ITEM_SOURCES",
+            "DESCRIPTION": "$$Ark-Nucleus$:$ITEM_SOURCES"
+        }
+    }
+}

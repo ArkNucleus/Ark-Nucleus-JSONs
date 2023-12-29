@@ -1,0 +1,63 @@
+{
+    "MOD_NAME": {
+        "Props": {
+            "Label": "_MOD_NAME_LBL_",
+            "BindText": "ItemData.Name"
+        }
+    },
+    "MOD_FOLDER": {
+        "Props": {
+            "Label": "_MOD_FOLDER_LBL_",
+            "BindText": "ItemData.ModUID"
+        }
+    },
+    "MOD_ID": {
+        "Props": {
+            "Label": "_MOD_ID_LBL_",
+            "BindText": "ItemData.WorkshopID"
+        }
+    },
+    "MOD_ORDER": {
+        "Props": {
+            "Label": "_MOD_ORDER_LBL_",
+            "BindText": "ItemData.LoadOrder",
+            "ValueConverter": "StringToInt"
+        }
+    },
+    "MOD_FLAG_CONFIG": {
+        "Props": {
+            "Label": "_MOD_SUP_CONFIG_LBL_",
+            "BindText": "ItemData.CCAData.IntegrationFlags.Configuration",
+            "ValueConverter": "BooleanToYesNo"
+        }
+    },
+    "MOD_FLAG_LOC": {
+        "Props": {
+            "Label": "_MOD_SUP_LOC_LBL_",
+            "BindText": "ItemData.CCAData.IntegrationFlags.Configuration",
+            "ValueConverter": "BooleanToYesNo"
+        }
+    },
+    "MOD_FLAG_LOG": {
+        "Props": {
+            "Label": "_MOD_SUP_LOG_LBL_",
+            "BindText": "ItemData.CCAData.IntegrationFlags.Logs",
+            "ValueConverter": "BooleanToYesNo"
+        }
+    },
+    "MOD_DESC": {
+        "Props": {
+            "Label": "_MOD_DESC_LBL_",
+            "BindText": "ItemData.Desc"
+        }
+    },
+    "MOD_URL": {
+        "Props": {
+            "Label": "_VIEW_WORKSHOP_",
+            "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_SteamLogo.T_Nucleus_SteamLogo"
+        },
+        "OnClickEvent": {
+            "BindUrl": "ItemData.SteamUrl"
+        }
+    }
+}

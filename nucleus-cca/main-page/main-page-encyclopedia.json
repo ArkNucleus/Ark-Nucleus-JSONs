@@ -1,0 +1,308 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_TITLE",
+        "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_TITLE_NOTE",
+        "Icon": "/Game/PrimalEarth/UI/Textures/HubSurviviorIcon.HubSurviviorIcon",
+        "Fill": 1
+    },
+    "Info": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE0",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE1",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE2",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE3",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE4",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK"
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+            "Props": {
+                "Fill": 1
+            },
+            "DataSource": {
+                "Name": "Ark-Nucleus/GET/Encyclopedia",
+                "ResponseKey": "Data.Encyclopedia"
+            },
+            "OptionalPostRequests": [
+                {
+                    "Name": "Ark-Nucleus/POST/Encyclopedia/SpawnByPlayer",
+                    "RequestParams": [
+                        {
+                            "RequestKey": "SelectedItem",
+                            "ValueKey": "Data.SelectedPreviewItem"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ark-Nucleus/POST/Encyclopedia/SpawnCryo",
+                    "RequestParams": [
+                        {
+                            "RequestKey": "SelectedItem",
+                            "ValueKey": "Data.SelectedPreviewItem"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ark-Nucleus/POST/Encyclopedia/SpawnItem",
+                    "RequestParams": [
+                        {
+                            "RequestKey": "SelectedItem",
+                            "ValueKey": "Data.SelectedPreviewItem"
+                        }
+                    ]
+                }
+            ],
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                    "UICache": {
+                        "SaveFile": "Nucleus-Encyclopedia"
+                    },
+                    "Props": {
+                        "Fill": 1,
+                        "FilterKeys": [
+                            "Type",
+                            "FolderPaths",
+                            "CanBeBlueprint",
+                            "CanBeTamed",
+                            "CanHaveBaby",
+                            "IsFlayer",
+                            "Group",
+                            "ModUID"
+                        ],
+                        "TextValues": {
+                            "Type": [
+                                "$$Ark-Nucleus$:$ITEM",
+                                "$$Ark-Nucleus$:$DINO"
+                            ]
+                        },
+                        "BindValue": "Data.Encyclopedia.Items"
+                    },
+                    "ItemWidget": {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_PrimalItemDino_v1.DU_Item_PrimalItemDino_v1_C",
+                        "UICache": {
+                            "SaveFile": "Nucleus-Encyclopedia",
+                            "BindViewMode": "UICache.Encyclopedia.ViewMode"
+                        },
+                        "Props": {
+                            "ItemKey": "Path",
+                            "SetValueKey": "Data.SelectedPreviewItem"
+                        },
+                        "OnClickEvent": {
+                            "PostUrl": "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+                        },
+                        "UpdateOnEvents": {
+                            "Events": [
+                                "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                    "Props": {
+                        "Fill": 1,
+                        "Padding": [
+                            2,
+                            0,
+                            0,
+                            0
+                        ]
+                    },
+                    "UpdateOnEvents": {
+                        "Events": [
+                            "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+                        ]
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                            "UICache": {
+                                "SaveFile": "Ark-Nucleus-MainPage"
+                            },
+                            "Props": {
+                                "UUID": "EncyclopediaBaseInfo",
+                                "Title": "$$Ark-Nucleus$:$DINO_BASE_INFO",
+                                "Note": "$$Ark-Nucleus$:$DINO_BASE_INFO_NOTE",
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ],
+                                "UpdateOnEvents": {
+                                    "Events": [
+                                        "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+                                    ]
+                                }
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "$$Ark-Nucleus$:$COMING_SOON",
+                                        "FontSize": 15,
+                                        "Justification": "Center"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "Some general info about the dino like diet and habitat.",
+                                        "FontSize": 12,
+                                        "Justification": "Center"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "Join Nucleus Discord server and let me know what type of information you would like to see here.",
+                                        "FontSize": 12,
+                                        "Justification": "Center"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                            "UICache": {
+                                "SaveFile": "Ark-Nucleus-MainPage"
+                            },
+                            "Props": {
+                                "UUID": "EncyclopediaSpawn",
+                                "Title": "$$Ark-Nucleus$:$SPAWN_MENU",
+                                "Note": "$$Ark-Nucleus$:$SPAWN_MENU_NOTE",
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/PreBuiltComps/DU_PreBuilt_Spawn_v1.DU_PreBuilt_Spawn_v1_C",
+                                    "Props": {
+                                        "Fill": 1,
+                                        "BindValue": "Data.SelectedPreviewItem"
+                                    },
+                                    "DataSource": {
+                                        "Name": "Ark-Nucleus/GET/Players/Basic",
+                                        "ResponseKey": "Data.AllPlayersList"
+                                    },
+                                    "ResetOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/PreBuiltComps/DU_PreBuilt_Advanced3DView_v1.DU_PreBuilt_Advanced3DView_v1_C",
+                    "PreviewWidth": 200,
+                    "Props": {
+                        "PreviewWidth": 200,
+                        "Fill": 2,
+                        "BindValue": "Data.SelectedPreviewItem"
+                    },
+                    "ColorRegionsUIConfig": {
+                        "Props": {
+                            "BindValue": "ItemData.ColorIndex",
+                            "BindIsEnabled": "ItemData.IsEnabled"
+                        },
+                        "OnValueChanged": {
+                            "EventUID": "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
+                        },
+                        "ColorPickerUIConfig": {
+                            "Props": {
+                                "UUID": "ColorDefPicker",
+                                "Cache": true,
+                                "Title": "$$Ark-Nucleus$:$COLOR_DEF_PICKER"
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Props": {
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_UGridList_v1.DU_Panel_UGridList_v1_C",
+                                            "Props": {
+                                                "ColumnCount": 6,
+                                                "BindValue": "ItemData.Colors"
+                                            },
+                                            "ItemWidget": {
+                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Color_v1.DU_Item_Color_v1_C",
+                                                "Props": {
+                                                    "BindLabel": "ItemData.Name",
+                                                    "BindValue": "ItemData.Index"
+                                                },
+                                                "OnClickEvent": {
+                                                    "EventUID": "Ark-Nucleus/UI/ColorPicked"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "UpdateOnEvents": {
+                        "Events": [
+                            "Ark-Nucleus/NOTIFY/Encyclopedia/Selected",
+                            "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

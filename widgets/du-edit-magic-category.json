@@ -1,0 +1,11 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+    "Props": {
+        "Padding": [
+            2,
+            2,
+            2,
+            2
+        ]
+    }
+}

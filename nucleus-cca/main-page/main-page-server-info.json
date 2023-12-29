@@ -1,0 +1,156 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$SERVER_INFO_TITLE",
+        "Note": "$$Ark-Nucleus$:$SERVER_INFO_TITLE_NOTE",
+        "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/House_Icon_White.House_Icon_White",
+        "Fill": 1
+    },
+    "Info": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE0",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE1",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE2",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE3",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE4",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK"
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ]
+    },
+    "Buttons": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRename.IconRename",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$EDIT_SERVER_INFO_PAGE"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/ServerInfoPage",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "ServerInfo",
+                                "ValueKey": "Data.ServerInfoPage"
+                            }
+                        ],
+                        "ResponseKey": "Data.ServerInfoPage",
+                        "CloseModal": true
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Props": {
+                            "BindValue": "Data.ServerInfoPage",
+                            "Label": "$$SERVER_INFO_UI_CONFIG",
+                            "Note": "$$SERVER_INFO_UI_CONFIG_NOTE",
+                            "Padding": [
+                                0,
+                                0,
+                                0,
+                                8
+                            ],
+                            "Fill": 1
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                        "UIItems": [
+                            {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$VERIFY_AND_SAVE",
+                                    "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
+                                    "Fill": 1,
+                                    "Color": "ATTENTION_COLOR_DARK",
+                                    "ContentColor": "ATTENTION_COLOR_LIGHT"
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/ServerInfoPage"
+                                }
+                            },
+                            {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$Ark-Nucleus$:$CANCEL",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "EventUID": "CloseModal"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+            "Props": {
+                "Fill": 1,
+                "BindValue": "Data.ServerInfoPage.UIItems"
+            },
+            "DataSource": {
+                "Name": "Ark-Nucleus/GET/ServerInfoPage",
+                "ResponseKey": "Data.ServerInfoPage"
+            },
+            "ResetOnEvents": {
+                "Events": [
+                    "Ark-Nucleus/NOTIFY/ServerInfoPage"
+                ]
+            }
+        }
+    ]
+}

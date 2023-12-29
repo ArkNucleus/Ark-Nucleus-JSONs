@@ -1,0 +1,30 @@
+{
+    "Props": {
+        "BindTitle": "Data.Name"
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "BindText": "Data.Response.Message",
+                "FontSize": 12,
+                "Fill": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Label": "$$Ark-Nucleus$:$OK"
+            },
+            "OnClickEvent": {
+                "EventUID": "CloseModal"
+            }
+        }
+    ]
+}

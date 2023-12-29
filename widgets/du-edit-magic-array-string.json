@@ -1,0 +1,15 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Array_v1.DU_Edit_Array_v1_C",
+    "Props": {
+        "Padding": [
+            2,
+            2,
+            2,
+            2
+        ]
+    },
+    "ItemWidget": {
+        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_ArrayEdit_v1.DU_Item_ArrayEdit_v1_C",
+        "ContentWidget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C"
+    }
+}

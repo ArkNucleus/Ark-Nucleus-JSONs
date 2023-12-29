@@ -1,0 +1,137 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Props": {
+        "Title": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE",
+        "Note": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE_NOTE",
+        "Icon": "/Game/PrimalEarth/UI/Textures/HubTribeIcon.HubTribeIcon",
+        "Fill": 1
+    },
+    "Info": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE0",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE1",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE2",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE3",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Props": {
+                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE4",
+                    "FontSize": 15
+                }
+            },
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK"
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+            "Props": {
+                "Title": "_CLIENT_SETTINGS_",
+                "Note": "_CLIENT_SETTINGS_NOTE_",
+                "BindIsEnabled": "Data.SelectedItem.CCAData.SupportedFeatures.Configuration",
+                "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_C_Settings.T_Nucleus_C_Settings",
+                "Fill": 1
+            },
+            "Info": {
+                "Props": {
+                    "Title": "_LOGS_INFO_TITLE_"
+                },
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                        "Props": {
+                            "Fill": 1
+                        },
+                        "UIItems": [
+                            {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                "Props": {
+                                    "Text": "_LOG_INFO_LINE0_",
+                                    "FontSize": 15
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "_OK_"
+                        },
+                        "OnClickEvent": {
+                            "EventUID": "CloseModal"
+                        }
+                    }
+                ]
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                    "Props": {
+                        "BindIsVisible": "Data.SelectedItem.CCAData.SupportedFeatures.Configuration",
+                        "Fill": 1
+                    },
+                    "DataSource": {
+                        "Name": "Ark-Nucleus/GET/ClientSettingsDT",
+                        "RequestParams": "Data.SelectedItem",
+                        "ResponseKey": "Data.ClientSettingsDT"
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Magic_v1.DU_Edit_Magic_v1_C",
+                            "Props": {
+                                "LockNavigationOnDirty": true,
+                                "BindValue": "Data.ModClientSettings",
+                                "BindDataTemplate": "Data.ClientSettingsDT"
+                            },
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/ModClientSettings",
+                                "ResponseKey": "Data.ModClientSettings",
+                                "RequestParams": "Data.SelectedItem"
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/EDITED/ModClientSettings"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

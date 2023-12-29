@@ -1,0 +1,198 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+    "Props": {
+        "Fill": 1,
+        "Padding": [
+            5,
+            5,
+            5,
+            5
+        ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "Welcom to Ark Nucleus",
+                "FontSize": 32,
+                "Justification": "Center",
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    20
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "Explore, configure and localize all the supported mods in one place.",
+                "FontSize": 15,
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    10
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "With just a few easy steps, mod authors can opt-in with their mods to make use of the shared systems that Ark Nucleus offers.",
+                "FontSize": 15,
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    10
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "Your life as a Server Admin just got a little easier, as more mods opt-in to use the configuration system, configure a mod from inside the game, tweak the option till you like them, no INI files, no server restarts, just a nice UI with all the needed info about each setting.",
+                "FontSize": 15,
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    10
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Props": {
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    10
+                ]
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Props": {
+                        "Padding": [
+                            5,
+                            5,
+                            5,
+                            5
+                        ]
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_3DView_v1.DU_View_3DView_v1_C",
+                            "Props": {
+                                "StaticPath": "/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP",
+                                "PreviewWidth": 256,
+                                "PreviewHeight": 256,
+                                "Padding": [
+                                    0,
+                                    0,
+                                    10,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                            "Props": {
+                                "Fill": 1
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": " - Explore all the items and dinos a mod adds to your game (released or work in progress). If the files are in the mod, you will be able to see them.",
+                                        "FontSize": 15
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": " - It's hard to keep track of all the items and dinos that got added to the ARK, now all of them are just one Catalog search away.",
+                                        "FontSize": 15
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": " - 3D previews make it easy to see how an item/dino will look like with custom colors even before you have the chance to get/paint it.",
+                                        "FontSize": 15
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+            "Props": {
+                "Title": "_FEATURED_MODS_",
+                "NNote": "_FEATURED_MODS_NOTE_",
+                "Padding": [
+                    0,
+                    0,
+                    0,
+                    10
+                ]
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                    "Props": {
+                        "Text": "Coming soon...",
+                        "FontSize": 15,
+                        "Padding": [
+                            5,
+                            5,
+                            5,
+                            5
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                    "Props": {
+                        "Text": "The mod is still in active development, so make sure to check my Discord server for announcements of incoming updates and give your feedback so we can improve and expand the features this mod offers.",
+                        "FontSize": 15,
+                        "Padding": [
+                            5,
+                            5,
+                            5,
+                            5
+                        ]
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                    "Props": {
+                        "Label": "Join my Discord",
+                        "Padding": [
+                            5,
+                            5,
+                            5,
+                            5
+                        ],
+                        "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo"
+                    },
+                    "OnClickEvent": {
+                        "Url": "https://discord.gg/YD6jzCd"
+                    }
+                }
+            ]
+        }
+    ]
+}
