@@ -1,13 +1,7 @@
 {
-    "CATEGORY_NAME": "$$Ark-Nucleus$:$LOCALIZATION_SETTINGS",
-    "CATEGORY_DESC": "$$Ark-Nucleus$:$LOCALIZATION_SETTINGS_DESC",
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$GENERAL_PLAYER_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$GENERAL_PLAYER_SETTINGS_NOTE",
     "SETTINGS": {
-        "PROFILE_DESC": {
-            "TYPE": "STRING",
-            "DEFAULT_VALUE": "Introduce yourself to the community.",
-            "LABEL": "$$Ark-Nucleus$:$PROFILE_DESC",
-            "DESCRIPTION": "$$Ark-Nucleus$:$PROFILE_DESC_DESC"
-        },
         "ALLOW_MESSAGING": {
             "TYPE": "BOOLEAN",
             "DEFAULT_VALUE": true,

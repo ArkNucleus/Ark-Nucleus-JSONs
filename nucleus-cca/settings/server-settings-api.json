@@ -1,0 +1,12 @@
+{
+    "CATEGORY_NAME": "$$Ark-Nucleus$:$API_SETTINGS",
+    "CATEGORY_DESC": "$$Ark-Nucleus$:$API_SETTINGS_DESC",
+    "SETTINGS": {
+        "BASE_API_URL": {
+            "TYPE": "STRING",
+            "DEFAULT_VALUE": "",
+            "LABEL": "$$Ark-Nucleus$:$BASE_API_URL",
+            "DESCRIPTION": "$$Ark-Nucleus$:$BASE_API_URL_DESC"
+        }
+    }
+}

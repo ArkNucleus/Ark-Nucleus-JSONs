@@ -1,133 +1,266 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE",
         "Note": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Textures/HubTribeIcon.HubTribeIcon",
         "Fill": 1
     },
-    "Info": {
-        "Props": {
-            "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
-        },
-        "UIItems": [
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE0",
-                    "FontSize": 15
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE1",
-                    "FontSize": 15
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE2",
-                    "FontSize": 15
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE3",
-                    "FontSize": 15
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOCALITATION_INFO_LINE4",
-                    "FontSize": 15
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                "Props": {
-                    "Label": "$$Ark-Nucleus$:$OK"
-                },
-                "OnClickEvent": {
-                    "EventUID": "CloseModal"
-                }
-            }
-        ]
+    "UICache": {
+        "SaveFile": "Ark-Nucleus-ServerCommunity"
     },
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
             "Props": {
-                "Title": "_CLIENT_SETTINGS_",
-                "Note": "_CLIENT_SETTINGS_NOTE_",
-                "BindIsEnabled": "Data.SelectedItem.CCAData.SupportedFeatures.Configuration",
-                "Icon": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_C_Settings.T_Nucleus_C_Settings",
                 "Fill": 1
             },
-            "Info": {
-                "Props": {
-                    "Title": "_LOGS_INFO_TITLE_"
-                },
-                "UIItems": [
-                    {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
-                        "Props": {
-                            "Fill": 1
-                        },
-                        "UIItems": [
-                            {
-                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                "Props": {
-                                    "Text": "_LOG_INFO_LINE0_",
-                                    "FontSize": 15
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                        "Props": {
-                            "Label": "_OK_"
-                        },
-                        "OnClickEvent": {
-                            "EventUID": "CloseModal"
-                        }
-                    }
-                ]
+            "DataSource": {
+                "Name": "Ark-Nucleus/GET/Players/Basic",
+                "ResponseKey": "Data.PlayersData"
             },
+
             "UIItems": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
                     "Props": {
-                        "BindIsVisible": "Data.SelectedItem.CCAData.SupportedFeatures.Configuration",
-                        "Fill": 1
-                    },
-                    "DataSource": {
-                        "Name": "Ark-Nucleus/GET/ClientSettingsDT",
-                        "RequestParams": "Data.SelectedItem",
-                        "ResponseKey": "Data.ClientSettingsDT"
+                        "UUID": "PlayersList",
+                        "Fill": 1,
+                        "Title": "$$Ark-Nucleus$:$ALL_PLAYERS",
+                        "CompactWidth": 188,
+                        "ExpandedFill": 1,
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Magic_v1.DU_Edit_Magic_v1_C",
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                             "Props": {
-                                "LockNavigationOnDirty": true,
-                                "BindValue": "Data.ModClientSettings",
-                                "BindDataTemplate": "Data.ClientSettingsDT"
+                                "Fill": 1,
+                                "BindValue": "Data.PlayersData.Items",
+                                "BindViewMode": "UICache.PlayersList.ViewMode",
+                                "ViewMode": "MEDIUM",
+                                "FilterKeys": [
+                                    "IsOnline"
+                                ]
                             },
-                            "DataSource": {
-                                "Name": "Ark-Nucleus/GET/ModClientSettings",
-                                "ResponseKey": "Data.ModClientSettings",
-                                "RequestParams": "Data.SelectedItem"
+                            "Permission": {
+                                "Tag": "Nucleus_ViewPlayerList"
                             },
                             "ResetOnEvents": {
                                 "Events": [
-                                    "Ark-Nucleus/EDITED/ModClientSettings"
+                                    "Ark-Nucleus/NOTIFY/Players"
+                                ]
+                            },
+                            "OnClickEvent": {
+                                "PostData": "Ark-Nucleus/NOTIFY/Players/Selected"
+                            },
+                            "ItemWidget": {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Player_v1.DU_Item_Player_v1_C",
+                                "UpdateOnEvents": {
+                                    "Events": [
+                                        "Ark-Nucleus/NOTIFY/Players/Selected"
+                                    ]
+                                },
+                                "Props": {
+                                    "ItemKey": "LinkedPlayerId",
+                                    "SetValueKey": "Data.SelectedPlayer",
+                                    "BindViewMode": "UICache.PlayersList.ViewMode"
+                                },
+                                "OnClickEvent": {
+                                    "EventUID": "Ark-Nucleus/UI/Selected"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                    "Props": {
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Props": {
+                        "Fill": 3
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$COMMANDs_TELEPORT_TITLE",
+                                "Note": "$$Ark-Nucleus$:$COMMANDs_TELEPORT_TITLE_NOTE",
+                                "Fill": 1
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/Players/Selected"
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "$$Ark-Nucleus$:$WIP",
+                                        "FontSize": 24,
+                                        "Justification": "Center",
+                                        "Color": [ 1, 0, 0 ],
+                                        "Padding": [ 5, 5, 5, 5 ]
+                                    }
+                                }
+                            ]
+
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Props": {
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
                                 ]
                             }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$PLAYER_INFO_TITLE",
+                                "Note": "$$Ark-Nucleus$:$PLAYER_INFO_TITLE_NOTE",
+                                "Fill": 1
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/Players/Selected"
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$NAME",
+                                        "BindText": "Data.SelectedPlayer.PlayerName",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$LP_ID",
+                                        "BindText": "Data.SelectedPlayer.LinkedPlayerId",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$EOS_ID",
+                                        "BindText": "Data.SelectedPlayer.UUID",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$PLAYER_ONLINE",
+                                        "BindText": "Data.SelectedPlayer.IsOnline",
+                                        "ValueConverter": "BooleanToYesNo",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$PLAYER_INDEX_DATE",
+                                        "BindText": "Data.SelectedPlayer.IndexDate",
+                                        "ValueConverter": "SecondsToDateTimeString",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$PLAYER_LAST_ACTIVITY",
+                                        "BindText": "Data.SelectedPlayer.LastActivity",
+                                        "ValueConverter": "SecondsToDateTimeString",
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Props": {
+                                        "Fill": 1,
+                                        "Padding": [ 2, 2, 2, 2 ]
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$RAW_JSON_DATA",
+                                                "IsReadOnly": true,
+                                                "Fill": 1,
+                                                "BindValue": "Data.SelectedPlayer"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Props": {
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$PLAYER_3D_VIEW_TITLE",
+                                "Note": "$$Ark-Nucleus$:$PLAYER_3D_VIEW_TITLE_NOTE",
+                                "Fill": 1
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/Players/Selected"
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_3DView_v1.DU_View_3DView_v1_C",
+                                    "PreviewWidth": 200,
+                                    "Props": {
+                                        "PreviewWidth": 200,
+                                        "Fill": 1,
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ],
+                                        "BindValue": "Data.SelectedPlayer"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/Players/Selected"
+                                        ]
+                                    }
+                                }
+                            ]
                         }
                     ]
                 }

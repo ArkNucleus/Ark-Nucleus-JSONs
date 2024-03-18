@@ -1,63 +1,62 @@
 {
     "MOD_NAME": {
         "Props": {
-            "Label": "_MOD_NAME_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_NAME_LBL",
             "BindText": "ItemData.Name"
         }
     },
     "MOD_FOLDER": {
         "Props": {
-            "Label": "_MOD_FOLDER_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_FOLDER_LBL",
             "BindText": "ItemData.ModUID"
         }
     },
     "MOD_ID": {
         "Props": {
-            "Label": "_MOD_ID_LBL_",
-            "BindText": "ItemData.WorkshopID"
+            "Label": "$$Ark-Nucleus$:$MOD_ID_LBL",
+            "BindText": "ItemData.CFData.details.iD"
         }
     },
     "MOD_ORDER": {
         "Props": {
-            "Label": "_MOD_ORDER_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_ORDER_LBL",
             "BindText": "ItemData.LoadOrder",
             "ValueConverter": "StringToInt"
         }
     },
     "MOD_FLAG_CONFIG": {
         "Props": {
-            "Label": "_MOD_SUP_CONFIG_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_SUP_CONFIG_LBL",
             "BindText": "ItemData.CCAData.IntegrationFlags.Configuration",
             "ValueConverter": "BooleanToYesNo"
         }
     },
     "MOD_FLAG_LOC": {
         "Props": {
-            "Label": "_MOD_SUP_LOC_LBL_",
-            "BindText": "ItemData.CCAData.IntegrationFlags.Configuration",
+            "Label": "$$Ark-Nucleus$:$MOD_SUP_LOC_LBL",
+            "BindText": "ItemData.CCAData.IntegrationFlags.Localization",
             "ValueConverter": "BooleanToYesNo"
         }
     },
     "MOD_FLAG_LOG": {
         "Props": {
-            "Label": "_MOD_SUP_LOG_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_SUP_LOG_LBL",
             "BindText": "ItemData.CCAData.IntegrationFlags.Logs",
             "ValueConverter": "BooleanToYesNo"
         }
     },
     "MOD_DESC": {
         "Props": {
-            "Label": "_MOD_DESC_LBL_",
+            "Label": "$$Ark-Nucleus$:$MOD_DESC_LBL",
             "BindText": "ItemData.Desc"
         }
     },
     "MOD_URL": {
         "Props": {
-            "Label": "_VIEW_WORKSHOP_",
-            "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_SteamLogo.T_Nucleus_SteamLogo"
+            "Label": "$$Ark-Nucleus$:$GO_TO_MOD_PAGE"
         },
         "OnClickEvent": {
-            "BindUrl": "ItemData.SteamUrl"
+            "BindUrl": "ItemData.CFData.details.links.websiteUrl"
         }
     }
 }

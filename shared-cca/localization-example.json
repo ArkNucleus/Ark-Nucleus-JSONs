@@ -1,20 +1,20 @@
 {
     "CCA_LOG_CAL_ADDED": {
-        "EN": "CCA added to Custom Actor List"
+        "en": "CCA added to Custom Actor List"
     },
     "CCA_LOG_CAL_ADDED_MSG": {
-        "EN": "CCA was added to the Ark-Nucleus curated Custom Actor List. With this, this CCA is accessible to Ark-Nucleus for communication."
+        "en": "CCA was added to the Ark-Nucleus curated Custom Actor List. With this, this CCA is accessible to Ark-Nucleus for communication."
     },
     "CCA_LOG_DESTROYED": {
-        "EN": "CCA Actor Destroyed"
+        "en": "CCA Actor Destroyed"
     },
     "CCA_LOG_DESTROYED_MSG": {
-        "EN": "CCA Actor was destroyed. Reason being: __0__."
+        "en": "CCA Actor was destroyed. Reason being: __0__."
     },
     "CCA_LOG_READY": {
-        "EN": "CCA is Ready"
+        "en": "CCA is Ready"
     },
     "CCA_LOG_READY_MSG": {
-        "EN": "CCA has finished setting things up and is ready for communication."
+        "en": "CCA has finished setting things up and is ready for communication."
     }
 }

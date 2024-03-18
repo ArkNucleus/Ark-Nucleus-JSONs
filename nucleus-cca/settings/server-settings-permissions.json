@@ -34,26 +34,29 @@
             ],
             "LABEL": "$$Ark-Nucleus$:$GROUP_POLICY",
             "DESCRIPTION": "$$Ark-Nucleus$:$GROUP_POLICY_DESC",
-            "ITEM_TEMPLATE":{
-                    "POLICY_NAME": {
-                        "TYPE": "STRING",
-                        "DEFAULT_VALUE":"Policy Name",
-                        "LABEL": "$$Ark-Nucleus$:$POLICY_NAME",
-                        "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_DESC"
-                    },
-                    "UUIDS": {
-                        "TYPE": "ARRAY-STRING",
-                        "DEFAULT_VALUE":["*"],
-                        "LABEL": "$$Ark-Nucleus$:$POLICY_NAME_UUIDS",
-                        "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_UUIDS_DESC"
-
-                    },
-                    "TAGS": {
-                        "TYPE": "ARRAY-STRING",
-                        "DEFAULT_VALUE":["Nucleus_ViewEncyclopedia"],
-                        "LABEL": "$$Ark-Nucleus$:$POLICY_NAME_TAGS",
-                        "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_TAGS_DESC"
-                    }
+            "ITEM_TEMPLATE": {
+                "POLICY_NAME": {
+                    "TYPE": "STRING",
+                    "DEFAULT_VALUE": "Policy Name",
+                    "LABEL": "$$Ark-Nucleus$:$POLICY_NAME",
+                    "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_DESC"
+                },
+                "UUIDS": {
+                    "TYPE": "ARRAY-PLAYER",
+                    "DEFAULT_VALUE": [
+                        "*"
+                    ],
+                    "LABEL": "$$Ark-Nucleus$:$POLICY_NAME_UUIDS",
+                    "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_UUIDS_DESC"
+                },
+                "TAGS": {
+                    "TYPE": "ARRAY-STRING",
+                    "DEFAULT_VALUE": [
+                        "Nucleus_ViewEncyclopedia"
+                    ],
+                    "LABEL": "$$Ark-Nucleus$:$POLICY_NAME_TAGS",
+                    "DESCRIPTION": "$$Ark-Nucleus$:$POLICY_NAME_TAGS_DESC"
+                }
             }
         }
     }

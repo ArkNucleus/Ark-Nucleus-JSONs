@@ -1,0 +1,295 @@
+{
+    "RAW_JSON": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_JSON_ITEM_DATA",
+            "IsReadOnly": true,
+            "BindValue": "ItemData.BaseData"
+        }
+    },
+    "PATH": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$PATH",
+            "BindValue": "ItemData.Path",
+            "IsReadOnly": true
+        }
+    },
+    "NAME": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$NAME",
+            "BindText": "ItemData.BaseData.Name"
+        }
+    },
+    "TAG": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_TAG",
+            "BindText": "ItemData.BaseData.Tag",
+            "BindIsVisible":"ItemData.BaseData.IsDino"
+        }
+    },
+    "GROUP": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_GROUP",
+            "BindText": "ItemData.BaseData.Group",
+            "BindIsVisible":"ItemData.BaseData.IsDino"
+        }
+    },
+    "DESC": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DESC",
+            "BindText": "ItemData.BaseData.Desc",
+            "BindIsVisible":"!ItemData.BaseData.IsDino"
+        }
+    },
+    "STACK_SIZE": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$STACK_SIZE",
+            "BindText": "ItemData.BaseData.MaxQuantity",
+            "BindIsVisible":"!ItemData.BaseData.IsDino"
+        }
+    },
+    "CAN_BE_BLUEPRINT": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_CAN_BE_BLUEPRINT",
+            "BindText": "ItemData.BaseData.CanBeBlueprint",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"!ItemData.BaseData.IsDino"
+        }
+    },
+    "CAN_BE_PAINTED": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_CAN_BE_PAINTED",
+            "BindText": "ItemData.BaseData.UseColorization",
+            "ValueConverter": "BooleanToYesNo"
+        }
+    },
+    "USES_STATS": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$ITEM_USES_STATS",
+            "BindText": "ItemData.BaseData.UseItemStats",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"!ItemData.BaseData.IsDino"
+        }
+    },
+    "CAN_BE_TAMED": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_CAN_BE_TAMED",
+            "BindText": "ItemData.BaseData.CanBeTamed",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed",
+            "Color":"SUCCESS_COLOR"
+        }
+    },
+    "IS_KNOCK_TAME": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_IS_KNOCK_TAME",
+            "BindText": "ItemData.BaseData.IsKnockOutTame",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsKnockOutTame"
+        }
+    },
+    "IS_PASSIVE_TAME": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_IS_PASSIVE_TAME",
+            "BindText": "ItemData.BaseData.IsPassiveTame",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsPassiveTame"
+        }
+    },
+    "IS_SPECIAL_TAME": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_IS_SPECIAL_TAME",
+            "BindText": "ItemData.BaseData.IsSpecialTame",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsSpecialTame",
+            "Color":"ALERT_COLOR"
+        }
+    },
+    "CAN_BREED": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_CAN_BREED",
+            "BindText": "ItemData.BaseData.CanHaveBaby",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.CanHaveBaby",
+            "Color":"SUCCESS_COLOR"
+        }
+    },
+    "IS_FLAYER": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_IS_FLAYER",
+            "BindText": "ItemData.BaseData.IsFlayer",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsFlayer",
+            "Color":"SUCCESS_COLOR"
+        }
+    },
+    "IS_WATER_DINO": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$DINO_IS_WATER_DINO",
+            "BindText": "ItemData.BaseData.IsWaterDino",
+            "ValueConverter": "BooleanToYesNo",
+            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsWaterDino",
+            "Color":"SUCCESS_COLOR"
+        }
+    },
+    "TAMING_INFO": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO",
+            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO_NOTE",
+            "BindIsVisible": "ItemData.BaseData.IsDino"
+        },
+        "ResetOnEvents": {
+            "Events": [
+                "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+            ]
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                "Props": {
+                    "Fill": 1
+                },
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                        "Props": {
+                            "Color": "ALERT_COLOR",
+                            "Padding": [ 2, 2, 2, 2 ]
+                        },
+                        "UIItems": [ {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                "Props": {
+                                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO_INACCURACY",
+                                    "Color": "ALERT_COLOR",
+                                    "FontSize": 10,
+                                    "Padding": [ 2, 2, 2, 2 ]
+                                }
+                            } ]
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                        "Props": {
+                            "BindIsVisible": "Data.SelectedPreviewItem.BaseData.IsSpecialTame",
+                            "Color": "ERROR_COLOR",
+                            "Padding": [ 2, 2, 2, 2 ]
+                        },
+                        "UIItems": [
+                            {
+                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                "Props": {
+                                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_SPECIAL_WARNING",
+                                    "FontSize": 10,
+                                    "Color": "ERROR_COLOR",
+                                    "Padding": [ 2, 2, 2, 2 ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$SERVER_TAMING_MULTI",
+                            "BindText": "BaseData.Server.TamingMulti",
+                            "Padding": [ 2, 2, 2, 2 ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Int_v1.DU_Edit_Int_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$DINO_FOOD_CALC_LVL",
+                            "Note": "$$Ark-Nucleus$:$DINO_FOOD_CALC_LVL_NOTE",
+                            "BindValue": "UICache.DinoTamingFoodLvl",
+                            "Min": 1,
+                            "MaxSlide": 150,
+                            "Padding": [ 2, 2, 2, 2 ]
+                        },
+                        "OnValueChanged": {
+                            "EventUID": "Ark-Nucleus/NOTIFY/FoodTameLvlChanged"
+                        }
+
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                        "Props": {
+                            "Fill": 1,
+                            "Padding": [ 2, 2, 2, 2 ],
+                            "BindValue": "Data.SelectedPreviewItem.FoodInfo"
+                        },
+                        "ItemWidget": {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C"
+                        },
+                        "DataSource": {
+                            "Name": "Ark-Nucleus/GET/Encyclopedia/FoodInfo",
+                            "ResponseKey": "Data.SelectedPreviewItem.FoodInfo",
+                            "RequestParams": [
+                                {
+                                    "RequestKey": "SelectedPreviewItem",
+                                    "ValueKey": "Data.SelectedPreviewItem"
+                                },
+                                {
+                                    "RequestKey": "UICache",
+                                    "ValueKey": "UICache"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+
+        ]
+    },
+    "DINO_DMG_MULTI": {
+        "Props": {
+            "Title": "$$Ark-Nucleus$:$DINO_DMG_MULTI",
+            "Note": "$$Ark-Nucleus$:$DINO_DMG_MULTI_NOTE",
+            "BindIsVisible": "Data.SelectedPreviewItem.BaseData.IsDino"
+        },
+        "ResetOnEvents": {
+            "Events": [
+                "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
+            ]
+        },
+        "UIItems": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                "Props": {
+                    "Fill": 1
+                },
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                        "Props": {
+                            "Fill": 1,
+                            "Padding": [ 2, 2, 2, 2 ],
+                            "BindValue": "Data.SelectedPreviewItem.BaseData.BoneDmg"
+                        },
+                        "ItemWidget": {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                            "Props": {
+                                "BindLabel": "ItemData.ShortName",
+                                "BindText": "ItemData.DmgMulti",
+                                "BindNote": "ItemData.Bone",
+                                "Padding": [ 2, 2, 2, 2 ],
+                                "Color": "ALERT_COLOR"
+                            }
+                        },
+                        "DataSource": {
+                            "Name": "Ark-Nucleus/GET/Encyclopedia/FoodInfo",
+                            "ResponseKey": "Data.SelectedPreviewItem.FoodInfo",
+                            "RequestParams": [
+                                {
+                                    "RequestKey": "SelectedPreviewItem",
+                                    "ValueKey": "Data.SelectedPreviewItem"
+                                },
+                                {
+                                    "RequestKey": "UICache",
+                                    "ValueKey": "UICache"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+    "Props": {
+        "Text": "$$Ark-Nucleus$:$NO_CUSTOM_INFO",
+        "FontSize": 15,
+        "Fill": 1,
+        "VerticalAlignment": 2,
+        "Justification": "Center",
+        "Color": [
+            1,
+            0,
+            0,
+            1
+        ]
+    }
+}

@@ -1,10 +1,13 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$LOGS_TITLE",
         "Note": "$$Ark-Nucleus$:$LOGS_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Textures/T_UI_Missions_ActiveMissionIcon.T_UI_Missions_ActiveMissionIcon",
         "Fill": 1
+    },
+    "UICache": {
+        "SaveFile": "Ark-Nucleus-Logs"
     },
     "Info": {
         "Props": {
@@ -28,12 +31,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOGS_INFO_LINE0",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -41,12 +39,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOGS_INFO_LINE1",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -54,12 +47,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOGS_INFO_LINE2",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -67,13 +55,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOGS_INFO_LINE3",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ],
-                    "Fill": 1
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             }
         ]
@@ -268,561 +250,422 @@
     ],
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
             "Props": {
-                "UUID": "ServerLogsGroup",
-                "Title": "$$Ark-Nucleus$:$SERVER_LOGS",
-                "Note": "$$Ark-Nucleus$:$SERVER_LOGS_NOTE",
-                "Padding": [
-                    2,
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "UICache": {
-                "SaveFile": "Ark-Nucleus-MainPage"
-            },
-            "DataSource": {
-                "Name": "Ark-Nucleus/GET/Logs/Server",
-                "ResponseKey": "Data.ServerLogs"
-            },
-            "Permission": {
-                "Tag": "Nucleus_ViewServerLogs"
-            },
-            "ResetOnEvents": {
-                "Events": [
-                    "Ark-Nucleus/NOTIFY/Logs"
-                ]
+                "Fill": 1
             },
             "UIItems": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                     "Props": {
                         "Fill": 1,
-                        "BindValue": "Data.ServerLogs.Logs",
-                        "FilterKeys": [
-                            "Type",
-                            "Category",
-                            "ModUID"
-                        ],
-                        "TextValues": {
-                            "Type": [
-                                "Info",
-                                "Success",
-                                "Warning",
-                                "Error",
-                                "CriticalError",
-                                "Other",
-                                "MAX"
-                            ]
-                        }
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
                     },
-                    "ItemWidget": {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Log_v1.DU_Item_Log_v1_C",
-                        "Modal": {
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
-                                "BindTitle": "Data.Title"
+                                "UUID": "ServerLogsGroup",
+                                "BindViewMode": "UICache.ServerLogs.ViewMode",
+                                "Title": "$$Ark-Nucleus$:$SERVER_LOGS",
+                                "Note": "$$Ark-Nucleus$:$SERVER_LOGS_NOTE",
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/Logs/Server",
+                                "ResponseKey": "Data.ServerLogs"
+                            },
+                            "Permission": {
+                                "Tag": "Nucleus_ViewServerLogs"
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/Logs"
+                                ]
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CATEGORY",
-                                                        "BindText": "Data.Category"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_TYPE",
-                                                        "BindText": "Data.Type",
-                                                        "ValueConverter": "LogTypeToString"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ],
-                                                "Fill": 1
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_DATE_TIME",
-                                                        "BindText": "Data.DateTime",
-                                                        "ValueConverter": "SecondsToDateTimeString"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ],
-                                                "Fill": 1
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$SESSION_NAME",
-                                                        "BindText": "Data.SessionName"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_TRIGGER_BY_USER",
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
-                                                        "BindText": "Data.ByName"
-                                                    }
-                                                },
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
-                                                        "BindText": "Data.BySteamID"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_RELATED_TO_USER",
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
-                                                        "BindText": "Data.ForName"
-                                                    }
-                                                },
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
-                                                        "BindText": "Data.ForSteamID"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                                     "Props": {
-                                        "Fill": 1
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_MESSAGE",
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                                    "Props": {
-                                                        "BindText": "Data.Message",
-                                                        "FontSize": 15
-                                                    }
-                                                }
+                                        "Fill": 1,
+                                        "BindValue": "Data.ServerLogs.Logs",
+                                        "FilterKeys": [
+                                            "Type",
+                                            "Category",
+                                            "ModUID"
+                                        ],
+                                        "TextValues": {
+                                            "Type": [
+                                                "Info",
+                                                "Success",
+                                                "Warning",
+                                                "Error",
+                                                "CriticalError",
+                                                "Other",
+                                                "MAX"
                                             ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$LOG_EXTRA_DATA",
-                                                "IsReadOnly": true,
-                                                "BindValue": "Data.ExtraData",
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            }
                                         }
-                                    ]
-                                }
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
-            "Props": {
-                "UUID": "ClientLogsGroup",
-                "Title": "$$Ark-Nucleus$:$CLIENT_LOGS",
-                "Note": "$$Ark-Nucleus$:$CLIENT_LOGS_NOTE",
-                "Padding": [
-                    2,
-                    2,
-                    2,
-                    2
-                ]
-            },
-            "UICache": {
-                "SaveFile": "Ark-Nucleus-MainPage"
-            },
-            "DataSource": {
-                "Name": "Ark-Nucleus/GET/Logs/Client",
-                "ResponseKey": "Data.ClientLogs"
-            },
-            "ResetOnEvents": {
-                "Events": [
-                    "Ark-Nucleus/NOTIFY/Logs"
-                ]
-            },
-            "UIItems": [
-                {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
-                    "Props": {
-                        "Fill": 1,
-                        "BindValue": "Data.ClientLogs.Logs",
-                        "FilterKeys": [
-                            "Type",
-                            "Category",
-                            "ModUID"
-                        ],
-                        "TextValues": {
-                            "Type": [
-                                "Info",
-                                "Success",
-                                "Warning",
-                                "Error",
-                                "CriticalError",
-                                "Other",
-                                "MAX"
-                            ]
-                        }
-                    },
-                    "ItemWidget": {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Log_v1.DU_Item_Log_v1_C",
-                        "Modal": {
-                            "Props": {
-                                "BindTitle": "Data.Title"
-                            },
-                            "Buttons": [
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                    "Props": {
-                                        "Label": "$$Ark-Nucleus$:$OK",
-                                        "Fill": 1
                                     },
                                     "OnClickEvent": {
-                                        "EventUID": "CloseModal"
+                                        "PostData": "Ark-Nucleus/NOTIFY/Logs/Selected"
+                                    },
+                                    "ItemWidget": {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Log_v1.DU_Item_Log_v1_C",
+                                        "UpdateOnEvents": {
+                                            "Events": [
+                                                "Ark-Nucleus/NOTIFY/Logs/Selected"
+                                            ]
+                                        },
+                                        "Props": {
+                                            "ItemKey": "UUID",
+                                            "SetValueKey": "Data.SelectedLog"
+                                        },
+                                        "OnClickEvent": {
+                                            "EventUID": "Ark-Nucleus/UI/Selected"
+                                        }
                                     }
                                 }
-                            ],
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                            "Props": {
+                                "UUID": "ClientLogsGroup",
+                                "BindViewMode": "UICache.ClientLogs.ViewMode",
+                                "Title": "$$Ark-Nucleus$:$CLIENT_LOGS",
+                                "Note": "$$Ark-Nucleus$:$CLIENT_LOGS_NOTE",
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/Logs/Client",
+                                "ResponseKey": "Data.ClientLogs"
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/Logs"
+                                ]
+                            },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                                     "Props": {
+                                        "Fill": 1,
+                                        "BindValue": "Data.ClientLogs.Logs",
+                                        "FilterKeys": [
+                                            "Type",
+                                            "Category",
+                                            "ModUID"
+                                        ],
+                                        "TextValues": {
+                                            "Type": [
+                                                "Info",
+                                                "Success",
+                                                "Warning",
+                                                "Error",
+                                                "CriticalError",
+                                                "Other",
+                                                "MAX"
+                                            ]
+                                        }
+                                    },
+                                    "OnClickEvent": {
+                                        "PostData": "Ark-Nucleus/NOTIFY/Logs/Selected"
+                                    },
+                                    "ItemWidget": {
+                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Log_v1.DU_Item_Log_v1_C",
+                                        "UpdateOnEvents": {
+                                            "Events": [
+                                                "Ark-Nucleus/NOTIFY/Logs/Selected"
+                                            ]
+                                        },
+                                        "Props": {
+                                            "ItemKey": "UUID",
+                                            "SetValueKey": "Data.SelectedLog"
+                                        },
+                                        "OnClickEvent": {
+                                            "EventUID": "Ark-Nucleus/UI/Selected"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                    "Props": {
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                    "Props": {
+                        "Fill": 3,
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
+                    },
+                    "UpdateOnEvents": {
+                        "Events": [
+                            "Ark-Nucleus/NOTIFY/Logs/Selected"
+                        ]
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Props": {
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "BindText": "Data.SelectedLog.Title",
+                                        "FontSize": 14,
+                                        "BindColor": "Data.SelectedLog.Type",
+                                        "ColorValueConverter": "LogTypeToColor",
                                         "Padding": [
-                                            0,
-                                            0,
-                                            0,
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Props": {
+                                        "Fill": 1,
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
                                             2
                                         ]
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                             "Props": {
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CATEGORY",
-                                                        "BindText": "Data.Category"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_TYPE",
-                                                        "BindText": "Data.Type",
-                                                        "ValueConverter": "LogTypeToString"
-                                                    }
-                                                }
-                                            ]
+                                                "Label": "$$Ark-Nucleus$:$LOG_CATEGORY",
+                                                "BindText": "Data.SelectedLog.Category"
+                                            }
                                         }
                                     ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
+                                        "Fill": 1,
                                         "Padding": [
-                                            0,
-                                            0,
-                                            0,
+                                            2,
+                                            2,
+                                            2,
                                             2
                                         ]
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                             "Props": {
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ],
-                                                "Fill": 1
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_DATE_TIME",
-                                                        "BindText": "Data.DateTime",
-                                                        "ValueConverter": "SecondsToDateTimeString"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                            "Props": {
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ],
-                                                "Fill": 1
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$SESSION_NAME",
-                                                        "BindText": "Data.SessionName"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                    "Props": {
-                                        "Padding": [
-                                            0,
-                                            0,
-                                            0,
-                                            2
-                                        ]
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_TRIGGER_BY_USER",
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
-                                                        "BindText": "Data.ByName"
-                                                    }
-                                                },
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
-                                                        "BindText": "Data.BySteamID"
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_RELATED_TO_USER",
-                                                "Fill": 1,
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
-                                                        "BindText": "Data.ForName"
-                                                    }
-                                                },
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                    "Props": {
-                                                        "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
-                                                        "BindText": "Data.ForSteamID"
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
-                                    "Props": {
-                                        "Fill": 1
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                            "Props": {
-                                                "Title": "$$Ark-Nucleus$:$LOG_MESSAGE",
-                                                "Padding": [
-                                                    2,
-                                                    2,
-                                                    2,
-                                                    2
-                                                ]
-                                            },
-                                            "UIItems": [
-                                                {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                                    "Props": {
-                                                        "BindText": "Data.Message",
-                                                        "FontSize": 15
-                                                    }
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$LOG_EXTRA_DATA",
-                                                "IsReadOnly": true,
-                                                "BindValue": "Data.ExtraData"
+                                                "Label": "$$Ark-Nucleus$:$LOG_TYPE",
+                                                "BindText": "Data.SelectedLog.Type",
+                                                "ValueConverter": "LogTypeToString"
                                             }
                                         }
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Props": {
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ],
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$LOG_DATE_TIME",
+                                                "BindText": "Data.SelectedLog.DateTime",
+                                                "ValueConverter": "SecondsToDateTimeString"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Props": {
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ],
+                                        "Fill": 1
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$SESSION_NAME",
+                                                "BindText": "Data.SelectedLog.SessionName"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                    "Props": {
+                                        "Title": "$$Ark-Nucleus$:$LOG_TRIGGER_BY_USER",
+                                        "Fill": 1,
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
+                                                "BindText": "Data.SelectedLog.ByName"
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
+                                                "BindText": "Data.SelectedLog.ByPlayerID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                    "Props": {
+                                        "Title": "$$Ark-Nucleus$:$LOG_RELATED_TO_USER",
+                                        "Fill": 1,
+                                        "Padding": [
+                                            2,
+                                            2,
+                                            2,
+                                            2
+                                        ]
+                                    },
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$LOG_CHARACTER_NAME",
+                                                "BindText": "Data.SelectedLog.ForName"
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                            "Props": {
+                                                "Label": "$$Ark-Nucleus$:$ACCOUNT_ID",
+                                                "BindText": "Data.SelectedLog.ForPlayerID"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Props": {
+                                "Title": "$$Ark-Nucleus$:$LOG_MESSAGE",
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "BindText": "Data.SelectedLog.Message",
+                                        "FontSize": 10
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Props": {
+                                "Fill": 1,
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$LOG_EXTRA_DATA",
+                                        "IsReadOnly": true,
+                                        "Fill":1,
+                                        "BindValue": "Data.SelectedLog.ExtraData"
+                                    }
+                                }
+                            ]
                         }
-                    }
+                    ]
                 }
             ]
         }

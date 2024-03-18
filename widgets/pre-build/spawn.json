@@ -5,17 +5,20 @@
             "BindValue": "ItemData.Quantity",
             "Min": 1,
             "MaxSlide": 50
+        },
+        "OnValueChanged": {
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "LEVEL": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DIN_BASE_LVL",
+            "Label": "$$Ark-Nucleus$:$DINO_BASE_LVL",
             "BindValue": "ItemData.BaseLvl",
             "Min": 1,
             "MaxSlide": 500
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "SCALE": {
@@ -28,7 +31,7 @@
             "MaxSlide": 10
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "STATE": {
@@ -38,23 +41,23 @@
             "Items": [
                 {
                     "EnumID": "0",
-                    "Name": "Passive"
+                    "Name": "$$Ark-Nucleus$:$DINO_STATE_PASSIVE"
                 },
                 {
                     "EnumID": "8",
-                    "Name": "Passive Flee"
+                    "Name": "$$Ark-Nucleus$:$DINO_STATE_PASSIVE_FLEE"
                 },
                 {
                     "EnumID": "1",
-                    "Name": "Neutral"
+                    "Name": "$$Ark-Nucleus$:$DINO_STATE_NEUTRAL"
                 },
                 {
                     "EnumID": "2",
-                    "Name": "Aggressive"
+                    "Name": "$$Ark-Nucleus$:$DINO_STATE_AGGRESSIVE"
                 },
                 {
                     "EnumID": "3",
-                    "Name": "Attack Target"
+                    "Name": "$$Ark-Nucleus$:$DINO_STATE_ATTACK_TARGET"
                 }
             ],
             "BindValue": "ItemData.State"
@@ -67,7 +70,7 @@
             }
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "IS_FEMALE": {
@@ -77,7 +80,7 @@
             "HideIfBroken": true
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "IS_NEUTERED": {
@@ -88,7 +91,7 @@
             "BindIsVisible": "ItemData.CanHaveBaby"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "IS_BABY": {
@@ -98,7 +101,7 @@
             "HideIfBroken": true
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "MATURATION": {
@@ -110,7 +113,7 @@
             "Max": 100
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "IS_TAMED": {
@@ -120,14 +123,14 @@
             "HideIfBroken": true
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "OWNER": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_OWNER",
             "ItemKey": "LinkedPlayerId",
-            "BindItems": "Data.AllPlayersList.Items",
+            "BindItems": "BaseData.Players",
             "BindValue": "ItemData.OwnerId",
             "BindIsVisible": "ItemData.IsTamed"
         },
@@ -135,12 +138,12 @@
             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.PlayerName",
-                "BindNote": "ItemData.UUID",
+                "BindNote": "ItemData.LinkedPlayerId",
                 "BindValue": "ItemData.LinkedPlayerId"
             }
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "TAMING_EFFECT": {
@@ -153,7 +156,7 @@
             "Max": 100
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "IMPRINTING": {
@@ -165,7 +168,7 @@
             "Max": 100
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "CUSTOM_NAME": {
@@ -175,111 +178,7 @@
             "BindIsVisible": "ItemData.IsTamed"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
-        }
-    },
-    "TAME_RANDOM_STATS": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$UNALLOCATED_TAMED_POINTS",
-            "BindText": "ItemData.TamePoints"
-        }
-    },
-    "TAME_RANDOM_STATS_BTN": {
-        "Props": {
-            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize"
-        },
-        "OnClickEvent": {
-            "EventUID": "Nuclues/DinoSpawner/RandomizeStats"
-        }
-    },
-    "TAME_RESET_STATS": {
-        "Props": {
-            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRefresh.IconRefresh"
-        },
-        "OnClickEvent": {
-            "EventUID": "Nuclues/DinoSpawner/ResetTameStats"
-        }
-    },
-    "TAME_HEALTH": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$HEALTH_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_Health_Locked",
-            "BindValue": "ItemData.Tame_Health",
-            "BindMax": "ItemData.Tame_Health_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
-        }
-    },
-    "TAME_STAMINA": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$STAMINA_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_Stamina_Locked",
-            "BindValue": "ItemData.Tame_Stamina",
-            "BindMax": "ItemData.Tame_Stamina_Max"
-        },
-        "OnValueChanged": {}
-    },
-    "TAME_OXYGEN": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$OXYGEN_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_Oxygen_Locked",
-            "BindValue": "ItemData.Tame_Oxygen",
-            "BindMax": "ItemData.Tame_Oxygen_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
-        }
-    },
-    "TAME_FOOD": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$FOOD_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_Food_Locked",
-            "BindValue": "ItemData.Tame_Food",
-            "BindMax": "ItemData.Tame_Food_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
-        }
-    },
-    "TAME_WEIGHT": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$WEIGHT_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_Weight_Locked",
-            "BindValue": "ItemData.Tame_Weight",
-            "BindMax": "ItemData.Tame_Weight_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
-        }
-    },
-    "TAME_SPEED": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$SPEED_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_SpeedMultiplier_Locked",
-            "BindValue": "ItemData.Tame_SpeedMultiplier",
-            "BindMax": "ItemData.Tame_SpeedMultiplier_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
-        }
-    },
-    "TAME_DAMAGE": {
-        "Props": {
-            "Label": "$$Ark-Nucleus$:$MELEE_DMG_STAT",
-            "Min": 0,
-            "BindLocked": "ItemData.Tame_MeleeDamageMultiplier_Locked",
-            "BindValue": "ItemData.Tame_MeleeDamageMultiplier",
-            "BindMax": "ItemData.Tame_MeleeDamageMultiplier_Max"
-        },
-        "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/TameStatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "RANDOM_STATS": {
@@ -288,20 +187,20 @@
             "BindText": "ItemData.StatPoints"
         }
     },
-    "RANDOM_STATS_BTN": {
+    "RESET_STATS": {
         "Props": {
             "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRefresh.IconRefresh"
         },
         "OnClickEvent": {
-            "EventUID": "Nuclues/DinoSpawner/ResetStats"
+            "EventUID": "Nucleus/DinoSpawner/ResetStats"
         }
     },
-    "RESET_STATS": {
+    "RANDOM_STATS_BTN": {
         "Props": {
             "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize"
         },
         "OnClickEvent": {
-            "EventUID": "Nuclues/DinoSpawner/RandomizeStats"
+            "EventUID": "Nucleus/DinoSpawner/RandomizeStats"
         }
     },
     "WILD_HEALTH": {
@@ -313,7 +212,7 @@
             "BindMax": "ItemData.Health_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "WILD_STAMINA": {
@@ -325,7 +224,7 @@
             "BindMax": "ItemData.Stamina_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "WILD_OXYGEN": {
@@ -337,7 +236,7 @@
             "BindMax": "ItemData.Oxygen_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "WILD_FOOD": {
@@ -349,7 +248,7 @@
             "BindMax": "ItemData.Food_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "WILD_WEIGHT": {
@@ -361,7 +260,7 @@
             "BindMax": "ItemData.Weight_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "WILD_SPEED": {
@@ -372,7 +271,7 @@
             "BindValue": "ItemData.SpeedMultiplier",
             "BindMax": "ItemData.SpeedMultiplier_Max",
             "OnValueChanged": {
-                "EventUID": "Nuclues/DinoSpawner/StatChange"
+                "EventUID": "Nucleus/DinoSpawner/StatChange"
             }
         }
     },
@@ -385,7 +284,7 @@
             "BindMax": "ItemData.MeleeDamageMultiplier_Max"
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
     "ITEM_QUANTITY": {
@@ -394,6 +293,9 @@
             "BindValue": "ItemData.Quantity",
             "Min": 1,
             "MaxSlide": 1000
+        },
+        "OnValueChanged": {
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_QUALITY_INDEX": {
@@ -437,7 +339,7 @@
             }
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_QUALITY": {
@@ -449,7 +351,7 @@
             "HideIfBroken": true
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_IS_BP": {
@@ -459,32 +361,35 @@
             "HideIfBroken": true
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_CUSTOM_NAME": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$ITEM_CUSTOM_NAME",
             "BindValue": "ItemData.CustomName"
+        },
+        "OnValueChanged": {
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_OWNER": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$ITEM_OWNER",
             "ItemKey": "LinkedPlayerId",
-            "BindItems": "Data.AllPlayersList.Items",
+            "BindItems": "BaseData.Players",
             "BindValue": "ItemData.OwnerId"
         },
         "ItemWidget": {
             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.PlayerName",
-                "BindNote": "ItemData.UUID",
+                "BindNote": "ItemData.LinkedPlayerId",
                 "BindValue": "ItemData.LinkedPlayerId"
             }
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_GENERIC_QUALITY": {
@@ -495,7 +400,7 @@
             "MaxSlide": 1000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_ARMOR": {
@@ -507,7 +412,7 @@
             "MaxSlide": 2000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_MAX_DURABILITY": {
@@ -519,7 +424,7 @@
             "MaxSlide": 2000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_DMG": {
@@ -531,7 +436,7 @@
             "MaxSlide": 2000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_CLIP_AMMO": {
@@ -543,31 +448,31 @@
             "MaxSlide": 2000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_HYPOTHERMAL": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_HYPOTHERMAL",
-            "Min": 0,
+            "Label": "$$Ark-Nucleus$:$ITEM_COLD_RES",
             "BindValue": "ItemData.HypothermalInsulation",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 200,
+            "MinSlide": -200
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_HYPERTHERMIA": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_HYPERTHERMIA",
-            "MinSlide": -2000,
+            "Label": "$$Ark-Nucleus$:$ITEM_HEAT_RES",
             "BindValue": "ItemData.HyperthermalInsulation",
             "HideIfBroken": true,
-            "Max": 0
+            "MaxSlide": 200,
+            "MinSlide": -200
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "ITEM_WEIGHT": {
@@ -579,11 +484,12 @@
             "MaxSlide": 2000
         },
         "OnValueChanged": {
-            "EventUID": "Nuclues/DinoSpawner/StatChange"
+            "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
     "SPAWN_ITEM_BTN": {
         "Props": {
+            "BindIsVisible": "!ItemData.IsDino",
             "BindIsEnabled": "ItemData.IsValid",
             "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER",
             "Permission": "Nucleus_SpawnItems"
@@ -595,6 +501,7 @@
     "SPAWN_BTN": {
         "Props": {
             "BindIsEnabled": "ItemData.IsValid",
+            "BindIsVisible": "ItemData.IsDino",
             "Label": "$$Ark-Nucleus$:$SPAWN_IN_FRONT",
             "Permission": "Nucleus_SpawnDinos"
         },
@@ -611,16 +518,6 @@
         },
         "OnClickEvent": {
             "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnCryo"
-        }
-    },
-    "DRONE_BTN": {
-        "Props": {
-            "IsEnabled": false,
-            "Label": "_USE_SPAWN_DRONE_",
-            "Permission": "Nucleus_SpawnDinos"
-        },
-        "OnClickEvent": {
-            "EventUID": "Nuclues/DinoSpawner/SaveToDrone"
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
         "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
@@ -10,75 +10,58 @@
         "Props": {
             "Title": "$$Ark-Nucleus$:$LOC_INFO_TITLE"
         },
+        "Buttons": [
+            {
+                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Props": {
+                    "Label": "$$Ark-Nucleus$:$OK",
+                    "Fill": 1
+                },
+                "OnClickEvent": {
+                    "EventUID": "CloseModal"
+                }
+            }
+        ],
         "UIItems": [
             {
                 "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
-                    "FontSize": 15,
-                    "Padding": [
-                        0,
-                        0,
-                        0,
-                        8
-                    ]
+                    "FontSize": 14,
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
                 "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
-                    "FontSize": 15,
-                    "Padding": [
-                        0,
-                        0,
-                        0,
-                        8
-                    ]
+                    "FontSize": 14,
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
                 "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
-                    "FontSize": 15,
-                    "Padding": [
-                        0,
-                        0,
-                        0,
-                        8
-                    ]
+                    "FontSize": 14,
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
                 "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
-                    "FontSize": 15,
-                    "Padding": [
-                        0,
-                        0,
-                        0,
-                        8
-                    ]
+                    "FontSize": 14,
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
                 "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
-                    "FontSize": 16,
-                    "Color": "ALERT_COLOR",
-                    "Fill": 1
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                "Props": {
-                    "Label": "$$Ark-Nucleus$:$OK"
-                },
-                "OnClickEvent": {
-                    "EventUID": "CloseModal"
+                    "FontSize": 14,
+                    "Padding": [ 4, 4, 4, 4 ],
+                    "Color": "ALERT_COLOR"
                 }
             }
         ]

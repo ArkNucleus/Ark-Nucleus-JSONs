@@ -1,0 +1,57 @@
+{
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Props": {
+                "Title": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED",
+                "Fill": 1,
+                "Image": "https://cdn.survivetheark.com/uploads/monthly_2024_02/ASA_LoveAscended.jpg.c1159e334c9e47e04615a92695594874.jpg"
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Props": {
+                        "Fill": 1
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Props": {
+                                "Fill": 1,
+                                "VerticalAlignment": 2,
+                                "HorizontalAlignment": 2,
+                                "Color":"ALERT_COLOR"
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Props": {
+                                                "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED",
+                                                "Color":"ALERT_COLOR",
+                                                "FontSize": 32,
+                                                "HorizontalAlignment": 2,
+                                                "Padding": [ 10, 10, 10, 0 ]
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Props": {
+                                                "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED_NOTE",
+                                                "FontSize": 16,
+                                                "HorizontalAlignment": 2,
+                                                "Padding": [ 10, 10, 10, 10 ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -2,6 +2,9 @@
     "Props": {
         "Title": "$$Ark-Nucleus$:$ARK_NUCLEUS_DASHBOARD"
     },
+    "UICache": {
+        "SaveFile": "Ark-Nucleus-MainPage"
+    },
     "ResetOnEvents": {
         "Events": [
             "Ark-Nucleus/NOTIFY/Localization",
@@ -10,7 +13,7 @@
     },
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Nucleus_v1.DU_Panel_Nucleus_v1",
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Nucleus_v1.DU_Panel_Nucleus_v1_C",
             "Props": {
                 "Fill": 1
             },
@@ -23,21 +26,14 @@
                     "UIItems": [
                         {
                             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
-                            "UICache": {
-                                "SaveFile": "Ark-Nucleus-MainPage"
-                            },
                             "Props": {
-                                "UUID": "MainMenu",
+                                "BindViewMode": "UICache.MainMenu.ViewMode",
                                 "Title": "$$Ark-Nucleus$:$MAIN_MENU",
-                                "CompactWidth": 32,
-                                "ExpandedFill": 1
+                                "CompactWidth": 32
                             },
                             "UIItems": [
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
-                                    },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_INFO",
                                         "UUID": "ServerInfo",
@@ -61,9 +57,6 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
-                                    },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$INSTALLED_MODS",
                                         "UUID": "InstalledMods",
@@ -87,9 +80,6 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
-                                    },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA",
                                         "UUID": "Encyclopedia",
@@ -113,9 +103,6 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
-                                    },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$LOGS",
                                         "UUID": "AllLogs",
@@ -139,8 +126,8 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    "Permission": {
+                                        "Tag": "Nucleus_ViewSurvivorsHub"
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_COMMUNITY",
@@ -165,8 +152,8 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "UICache": {
-                                        "SaveFile": "Ark-Nucleus-MainPage"
+                                    "Permission": {
+                                        "Tag": "Nucleus_EditServerLocalization"
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION",
@@ -210,6 +197,16 @@
                                             5
                                         ]
                                     }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_LanguageDropDown_v1.DU_Edit_LanguageDropDown_v1_C",
+                                    "Props": {
+                                        "Padding": [2,2,2,2]
+                                    },
+                                    "OnValueChanged": {
+                                        "EventUID": "Ark-Nucleus/NOTIFY/Localization"
+                                    }
+
                                 }
                             ]
                         },

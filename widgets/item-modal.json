@@ -1,76 +1,12 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
-        "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_TITLE",
-        "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_TITLE_NOTE",
-        "Icon": "/Game/PrimalEarth/UI/Textures/HubSurviviorIcon.HubSurviviorIcon",
-        "Fill": 1
+        "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
     },
     "UICache": {
-        "SaveFile": "Ark-Nucleus-Encyclopedia",
+        "SaveFile": "Ark-Nucleus-ItemModal",
         "Props": {
             "DinoTamingFoodLvl": 150
         }
-    },
-    "Info": {
-        "Props": {
-            "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_TITLE"
-        },
-        "Buttons": [
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                "Props": {
-                    "Fill": 1,
-                    "Label": "$$Ark-Nucleus$:$OK"
-                },
-                "OnClickEvent": {
-                    "EventUID": "CloseModal"
-                }
-            }
-        ],
-        "UIItems": [
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE0",
-                    "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE1",
-                    "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE2",
-                    "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE3",
-                    "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
-                }
-            },
-            {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                "Props": {
-                    "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE4",
-                    "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
-                }
-            }
-
-        ]
     },
     "UIItems": [
         {
@@ -78,17 +14,13 @@
             "Props": {
                 "Fill": 1
             },
-            "DataSource": {
-                "Name": "Ark-Nucleus/GET/Encyclopedia",
-                "ResponseKey": "Data.Encyclopedia"
-            },
             "OptionalPostRequests": [
                 {
                     "Name": "Ark-Nucleus/POST/Encyclopedia/SpawnByPlayer",
                     "RequestParams": [
                         {
                             "RequestKey": "SelectedItem",
-                            "ValueKey": "Data.SelectedPreviewItem"
+                            "ValueKey": "ItemData"
                         }
                     ]
                 },
@@ -97,7 +29,7 @@
                     "RequestParams": [
                         {
                             "RequestKey": "SelectedItem",
-                            "ValueKey": "Data.SelectedPreviewItem"
+                            "ValueKey": "ItemData"
                         }
                     ]
                 },
@@ -106,68 +38,12 @@
                     "RequestParams": [
                         {
                             "RequestKey": "SelectedItem",
-                            "ValueKey": "Data.SelectedPreviewItem"
+                            "ValueKey": "ItemData"
                         }
                     ]
                 }
             ],
             "UIItems": [
-                {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
-                    "Props": {
-                        "Fill": 1,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
-                        "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
-                        "FilterKeys": [
-                            "BaseData.IsDino",
-                            "BaseData.FolderPaths",
-                            "BaseData.CanBeBlueprint",
-                            "BaseData.CanBeTamed",
-                            "BaseData.CanHaveBaby",
-                            "BaseData.IsFlayer",
-                            "BaseData.Group",
-                            "BaseData.Source"
-                        ],
-                        "TextValues": {
-                            "BaseData.IsDino": [
-                                "$$Ark-Nucleus$:$ITEM",
-                                "$$Ark-Nucleus$:$DINO"
-                            ]
-                        },
-                        "BindValue": "Data.Encyclopedia.Items"
-                    },
-                    "ItemWidget": {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_PrimalItemDino_v1.DU_Item_PrimalItemDino_v1_C",
-                        "Props": {
-                            "ItemKey": "Path",
-                            "SetValueKey": "Data.SelectedPreviewItem"
-                        },
-                        "OnClickEvent": {
-                            "PostUrl": "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
-                        },
-                        "UpdateOnEvents": {
-                            "Events": [
-                                "Ark-Nucleus/NOTIFY/Encyclopedia/Selected"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
-                    "Props": {
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ]
-                    }
-                },
                 {
                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                     "Props": {
@@ -194,7 +70,7 @@
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/PreBuiltComps/DU_PreBuilt_ItemInfo_v1.DU_PreBuilt_ItemInfo_v1_C",
                                     "Props": {
                                         "Fill": 1,
-                                        "BindValue": "Data.SelectedPreviewItem"
+                                        "BindValue": "ItemData"
                                     },
                                     "ResetOnEvents": {
                                         "Events": [
@@ -220,7 +96,7 @@
                                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/PreBuiltComps/DU_PreBuilt_Spawn_v1.DU_PreBuilt_Spawn_v1_C",
                                     "Props": {
                                         "Fill": 1,
-                                        "BindValue": "Data.SelectedPreviewItem"
+                                        "BindValue": "ItemData"
                                     },
                                     "UpdateOnEvents": {
                                         "Events": [
@@ -248,14 +124,14 @@
                     "PreviewWidth": 200,
                     "Props": {
                         "PreviewWidth": 200,
-                        "Fill": 2,
+                        "Fill": 1,
                         "Padding": [
                             2,
                             2,
                             2,
                             2
                         ],
-                        "BindValue": "Data.SelectedPreviewItem"
+                        "BindValue": "ItemData"
                     },
                     "ColorRegionsUIConfig": {
                         "Props": {

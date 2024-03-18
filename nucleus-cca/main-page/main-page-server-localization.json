@@ -1,10 +1,13 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1",
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
         "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
         "Fill": 1
+    },
+    "UICache": {
+        "SaveFile": "Ark-Nucleus-ServerLoc"
     },
     "DataSource": {
         "Name": "Ark-Nucleus/GET/Localization/ServerLoc",
@@ -54,12 +57,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -67,12 +65,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -80,12 +73,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -93,12 +81,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ]
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             },
             {
@@ -106,13 +89,7 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
                     "FontSize": 14,
-                    "Padding": [
-                        4,
-                        4,
-                        4,
-                        4
-                    ],
-                    "Fill": 1
+                    "Padding": [ 4, 4, 4, 4 ]
                 }
             }
         ]
@@ -343,9 +320,6 @@
             "UIItems": [
                 {
                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
-                    "UICache": {
-                        "SaveFile": "Nucleus-ServerLoc"
-                    },
                     "Props": {
                         "Fill": 1,
                         "BindValue": "Data.Localization.Items",
@@ -361,9 +335,6 @@
                     },
                     "ItemWidget": {
                         "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/Nucleus_Item_ServerLocItem_v1.Nucleus_Item_ServerLocItem_v1_C",
-                        "UICache": {
-                            "SaveFile": "Nucleus-ServerLoc"
-                        },
                         "UpdateOnEvents": {
                             "Events": [
                                 "Ark-Nucleus/NOTIFY/Localization/Selected"
@@ -475,7 +446,13 @@
                 {
                     "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                     "Props": {
-                        "Fill": 3
+                        "Fill": 3,
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ]
                     },
                     "OptionalPostRequests": [
                         {
@@ -529,7 +506,7 @@
                         {
                             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                             "Props": {
-                                "Label": "$$VERIFY_AND_SAVE",
+                                "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
                                 "Color": "ACCENT_COLOR_DARK",
                                 "ContentColor": "ACCENT_COLOR_LIGHT",

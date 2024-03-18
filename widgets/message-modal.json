@@ -20,7 +20,8 @@
         {
             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Label": "$$Ark-Nucleus$:$OK"
+                "Label": "$$Ark-Nucleus$:$OK",
+                "Fill": 1,
             },
             "OnClickEvent": {
                 "EventUID": "CloseModal"

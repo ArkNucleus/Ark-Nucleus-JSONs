@@ -1,0 +1,127 @@
+{
+    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+    "Props": {
+        "Fill": 1,
+        "Padding": [ 4, 4, 4, 4 ]
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS",
+                "FontSize": 32,
+                "Justification": "Center",
+                "Padding": [ 0, 0, 0, 20 ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_LINE0",
+                "FontSize": 15,
+                "Padding": [ 4, 4, 4, 4 ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+            "Props": {
+                "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_LINE1",
+                "FontSize": 15,
+                "Padding": [ 4, 4, 4, 4 ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Props": {
+                "Padding": [ 4, 4, 4, 4 ]
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                    "Props": {
+                        "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_LINE2",
+                        "FontSize": 15,
+                        "Padding": [ 4, 4, 4, 4 ]
+                    }
+                },
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                    "Props": {
+                        "Label": "$$Ark-Nucleus$:$JOIN_OUR_DISCORD",
+                        "Padding": [ 4, 4, 4, 4 ],
+                        "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo"
+                    },
+                    "OnClickEvent": {
+                        "Url": "https://discord.gg/YD6jzCd"
+                    }
+                }
+            ]
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Props": {
+                "Padding": [ 4, 4, 4, 4 ]
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Props": {
+                        "Padding": [ 4, 4, 4, 4 ]
+                    },
+                    "UIItems": [
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_3DView_v1.DU_View_3DView_v1_C",
+                            "Props": {
+                                "StaticPath": "/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP",
+                                "PreviewWidth": 256,
+                                "PreviewHeight": 256,
+                                "Padding": [ 4, 4, 4, 4 ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                            "Props": {
+                                "Fill": 1
+                            },
+                            "UIItems": [
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_3D_LINE0",
+                                        "FontSize": 15,
+                                        "Padding": [ 4, 4, 4, 4 ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_3D_LINE1",
+                                        "FontSize": 15,
+                                        "Padding": [ 4, 4, 4, 4 ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Props": {
+                "Padding": [ 4, 4, 4, 4 ],
+                "Color": "SUCCESS_COLOR"
+            },
+            "UIItems": [
+                {
+                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                    "Props": {
+                        "Text": "$$Ark-Nucleus$:$WELCOM_TO_NUCLEUS_INTEGRATION_LINE0",
+                        "FontSize": 15,
+                        "Padding": [ 4, 4, 4, 4 ]
+                    }
+                }
+            ]
+        }
+    ]
+}

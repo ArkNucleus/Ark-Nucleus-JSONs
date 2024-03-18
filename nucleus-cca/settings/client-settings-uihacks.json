@@ -37,12 +37,6 @@
             "DEFAULT_VALUE": true,
             "LABEL": "$$Ark-Nucleus$:$SHOW_DINO_ALLOCATED_STAT_POINTS",
             "DESCRIPTION": "$$Ark-Nucleus$:$SHOW_DINO_ALLOCATED_STAT_POINTS_DESC"
-        },
-        "SHOW_DINO_STAT_BOOKMARK": {
-            "TYPE": "BOOLEAN",
-            "DEFAULT_VALUE": true,
-            "LABEL": "$$Ark-Nucleus$:$SHOW_DINO_BOOKMARK_STAT_POINTS",
-            "DESCRIPTION": "$$Ark-Nucleus$:$SHOW_DINO_BOOKMARK_STAT_POINTS_DESC"
         }
     }
 }
