@@ -489,7 +489,7 @@
     },
     "SPAWN_ITEM_BTN": {
         "Props": {
-            "BindIsVisible": "!ItemData.IsDino",
+            "BindIsVisible": "!ItemData.BaseData.IsDino",
             "BindIsEnabled": "ItemData.IsValid",
             "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER",
             "Permission": "Nucleus_SpawnItems"
@@ -501,7 +501,7 @@
     "SPAWN_BTN": {
         "Props": {
             "BindIsEnabled": "ItemData.IsValid",
-            "BindIsVisible": "ItemData.IsDino",
+            "BindIsVisible": "ItemData.BaseData.IsDino",
             "Label": "$$Ark-Nucleus$:$SPAWN_IN_FRONT",
             "Permission": "Nucleus_SpawnDinos"
         },
