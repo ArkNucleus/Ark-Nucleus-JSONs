@@ -169,291 +169,340 @@
                                             }
                                         },
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
+                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                            "Props": {
+                                                "Title": "$$Ark-Nucleus$:$MOD_CS_INFO",
+                                                "Fill": 1,
+                                                "Padding": [ 2, 2, 2, 2 ]
+                                            },
                                             "ResetOnEvents": {
                                                 "Events": [
                                                     "Ark-Nucleus/NOTIFY/InstalledMods/Selected"
                                                 ]
                                             },
-                                            "Props": {
-                                                "UUID": "ModInfoTab",
-                                                "Fill": 1,
-                                                "Padding": [ 2, 2, 2, 2 ]
-                                            },
-                                            "Tabs": [
+                                            "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                     "Props": {
-                                                        "Title": "$$Ark-Nucleus$:$MOD_CS_INFO",
-                                                        "Fill": 1
+                                                        "BindText": "Data.SelectedMod.Value.CFData.details.name",
+                                                        "FontSize": 32,
+                                                        "Justification": "Center"
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                    "Props": {
+                                                        "BindText": "Data.SelectedMod.Value.CFData.details.summary",
+                                                        "FontSize": 12,
+                                                        "Justification": "Center"
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                                                    "Props": {
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_IS_PAID",
+                                                        "TitleColor": "DANGER_COLOR",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_IS_PAID_NOTE",
+                                                        "NoteColor": "DANGER_COLOR_LIGHT",
+                                                        "Color": "DANGER_COLOR_DARK",
+                                                        "Padding": [ 2, 2, 2, 2 ],
+                                                        "BindIsVisible": "Data.SelectedMod.Value.CFData.details.premiumDetails.isPremium"
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                                             "Props": {
-                                                                "BindText": "Data.SelectedMod.Value.CFData.details.name",
-                                                                "FontSize": 32,
-                                                                "Justification": "Center"
-                                                            }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                                            "Props": {
-                                                                "BindText": "Data.SelectedMod.Value.CFData.details.summary",
-                                                                "FontSize": 12,
-                                                                "Justification": "Center"
-                                                            }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
-                                                            "Props": {
+                                                                "Color": "ATTENTION_COLOR",
+                                                                "Label": "$$Ark-Nucleus$:$MOD_PRICE",
+                                                                "LabelColor": "DANGER_COLOR",
+                                                                "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.tierPrice",
                                                                 "Padding": [ 2, 2, 2, 2 ]
                                                             }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                                            "Props": {
-                                                                "Title": "$$Ark-Nucleus$:$MOD_IS_PAID",
-                                                                "Note": "$$Ark-Nucleus$:$MOD_IS_PAID_NOTE",
-                                                                "Padding": [ 0, 0, 0, 2 ],
-                                                                "Color": "DANGER_COLOR",
-                                                                "BindIsVisible": "Data.SelectedMod.Value.CFData.details.premiumDetails.isPremium"
-                                                            },
-                                                            "UIItems": [
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                                    "Props": {
-                                                                        "Color": "ATTENTION_COLOR",
-                                                                        "Label": "$$Ark-Nucleus$:$MOD_PRICE",
-                                                                        "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.tierPrice",
-                                                                        "Padding": [ 2, 2, 2, 2 ]
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                                    "Props": {
-                                                                        "Color": "ATTENTION_COLOR",
-                                                                        "Label": "$$Ark-Nucleus$:$MOD_CURRENCY",
-                                                                        "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.currencySymbol",
-                                                                        "Padding": [ 2, 2, 2, 2 ]
-                                                                    }
-                                                                }
-                                                            ]
                                                         },
                                                         {
                                                             "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                                             "Props": {
                                                                 "Color": "ATTENTION_COLOR",
-                                                                "Label": "$$Ark-Nucleus$:$MOD_ID_LBL",
-                                                                "BindText": "Data.SelectedMod.Value.CFData.details.iD",
+                                                                "Label": "$$Ark-Nucleus$:$MOD_CURRENCY",
+                                                                "LabelColor": "DANGER_COLOR",
+                                                                "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.currencySymbol",
                                                                 "Padding": [ 2, 2, 2, 2 ]
                                                             }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                            "Props": {
-                                                                "Label": "$$Ark-Nucleus$:$MOD_DOWNLOADS_LBL",
-                                                                "BindText": "Data.SelectedMod.Value.CFData.details.downloadCount",
-                                                                "Padding": [ 2, 2, 2, 2 ]
-                                                            }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                                            "Props": {
-                                                                "Label": "$$Ark-Nucleus$:$MOD_VERSION_LBL",
-                                                                "BindText": "Data.SelectedMod.Value.CFData.installedFile.filename",
-                                                                "Padding": [ 2, 2, 2, 2 ]
-                                                            }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
-                                                            "Props": {
-                                                                "Padding": [ 2, 2, 2, 2 ]
-                                                            }
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                                            "Props": {
-                                                                "Title": "$$Ark-Nucleus$:$MOD_SCREEN_SHOOTS",
-                                                                "Note": "$$Ark-Nucleus$:$MOD_SCREEN_SHOOTS_NOTE",
-                                                                "Padding": [ 0, 0, 0, 2 ]
-                                                            },
-                                                            "UIItems": [
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalScrollBox_v1.DU_Panel_HorizontalScrollBox_v1_C",
-                                                                    "Props": {
-                                                                        "BindValue": "Data.SelectedMod.Value.CFData.details.screenshots"
-                                                                    },
-                                                                    "ItemWidget": {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
-                                                                        "Props": {
-                                                                            "Padding": [ 2, 2, 2, 2 ],
-                                                                            "BindImage": "ItemData.thumbnailUrl"
-                                                                        },
-                                                                        "Info": {
-                                                                            "Props": {
-                                                                                "BindTitle": "ItemData.title"
-                                                                            },
-                                                                            "Buttons": [
-                                                                                {
-                                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                                                                    "Props": {
-                                                                                        "Label": "$$Ark-Nucleus$:$OK",
-                                                                                        "Fill": 1
-                                                                                    },
-                                                                                    "OnClickEvent": {
-                                                                                        "EventUID": "CloseModal"
-                                                                                    }
-                                                                                }
-                                                                            ],
-                                                                            "UIItems": [
-                                                                                {
-                                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
-                                                                                    "Props": {
-                                                                                        "Fill": 1,
-                                                                                        "Padding": [ 2, 2, 2, 2 ],
-                                                                                        "BindImage": "ItemData.uRL"
-                                                                                    }
-                                                                                },
-                                                                                {
-                                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                                                                    "Props": {
-                                                                                        "BindText": "ItemData.description",
-                                                                                        "FontSize": 12,
-                                                                                        "Justification": "Center"
-                                                                                    }
-                                                                                }
-                                                                            ]
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                                            "Props": {
-                                                                "Title": "$$Ark-Nucleus$:$MOD_AUTHORS",
-                                                                "Note": "$$Ark-Nucleus$:$MOD_AUTHORS_NOTE",
-                                                                "Padding": [ 0, 0, 0, 2 ]
-                                                            },
-                                                            "UIItems": [
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
-                                                                    "Props": {
-                                                                        "BindValue": "Data.SelectedMod.Value.CFData.details.authors"
-                                                                    },
-                                                                    "ItemWidget": {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                                                        "Props": {
-                                                                            "BindLabel": "ItemData.name",
-                                                                            "Padding": [ 2, 2, 2, 2 ]
-                                                                        },
-                                                                        "OnClickEvent": {
-                                                                            "BindUrl": "ItemData.uRL"
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
-                                                            "Props": {
-                                                                "Title": "$$Ark-Nucleus$:$MOD_CATEGORIES",
-                                                                "Note": "$$Ark-Nucleus$:$MOD_CATEGORIES_NOTE",
-                                                                "Padding": [ 0, 0, 0, 2 ]
-                                                            },
-                                                            "UIItems": [
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
-                                                                    "Props": {
-                                                                        "BindValue": "Data.SelectedMod.Value.CFData.details.categories"
-                                                                    },
-                                                                    "ItemWidget": {
-
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                                                        "Props": {
-                                                                        },
-                                                                        "UIItems": [
-                                                                            {
-                                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
-                                                                                "Props": {
-                                                                                    "Width": 32,
-                                                                                    "Height": 32,
-                                                                                    "Padding": [ 2, 2, 2, 2 ],
-                                                                                    "BindImage": "ItemData.iconUrl"
-                                                                                }
-                                                                            },
-                                                                            {
-                                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                                                                "Props": {
-                                                                                    "BindText": "ItemData.name",
-                                                                                    "FontSize": 14,
-                                                                                    "Fill": 1,
-                                                                                    "Padding": [ 2, 2, 2, 2 ],
-                                                                                    "VerticalAlignment": 2
-                                                                                }
-                                                                            },
-                                                                            {
-                                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                                                                "Props": {
-                                                                                    "Label": "$$Ark-Nucleus$:$MORE_MODS_WITH_SAME_CATEGORY",
-                                                                                    "Padding": [ 2, 2, 2, 2 ]
-                                                                                },
-                                                                                "OnClickEvent": {
-                                                                                    "Url": "https://www.curseforge.com/ark-survival-ascended/search?page=1&pageSize=20&sortBy=relevancy&class=mods&categories={0}",
-                                                                                    "BindUrlParams": [
-                                                                                        "ItemData.slug"
-                                                                                    ]
-                                                                                }
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
-                                                            "Props": {
-                                                                "Title": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA",
-                                                                "Note": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA_NOTE",
-                                                                "BindViewMode": "UICache.RwaCFData.ViewMode"
-                                                            },
-                                                            "UIItems": [
-                                                                {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
-                                                                    "Props": {
-                                                                        "Label": "$$Ark-Nucleus$:$RAW_JSON",
-                                                                        "Note": "$$Ark-Nucleus$:$RAW_JSON",
-                                                                        "BindValue": "Data.SelectedMod.Value.CFData",
-                                                                        "Padding": [
-                                                                            2,
-                                                                            2,
-                                                                            2,
-                                                                            2
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            ]
                                                         }
                                                     ]
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                                     "Props": {
-                                                        "BindValue": "Data.CustomInfoPage.Items",
-                                                        "Title": "$$Ark-Nucleus$:$MOD_CUSTOM_INFO",
-                                                        "Fill": 1
-                                                    },
-                                                    "DataSource": {
-                                                        "Name": "Ark-Nucleus/GET/InstalledMods/InfoUI",
-                                                        "RequestParams": [
-                                                            {
-                                                                "RequestKey": "SelectedMod",
-                                                                "ValueKey": "Data.SelectedMod"
-                                                            }
-                                                        ],
-                                                        "ResponseKey": "Data.CustomInfoPage"
+                                                        "Color": "ATTENTION_COLOR",
+                                                        "Label": "$$Ark-Nucleus$:$MOD_ID_LBL",
+                                                        "BindText": "Data.SelectedMod.Value.CFData.details.iD",
+                                                        "Padding": [ 2, 2, 2, 2 ]
                                                     }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                                    "Props": {
+                                                        "Label": "$$Ark-Nucleus$:$MOD_DOWNLOADS_LBL",
+                                                        "BindText": "Data.SelectedMod.Value.CFData.details.downloadCount",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                                    "Props": {
+                                                        "Label": "$$Ark-Nucleus$:$MOD_VERSION_LBL",
+                                                        "BindText": "Data.SelectedMod.Value.CFData.installedFile.filename",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                                                    "Props": {
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    }
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_SCREEN_SHOOTS",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_SCREEN_SHOOTS_NOTE",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalScrollBox_v1.DU_Panel_HorizontalScrollBox_v1_C",
+                                                            "Props": {
+                                                                "BindValue": "Data.SelectedMod.Value.CFData.details.screenshots"
+                                                            },
+                                                            "ItemWidget": {
+                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                "Props": {
+                                                                    "Padding": [ 2, 2, 2, 2 ],
+                                                                    "BindImage": "ItemData.thumbnailUrl"
+                                                                },
+                                                                "Info": {
+                                                                    "Props": {
+                                                                        "BindTitle": "ItemData.title"
+                                                                    },
+                                                                    "Buttons": [
+                                                                        {
+                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                            "Props": {
+                                                                                "Label": "$$Ark-Nucleus$:$OK",
+                                                                                "Fill": 1
+                                                                            },
+                                                                            "OnClickEvent": {
+                                                                                "EventUID": "CloseModal"
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "UIItems": [
+                                                                        {
+                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Props": {
+                                                                                "Fill": 1,
+                                                                                "Padding": [ 2, 2, 2, 2 ],
+                                                                                "BindImage": "ItemData.uRL"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                            "Props": {
+                                                                                "BindText": "ItemData.description",
+                                                                                "FontSize": 14,
+                                                                                "Padding": [ 2, 2, 2, 2 ],
+                                                                                "Justification": "Center"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_ENCYCLOPEDIA",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_ENCYCLOPEDIA_NOTE",
+                                                        "BindViewMode": "UICache.Encyclopedia.ViewMode",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                                                            "Props": {
+                                                                "Padding": [ 2, 2,  2, 2 ],
+                                                                "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
+                                                                "FilterKeys": [
+                                                                    "BaseData.IsDino",
+                                                                    "BaseData.FolderPaths",
+                                                                    "BaseData.CanBeBlueprint",
+                                                                    "BaseData.CanBeTamed",
+                                                                    "BaseData.CanHaveBaby",
+                                                                    "BaseData.IsFlayer",
+                                                                    "BaseData.Group"
+                                                                ],
+                                                                "TextValues": {
+                                                                    "BaseData.IsDino": [
+                                                                        "$$Ark-Nucleus$:$ITEM",
+                                                                        "$$Ark-Nucleus$:$DINO"
+                                                                    ]
+                                                                },
+                                                                "ItemsPerPage": 10,
+                                                                "BindValue": "Data.ModdedEncyclopedia.Items"
+                                                            },
+                                                            "DataSource": {
+                                                                "Name": "Ark-Nucleus/GET/Encyclopedia/Modded",
+                                                                "ResponseKey": "Data.ModdedEncyclopedia",
+                                                                "RequestParams": [
+                                                                    {
+                                                                        "RequestKey": "SelectedMod",
+                                                                        "ValueKey": "Data.SelectedMod"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "ItemWidget": {
+                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_CUSTOM_INFO",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_CUSTOM_INFO_NOTE",
+                                                        "BindViewMode": "UICache.CustomInfo.ViewMode",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                                                            "Props": {
+                                                                "BindValue": "Data.CustomInfoPage.Items"
+                                                            },
+                                                            "DataSource": {
+                                                                "Name": "Ark-Nucleus/GET/InstalledMods/InfoUI",
+                                                                "RequestParams": [
+                                                                    {
+                                                                        "RequestKey": "SelectedMod",
+                                                                        "ValueKey": "Data.SelectedMod"
+                                                                    }
+                                                                ],
+                                                                "ResponseKey": "Data.CustomInfoPage"
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_AUTHORS",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_AUTHORS_NOTE",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                            "Props": {
+                                                                "BindValue": "Data.SelectedMod.Value.CFData.details.authors"
+                                                            },
+                                                            "ItemWidget": {
+                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                "Props": {
+                                                                    "BindLabel": "ItemData.name",
+                                                                    "Padding": [ 2, 2, 2, 2 ]
+                                                                },
+                                                                "OnClickEvent": {
+                                                                    "BindUrl": "ItemData.uRL"
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_CATEGORIES",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_CATEGORIES_NOTE",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                            "Props": {
+                                                                "BindValue": "Data.SelectedMod.Value.CFData.details.categories"
+                                                            },
+                                                            "ItemWidget": {
+
+                                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                                "Props": {
+                                                                },
+                                                                "UIItems": [
+                                                                    {
+                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                        "Props": {
+                                                                            "Width": 32,
+                                                                            "Height": 32,
+                                                                            "Padding": [ 2, 2, 2, 2 ],
+                                                                            "BindImage": "ItemData.iconUrl"
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                        "Props": {
+                                                                            "BindText": "ItemData.name",
+                                                                            "FontSize": 14,
+                                                                            "Fill": 1,
+                                                                            "Padding": [ 2, 2, 2, 2 ],
+                                                                            "VerticalAlignment": 2
+                                                                        }
+                                                                    },
+                                                                    {
+                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                        "Props": {
+                                                                            "Label": "$$Ark-Nucleus$:$MORE_MODS_WITH_SAME_CATEGORY",
+                                                                            "Padding": [ 2, 2, 2, 2 ]
+                                                                        },
+                                                                        "OnClickEvent": {
+                                                                            "Url": "https://www.curseforge.com/ark-survival-ascended/search?page=1&pageSize=20&sortBy=relevancy&class=mods&categories={0}",
+                                                                            "BindUrlParams": [
+                                                                                "ItemData.slug"
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA",
+                                                        "Note": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA_NOTE",
+                                                        "BindViewMode": "UICache.RwaCFData.ViewMode",
+                                                        "Padding": [ 2, 2, 2, 2 ]
+                                                    },
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                                            "Props": {
+                                                                "Label": "$$Ark-Nucleus$:$RAW_JSON",
+                                                                "Note": "$$Ark-Nucleus$:$RAW_JSON",
+                                                                "BindValue": "Data.SelectedMod.Value.CFData",
+                                                                "Padding": [ 2, 2, 2, 2 ]
+                                                            }
+                                                        }
+                                                    ]
                                                 }
                                             ]
                                         }
