@@ -39,8 +39,8 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$SERVER_INFO",
-                                        "UUID": "ServerInfo",
+                                        "Label": "$$Ark-Nucleus$:$JSON_PLAYGROUND",
+                                        "UUID": "JsonPlayground",
                                         "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/House_Icon_White.House_Icon_White",
                                         "BindSelectedItem": "UICache.ActiveUUID",
                                         "Padding": [
@@ -111,58 +111,6 @@
                                         "Label": "$$Ark-Nucleus$:$LOGS",
                                         "UUID": "AllLogs",
                                         "Image": "/Game/PrimalEarth/UI/Textures/T_UI_Missions_ActiveMissionIcon.T_UI_Missions_ActiveMissionIcon",
-                                        "BindSelectedItem": "UICache.ActiveUUID",
-                                        "Padding": [
-                                            0,
-                                            5,
-                                            0,
-                                            5
-                                        ]
-                                    },
-                                    "OnClickEvent": {
-                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
-                                    },
-                                    "UpdateOnEvents": {
-                                        "Events": [
-                                            "Ark-Nucleus/NOTIFY/MainPage"
-                                        ]
-                                    }
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "Permission": {
-                                        "Tag": "Nucleus_ViewSurvivorsHub"
-                                    },
-                                    "Props": {
-                                        "Label": "$$Ark-Nucleus$:$SERVER_COMMUNITY",
-                                        "UUID": "AllSurvivors",
-                                        "Image": "/Game/PrimalEarth/UI/Textures/HubTribeIcon.HubTribeIcon",
-                                        "BindSelectedItem": "UICache.ActiveUUID",
-                                        "Padding": [
-                                            0,
-                                            5,
-                                            0,
-                                            5
-                                        ]
-                                    },
-                                    "OnClickEvent": {
-                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
-                                    },
-                                    "UpdateOnEvents": {
-                                        "Events": [
-                                            "Ark-Nucleus/NOTIFY/MainPage"
-                                        ]
-                                    }
-                                },
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "Permission": {
-                                        "Tag": "Nucleus_EditServerLocalization"
-                                    },
-                                    "Props": {
-                                        "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION",
-                                        "UUID": "AllLocalization",
-                                        "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
                                         "BindSelectedItem": "UICache.ActiveUUID",
                                         "Padding": [
                                             0,

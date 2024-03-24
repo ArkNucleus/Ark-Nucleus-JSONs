@@ -1,0 +1,20 @@
+{
+    "Props": {
+        "Title": "DEBUG"
+    },
+    "DataSource": {
+        "Name": "Ark-Nucleus/GET/Logs/Client",
+        "ResponseKey": "Data.Logs"
+    },
+    "UIItems": [
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+            "Props": {
+                "Label": "Raw LogsData",
+                "IsReadOnly": true,
+                "Fill":1,
+                "BindValue": "Data"
+            }
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
         "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
@@ -41,7 +41,7 @@
         },
         "Buttons": [
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                 "Props": {
                     "Label": "$$Ark-Nucleus$:$OK",
                     "Fill": 1
@@ -53,7 +53,7 @@
         ],
         "UIItems": [
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
                     "FontSize": 14,
@@ -61,7 +61,7 @@
                 }
             },
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
                     "FontSize": 14,
@@ -69,7 +69,7 @@
                 }
             },
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
                     "FontSize": 14,
@@ -77,7 +77,7 @@
                 }
             },
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
                     "FontSize": 14,
@@ -85,7 +85,7 @@
                 }
             },
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
                     "FontSize": 14,
@@ -96,7 +96,7 @@
     },
     "Buttons": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
                 "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
                 "Label": "$$Ark-Nucleus$:$ADD_NEW",
@@ -118,7 +118,7 @@
                 },
                 "Buttons": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$ADD",
                             "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
@@ -131,7 +131,7 @@
                 ],
                 "UIItems": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
                         "Props": {
                             "BindValue": "Data.NewLocItem.__KEY__",
                             "Label": "$$Ark-Nucleus$:$LOC_ADD_KEY",
@@ -145,7 +145,7 @@
                         }
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
                             "BindValue": "Data.NewLocItem.Value",
                             "Label": "$$Ark-Nucleus$:$LOC_ADD_VALUE",
@@ -163,9 +163,9 @@
             }
         },
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
                 "Label": "$$Ark-Nucleus$:$IMPORT",
                 "VerticalAlignment": 1,
                 "Padding": [
@@ -185,7 +185,7 @@
                 },
                 "Buttons": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$IMPORT",
                             "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
@@ -198,7 +198,7 @@
                 ],
                 "UIItems": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOC_IMP_SERVER_ONLY",
                             "Note": "$$Ark-Nucleus$:$LOC_IMP_SERVER_ONLY_NOTE",
@@ -212,7 +212,7 @@
                         }
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOC_IMP_JSON",
                             "Note": "$$Ark-Nucleus$:$LOC_IMP_JSON_NOTE",
@@ -230,9 +230,9 @@
             }
         },
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_Export.T_Nucleus_Export",
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Export.T_Nucleus_Export",
                 "Label": "$$Ark-Nucleus$:$EXPORT",
                 "VerticalAlignment": 1,
                 "Padding": [
@@ -264,7 +264,7 @@
                 ],
                 "Buttons": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$OK",
                             "Fill": 1
@@ -276,7 +276,7 @@
                 ],
                 "UIItems": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOC_EXP_SERVER_ONLY",
                             "Note": "$$Ark-Nucleus$:$LOC_EXP_SERVER_ONLY_NOTE",
@@ -293,7 +293,7 @@
                         }
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOC_EXP_JSON",
                             "Note": "$$Ark-Nucleus$:$LOC_EXP_JSON_NOTE",
@@ -313,13 +313,13 @@
     ],
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
             "Props": {
                 "Fill": 1
             },
             "UIItems": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                     "Props": {
                         "Fill": 1,
                         "BindValue": "Data.Localization.Items",
@@ -334,7 +334,7 @@
                         "PostData": "Ark-Nucleus/NOTIFY/Localization/Selected"
                     },
                     "ItemWidget": {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/Nucleus_Item_ServerLocItem_v1.Nucleus_Item_ServerLocItem_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/Nucleus_Item_ServerLocItem_v1.Nucleus_Item_ServerLocItem_v1_C",
                         "UpdateOnEvents": {
                             "Events": [
                                 "Ark-Nucleus/NOTIFY/Localization/Selected"
@@ -365,7 +365,7 @@
                             },
                             "Buttons": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$DELETE",
                                         "Fill": 1,
@@ -377,7 +377,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$CANCEL",
                                         "Fill": 1
@@ -389,7 +389,7 @@
                             ],
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
                                         "FontSize": 14,
@@ -402,7 +402,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
                                         "FontSize": 14,
@@ -415,7 +415,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
                                         "FontSize": 14,
@@ -433,7 +433,7 @@
                     }
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
                         "Padding": [
                             2,
@@ -444,7 +444,7 @@
                     }
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                     "Props": {
                         "Fill": 3,
                         "Padding": [
@@ -472,7 +472,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
                             "Props": {
                                 "BindValue": "Data.SelectedServerLoc.__KEY__",
                                 "Label": "$$Ark-Nucleus$:$LOC_ADD_KEY",
@@ -488,7 +488,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                             "Props": {
                                 "BindValue": "Data.SelectedServerLoc.Value",
                                 "Label": "$$Ark-Nucleus$:$LOC_ADD_VALUE",
@@ -504,7 +504,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                             "Props": {
                                 "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",

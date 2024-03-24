@@ -1,7 +1,7 @@
 {
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
             "Props": {
                 "UUID":"MainTab",
                 "Fill": 1
@@ -11,7 +11,7 @@
             },
             "Tabs": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                     "Props": {
                         "Title": "$$SERVER$:$HOME",
                         "Note": "$$SERVER$:$HOME_NOTE",
@@ -20,13 +20,13 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                             "Props": {
                                 "Fill": 1
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                     "Props": {
                                         "Fill": 1,
                                         "Padding": [ 30, 30, 30, 30 ]
@@ -34,14 +34,14 @@
                                     "UIItems": [ ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "VerticalAlignment": 2,
                                         "Padding": [ 30, 30, 30, 30 ]
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                             "Props": {
                                                 "Fill": 2,
                                                 "VerticalAlignment": 2,
@@ -49,7 +49,7 @@
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                     "Props": {
                                                         "Text": "$$SERVER$:$WELCOME_TO_SERVER",
                                                         "FontSize": 32,
@@ -57,7 +57,7 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                     "Props": {
                                                         "Text": "$$SERVER$:$SERVER_SLOGAN",
                                                         "FontSize": 16,
@@ -65,10 +65,10 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Link to a Twitter Page",
                                                                 "Padding": [ 5, 5, 5, 5 ]
@@ -78,10 +78,10 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Invite to a Discord Server",
-                                                                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo",
+                                                                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo",
                                                                 "Padding": [ 5, 5, 5, 5 ]
                                                             },
                                                             "OnClickEvent": {
@@ -97,14 +97,14 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                             "Props": {
                                 "HorizontalAlignment": 0,
                                 "Padding": [ 5, 5, 5, 5 ]
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "VerticalAlignment": 0,
                                         "Fill": 1,
@@ -122,13 +122,13 @@
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                             "Props": {
                                                 "Padding": [ 5, 5, 5, 5 ]
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                     "Props": {
                                                         "Image": "/Ark-Nucleus/Assets/Materials/M_NewLogo.M_NewLogo",
                                                         "Width": 120,
@@ -137,14 +137,14 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                     "Props": {
                                                         "Fill": 1,
                                                         "Padding": [ 5, 5, 5, 5 ]
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "Q: What is this About?",
                                                                 "FontSize": 14,
@@ -153,7 +153,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "A: Just a demo server info page provided my the Ark-Nucleus mod.",
                                                                 "FontSize": 11,
@@ -163,7 +163,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Learn More",
                                                                 "Padding": [ 5, 5, 5, 5 ]
@@ -174,7 +174,7 @@
                                                                 },
                                                                 "UIItems": [
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                                         "Props": {
                                                                             "Text": "This is just a small representation of what kind of pages can be setup using the Ark-Nucleus JSON Editor.",
                                                                             "FontSize": 15,
@@ -182,7 +182,7 @@
                                                                         }
                                                                     },
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
                                                                             "Label": "$$Ark-Nucleus$:$OK"
                                                                         },
@@ -200,7 +200,7 @@
                                     ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "VerticalAlignment": 0,
                                         "Fill": 1,
@@ -218,13 +218,13 @@
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                             "Props": {
                                                 "Padding": [ 5, 5, 5, 5 ]
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                     "Props": {
                                                         "Image": "/Ark-Nucleus/Assets/Materials/M_NewLogo.M_NewLogo",
                                                         "Width": 120,
@@ -233,14 +233,14 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                     "Props": {
                                                         "Fill": 1,
                                                         "Padding": [ 5, 5, 5, 5 ]
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "Q: Can I disable this for my server?",
                                                                 "FontSize": 14,
@@ -254,7 +254,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "A: Yes, Go to Installed Mods -> Ark Nucleus ->Server Settings",
                                                                 "FontSize": 11,
@@ -269,7 +269,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Learn More",
                                                                 "Padding": [
@@ -285,7 +285,7 @@
                                                                 },
                                                                 "UIItems": [
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                                         "Props": {
                                                                             "Text": "As majority of things is optional in Ark-Nucleus so is the Server Info Page. You don't see use for it? Disable it!",
                                                                             "FontSize": 15,
@@ -293,7 +293,7 @@
                                                                         }
                                                                     },
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
                                                                             "Label": "$$Ark-Nucleus$:$OK"
                                                                         },
@@ -311,7 +311,7 @@
                                     ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "VerticalAlignment": 0,
                                         "Fill": 1,
@@ -329,7 +329,7 @@
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                             "Props": {
                                                 "Padding": [
                                                     5,
@@ -340,7 +340,7 @@
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                     "Props": {
                                                         "Image": "/Ark-Nucleus/Assets/Materials/M_NewLogo.M_NewLogo",
                                                         "Width": 120,
@@ -354,7 +354,7 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                     "Props": {
                                                         "Fill": 1,
                                                         "Padding": [
@@ -366,7 +366,7 @@
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "Q: Who can edit this page?",
                                                                 "FontSize": 14,
@@ -380,7 +380,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "A: Only Admins can edit this page.",
                                                                 "Justification": "Center",
@@ -395,7 +395,7 @@
                                                             }
                                                         },
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Learn More",
                                                                 "Padding": [
@@ -411,7 +411,7 @@
                                                                 },
                                                                 "UIItems": [
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                                         "Props": {
                                                                             "Text": "If you are in the admin mode, you will see an EDIT button in the upper right corner.",
                                                                             "FontSize": 15,
@@ -419,7 +419,7 @@
                                                                         }
                                                                     },
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
                                                                             "Label": "$$Ark-Nucleus$:$OK"
                                                                         },
@@ -441,7 +441,7 @@
                     ]
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                     "Props": {
                         "Title": "$$SERVER$:$FAQ",
                         "Note": "$$SERVER$:$FAQ_NOTE",
@@ -449,7 +449,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "THIS IS A DEMO PAGE!!!",
                                 "FontSize": 24,
@@ -459,7 +459,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "The Question and Answers are just an example until replaced by an admin with their own.",
                                 "FontSize": 22,
@@ -469,19 +469,19 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
                                 "Padding": [ 2, 2, 2, 2 ]
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                             "Props": {
                                 "Fill": 1
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: What mods are installed on the server?",
                                         "FontSize": 16,
@@ -489,7 +489,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: We have carefully selected mods to enhance your gaming experience. You can find a list of installed mods by clicking the \"INSTALLED MODS\" on the left side menu.",
                                         "FontSize": 12,
@@ -497,7 +497,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: How often is the server wiped?",
                                         "FontSize": 16,
@@ -505,7 +505,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: We aim to provide a stable and enjoyable gaming environment, so server wipes are infrequent. However, wipes may occur during major game updates or if necessary for maintenance purposes. We will notify players in advance if a wipe is scheduled.",
                                         "FontSize": 12,
@@ -513,7 +513,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: Are there any rules I need to follow?",
                                         "FontSize": 16,
@@ -521,7 +521,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: Yes, we have a set of rules in place to ensure fair play and a positive community experience. These rules typically cover areas such as harassment, cheating, and griefing. You can find our server rules posted in the above \"Rules\" tab or in our Discord server.",
                                         "FontSize": 12,
@@ -529,7 +529,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: How do I report a player for breaking the rules?",
                                         "FontSize": 16,
@@ -537,7 +537,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: If you encounter a player violating server rules, please report them to one of our moderators or admins. You can do this through the in-game chat, Discord server, or by using the \"SURVIVORS HUB\" on the left side menu. Be sure to provide as much detail as possible, including the player's name and a description of the incident.",
                                         "FontSize": 12,
@@ -545,7 +545,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: Can I bring my friends to the server?",
                                         "FontSize": 16,
@@ -553,7 +553,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: Absolutely! We encourage you to invite your friends to join our server and embark on adventures together. Just make sure they also adhere to our server rules to maintain a friendly gaming environment.",
                                         "FontSize": 12,
@@ -561,7 +561,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: Is there a Discord server for the community?",
                                         "FontSize": 16,
@@ -569,7 +569,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: Yes, we have a Discord server where players can chat, share tips, and participate in events. You can find the link to our Discord server in the game's chat or on our server information page.",
                                         "FontSize": 12,
@@ -577,7 +577,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: Can I suggest changes or improvements for the server?",
                                         "FontSize": 16,
@@ -585,7 +585,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: Absolutely! We value feedback from our community and are always open to suggestions for improving the server experience. Whether it's a mod recommendation, gameplay adjustment, or general feedback, we encourage players to share their ideas with us through our Discord server or other communication channels.",
                                         "FontSize": 12,
@@ -593,7 +593,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Q: How do I contact the server admins?",
                                         "FontSize": 16,
@@ -601,7 +601,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "A: If you need assistance or have any concerns, you can reach out to our server admins via Discord. They are here to help resolve any issues and ensure everyone has an enjoyable gaming experience.",
                                         "FontSize": 12,
@@ -611,13 +611,13 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
                                 "Padding": [ 2, 2, 2, 2 ]
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "We hope this FAQ helps address any questions you may have about our Ark game server. If you have any further inquiries, don't hesitate to ask our friendly community or server staff. Happy gaming!",
                                 "FontSize": 16,
@@ -627,7 +627,7 @@
                     ]
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                     "Props": {
                         "Title": "$$SERVER$:$RULES_AND_GUIDES",
                         "Note": "$$SERVER$:$RULES_AND_GUIDES_NOTE",
@@ -635,7 +635,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "THIS IS A DEMO PAGE!!!",
                                 "FontSize": 24,
@@ -645,7 +645,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "The listed Ruels and Guids are just an example until replaced by an admin with their own.",
                                 "FontSize": 22,
@@ -655,19 +655,19 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
                                 "Padding": [ 2, 2, 2, 2 ]
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                             "Props": {
                                 "Fill": 1
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "1. Respect thy Neighbor: Treat your fellow Survivors with courtesy and respect. No harassment, hate speech, or toxic behavior will be tolerated.",
                                         "FontSize": 14,
@@ -675,7 +675,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "2. Base Raiding: While PvP is encouraged, senseless destruction is not. Raiding is allowed, but don't wipe out entire bases. Leave something for your opponents to rebuild with.",
                                         "FontSize": 14,
@@ -683,7 +683,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "3. Cheating and Exploits: Any form of cheating, exploiting, or hacking will result in swift and severe consequences. We're here for fair play and a fun experience for everyone.",
                                         "FontSize": 14,
@@ -691,7 +691,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "4. Building Limits: Keep your structures reasonable in size to maintain server performance. Excessive building or pillar spamming is not allowed.",
                                         "FontSize": 14,
@@ -699,7 +699,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "5. Wildlife Conservation: Avoid unnecessary killing of passive tames and wildlife. Let's strive for ecological balance on the Ark.",
                                         "FontSize": 14,
@@ -707,7 +707,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "6. Roleplay Encouraged: Engage in immersive roleplay if that's your style! Whether you're a lone survivor, a tribal leader, or a dino tamer, bring your character to life.",
                                         "FontSize": 14,
@@ -715,7 +715,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "7. Community Events: Join in on server-wide events for a chance to earn rewards, make new friends, and test your skills against the challenges we throw your way.",
                                         "FontSize": 14,
@@ -727,7 +727,7 @@
                     ]
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                     "Props": {
                         "Title": "Example Widgets",
                         "Note": "Some Page Notes",
@@ -735,7 +735,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "Welcome to [Server Name] - Your Ultimate Ark: Survival Ascended Adventure!",
                                 "FontSize": 28,
@@ -749,7 +749,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "Greetings, Survivors! Step into a world of untamed wilderness, colossal dinosaurs, and epic adventures on our Ark: Survival Ascended game server.",
                                 "FontSize": 15,
@@ -762,7 +762,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "We've created a thriving community where players can forge alliances, face formidable challenges, and build their own Jurassic legacy.",
                                 "FontSize": 15,
@@ -775,7 +775,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                             "Props": {
                                 "Padding": [
                                     0,
@@ -792,7 +792,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "This is an EXAMPLE Page provided my Nucleus. As a Server Admin you can fully customize this page with custom text, images, widgets and additional pages.",
                                         "FontSize": 15,
@@ -808,7 +808,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                             "Props": {
                                 "Padding": [
                                     0,
@@ -825,7 +825,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "It can be used to make things stand out by using the Color Property with a RGB/RGBA value formatted as an array [R,G,B,A] (RED color -> [1.0,0,0,1]).",
                                         "FontSize": 15,
@@ -841,7 +841,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "Some other examples of controls and widgets available for use.",
                                 "FontSize": 18,
@@ -860,7 +860,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                             "Props": {
                                 "Padding": [
                                     0,
@@ -871,7 +871,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "This is a Border widget, use this if you whish to have some elements stand more out by adding a border around it.",
                                         "FontSize": 15,
@@ -886,7 +886,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                             "Props": {
                                 "Padding": [
                                     0,
@@ -903,10 +903,10 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                             "Props": {
                                                 "Fill": 2,
                                                 "Padding": [
@@ -918,7 +918,7 @@
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                     "Props": {
                                                         "Text": "A horizontal box split with two bordered items split into a 2:1 width ratio using the \"Fill\" property.",
                                                         "FontSize": 15,
@@ -933,7 +933,7 @@
                                             ]
                                         },
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                             "Props": {
                                                 "Fill": 1,
                                                 "Padding": [
@@ -945,7 +945,7 @@
                                             },
                                             "UIItems": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                     "Props": {
                                                         "Text": "This Border box has text and a Discord Button.",
                                                         "FontSize": 15,
@@ -958,10 +958,10 @@
                                                     }
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                     "Props": {
                                                         "Label": "Discord Button",
-                                                        "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo",
+                                                        "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo",
                                                         "Padding": [
                                                             5,
                                                             5,
@@ -980,7 +980,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "Title": "This is a Group Panel",
                                 "Note": "A Group Panel that can be used to group a set of information and have it collapsed for better space usage.",
@@ -994,7 +994,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "Some random text.",
                                         "FontSize": 15
@@ -1003,7 +1003,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                             "Props": {
                                 "Text": "You can have unlimited number of pages by adding the Tabbed Panel",
                                 "FontSize": 20,
@@ -1017,13 +1017,13 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
                             "Props": {
                                 "UUID":"SecondTab"
                             },
                             "Tabs": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                     "Props": {
                                         "Title": "A Tab Page",
                                         "Note": "Some Tab Page Notes",
@@ -1032,7 +1032,7 @@
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                             "Props": {
                                                 "Text": "Any content can be placed inside (even nested tabs)!",
                                                 "FontSize": 15,
@@ -1045,7 +1045,7 @@
                                             }
                                         },
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
                                             "Props": {
                                                 "UUID":"ThirdTab",
                                                 "Padding": [
@@ -1057,7 +1057,7 @@
                                             },
                                             "Tabs": [
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                                     "Props": {
                                                         "Title": "A Tab Page 1",
                                                         "Note": "Some Tab Page Notes",
@@ -1066,7 +1066,7 @@
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                                             "Props": {
                                                                 "Padding": [
                                                                     0,
@@ -1077,13 +1077,13 @@
                                                             },
                                                             "UIItems": [
                                                                 {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                                     "Props": {
                                                                         "Fill": 1
                                                                     },
                                                                     "UIItems": [
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
                                                                             "Props": {
                                                                                 "Width": 700,
                                                                                 "Height": 464,
@@ -1097,7 +1097,7 @@
                                                                             }
                                                                         },
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                                             "Props": {
                                                                                 "Text": "Caption for a picture",
                                                                                 "Justification": "Center",
@@ -1107,13 +1107,13 @@
                                                                     ]
                                                                 },
                                                                 {
-                                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                                     "Props": {
                                                                         "Fill": 1
                                                                     },
                                                                     "UIItems": [
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
                                                                             "Props": {
                                                                                 "Width": 700,
                                                                                 "Height": 464,
@@ -1127,7 +1127,7 @@
                                                                             }
                                                                         },
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                                             "Props": {
                                                                                 "Text": "Caption for a picture",
                                                                                 "Justification": "Center",
@@ -1141,7 +1141,7 @@
                                                     ]
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                                     "Props": {
                                                         "Title": "A Tab Page 2",
                                                         "Note": "Some Tab Page Notes",
@@ -1150,7 +1150,7 @@
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "Any content can be placed inside!",
                                                                 "FontSize": 15,
@@ -1165,7 +1165,7 @@
                                                     ]
                                                 },
                                                 {
-                                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                                     "Props": {
                                                         "Title": "A Tab Page 3",
                                                         "Note": "Some Tab Page Notes",
@@ -1174,7 +1174,7 @@
                                                     },
                                                     "UIItems": [
                                                         {
-                                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                             "Props": {
                                                                 "Text": "Any content can be placed inside!",
                                                                 "FontSize": 15,
@@ -1193,7 +1193,7 @@
                                     ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                     "Props": {
                                         "Title": "Getting Started",
                                         "Note": "Direct your players to the right Discord channels!",
@@ -1205,13 +1205,13 @@
                                         },
                                         "UIItems": [
                                             {
-                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                 "Props": {
                                                     "Fill": 1
                                                 },
                                                 "UIItems": [
                                                     {
-                                                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                                         "Props": {
                                                             "Text": "Some additional information's can be added to Categories, Groups and other by providing the \"Info\" parameter which will generate an INFO button.",
                                                             "FontSize": 15,
@@ -1227,7 +1227,7 @@
                                                 ]
                                             },
                                             {
-                                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                 "Props": {
                                                     "Label": "_OK_",
                                                     "Padding": [
@@ -1245,7 +1245,7 @@
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                             "Props": {
                                                 "Text": "New to Ark? Check out our newbie guide in the Discord for tips on surviving your first days.",
                                                 "FontSize": 14,
@@ -1253,10 +1253,10 @@
                                             }
                                         },
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                             "Props": {
                                                 "Label": "Discord Button",
-                                                "Image": "/Ark-Nucleus/DynamicUI/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo"
+                                                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo"
                                             },
                                             "OnClickEvent": {
                                                 "Url": "https://discord.gg/"
@@ -1269,7 +1269,7 @@
                     ]
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                     "Props": {
                         "Title": "Web Url Widget",
                         "Note": "The Url Widget makes it easy to host the JSON widget somewhere on the web and reuse it on multiple server or edit it without the need to joining the game.",
@@ -1277,7 +1277,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Url_v1.DU_Panel_Url_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Url_v1.DU_Panel_Url_v1_C",
                             "UIConfigRequest": {
                                 "Url": "https://api.jsonsilo.com/demo/9cdde870-6517-485d-ac77-7dad7fd02f8e",
                                 "KeepCacheForXMinutes": 5,

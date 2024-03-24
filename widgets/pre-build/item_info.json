@@ -144,19 +144,19 @@
         },
         "UIItems": [
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                 "Props": {
                     "Fill": 1
                 },
                 "UIItems": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                         "Props": {
                             "Color": "ALERT_COLOR",
                             "Padding": [ 2, 2, 2, 2 ]
                         },
                         "UIItems": [ {
-                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
                                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO_INACCURACY",
                                     "Color": "ALERT_COLOR",
@@ -166,7 +166,7 @@
                             } ]
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                         "Props": {
                             "BindIsVisible": "Data.SelectedPreviewItem.BaseData.IsSpecialTame",
                             "Color": "ERROR_COLOR",
@@ -174,7 +174,7 @@
                         },
                         "UIItems": [
                             {
-                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
                                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_SPECIAL_WARNING",
                                     "FontSize": 10,
@@ -185,7 +185,7 @@
                         ]
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$SERVER_TAMING_MULTI",
                             "BindText": "BaseData.Server.TamingMulti",
@@ -193,7 +193,7 @@
                         }
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_Int_v1.DU_Edit_Int_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Int_v1.DU_Edit_Int_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$DINO_FOOD_CALC_LVL",
                             "Note": "$$Ark-Nucleus$:$DINO_FOOD_CALC_LVL_NOTE",
@@ -208,14 +208,14 @@
 
                     },
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                         "Props": {
                             "Fill": 1,
                             "Padding": [ 2, 2, 2, 2 ],
                             "BindValue": "Data.SelectedPreviewItem.FoodInfo"
                         },
                         "ItemWidget": {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C"
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C"
                         },
                         "DataSource": {
                             "Name": "Ark-Nucleus/GET/Encyclopedia/FoodInfo",
@@ -250,20 +250,20 @@
         },
         "UIItems": [
             {
-                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                 "Props": {
                     "Fill": 1
                 },
                 "UIItems": [
                     {
-                        "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                         "Props": {
                             "Fill": 1,
                             "Padding": [ 2, 2, 2, 2 ],
                             "BindValue": "Data.SelectedPreviewItem.BaseData.BoneDmg"
                         },
                         "ItemWidget": {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                             "Props": {
                                 "BindLabel": "ItemData.ShortName",
                                 "BindText": "ItemData.DmgMulti",

@@ -1,7 +1,7 @@
 {
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
             "Props": {
                 "Title": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED",
                 "Fill": 1,
@@ -9,13 +9,13 @@
             },
             "UIItems": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                     "Props": {
                         "Fill": 1
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                             "Props": {
                                 "Fill": 1,
                                 "VerticalAlignment": 2,
@@ -24,10 +24,10 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                             "Props": {
                                                 "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED",
                                                 "Color":"ALERT_COLOR",
@@ -37,7 +37,7 @@
                                             }
                                         },
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                             "Props": {
                                                 "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED_NOTE",
                                                 "FontSize": 16,

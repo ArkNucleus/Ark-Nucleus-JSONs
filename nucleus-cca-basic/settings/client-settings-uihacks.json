@@ -24,7 +24,7 @@
                     "$$Ark-Nucleus$:$BOTTOM-LEFT": "BOTTOM-LEFT"
                 }
             ],
-            "CUSTOM_WIDGET": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_DropDown_v1.DU_Edit_DropDown_v1_C"
+            "CUSTOM_WIDGET": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_DropDown_v1.DU_Edit_DropDown_v1_C"
         },
         "SHOW_PLAYER_ALLOCATED_STAT_POINTS": {
             "TYPE": "BOOLEAN",

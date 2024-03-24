@@ -63,7 +63,7 @@
             "BindValue": "ItemData.State"
         },
         "ItemWidget": {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.Name",
                 "BindValue": "ItemData.EnumID"
@@ -135,7 +135,7 @@
             "BindIsVisible": "ItemData.IsTamed"
         },
         "ItemWidget": {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.PlayerName",
                 "BindNote": "ItemData.LinkedPlayerId",
@@ -332,7 +332,7 @@
             "BindValue": "ItemData.QualityIndex"
         },
         "ItemWidget": {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.Name",
                 "BindValue": "ItemData.EnumID"
@@ -381,7 +381,7 @@
             "BindValue": "ItemData.OwnerId"
         },
         "ItemWidget": {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
             "Props": {
                 "BindLabel": "ItemData.PlayerName",
                 "BindNote": "ItemData.LinkedPlayerId",

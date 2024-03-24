@@ -1,5 +1,5 @@
 {
-    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
         "Title": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE",
         "Note": "$$Ark-Nucleus$:$SERVER_COMMUNITY_TITLE_NOTE",
@@ -11,7 +11,7 @@
     },
     "UIItems": [
         {
-            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
             "Props": {
                 "Fill": 1
             },
@@ -22,7 +22,7 @@
 
             "UIItems": [
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_SidePanel_v1.DU_Panel_SidePanel_v1_C",
                     "Props": {
                         "UUID": "PlayersList",
                         "Fill": 1,
@@ -38,7 +38,7 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                             "Props": {
                                 "Fill": 1,
                                 "BindValue": "Data.PlayersData.Items",
@@ -60,7 +60,7 @@
                                 "PostData": "Ark-Nucleus/NOTIFY/Players/Selected"
                             },
                             "ItemWidget": {
-                                "Widget": "/Ark-Nucleus/DynamicUI/Widgets/ListItems/DU_Item_Player_v1.DU_Item_Player_v1_C",
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_Player_v1.DU_Item_Player_v1_C",
                                 "UpdateOnEvents": {
                                     "Events": [
                                         "Ark-Nucleus/NOTIFY/Players/Selected"
@@ -79,7 +79,7 @@
                     ]
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
                         "Padding": [
                             2,
@@ -90,13 +90,13 @@
                     }
                 },
                 {
-                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                     "Props": {
                         "Fill": 3
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                             "Props": {
                                 "Title": "$$Ark-Nucleus$:$COMMANDs_TELEPORT_TITLE",
                                 "Note": "$$Ark-Nucleus$:$COMMANDs_TELEPORT_TITLE_NOTE",
@@ -109,7 +109,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
                                         "Text": "$$Ark-Nucleus$:$WIP",
                                         "FontSize": 24,
@@ -122,7 +122,7 @@
 
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
                                 "Padding": [
                                     2,
@@ -133,7 +133,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                             "Props": {
                                 "Title": "$$Ark-Nucleus$:$PLAYER_INFO_TITLE",
                                 "Note": "$$Ark-Nucleus$:$PLAYER_INFO_TITLE_NOTE",
@@ -146,7 +146,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$NAME",
                                         "BindText": "Data.SelectedPlayer.PlayerName",
@@ -154,7 +154,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$LP_ID",
                                         "BindText": "Data.SelectedPlayer.LinkedPlayerId",
@@ -162,7 +162,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$EOS_ID",
                                         "BindText": "Data.SelectedPlayer.UUID",
@@ -170,7 +170,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$PLAYER_ONLINE",
                                         "BindText": "Data.SelectedPlayer.IsOnline",
@@ -179,7 +179,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$PLAYER_INDEX_DATE",
                                         "BindText": "Data.SelectedPlayer.IndexDate",
@@ -188,7 +188,7 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$PLAYER_LAST_ACTIVITY",
                                         "BindText": "Data.SelectedPlayer.LastActivity",
@@ -197,14 +197,14 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "Fill": 1,
                                         "Padding": [ 2, 2, 2, 2 ]
                                     },
                                     "UIItems": [
                                         {
-                                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                                             "Props": {
                                                 "Label": "$$Ark-Nucleus$:$RAW_JSON_DATA",
                                                 "IsReadOnly": true,
@@ -217,7 +217,7 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
                                 "Padding": [
                                     2,
@@ -228,7 +228,7 @@
                             }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                             "Props": {
                                 "Title": "$$Ark-Nucleus$:$PLAYER_3D_VIEW_TITLE",
                                 "Note": "$$Ark-Nucleus$:$PLAYER_3D_VIEW_TITLE_NOTE",
@@ -241,7 +241,7 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/DynamicUI/Widgets/Views/DU_View_3DView_v1.DU_View_3DView_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_3DView_v1.DU_View_3DView_v1_C",
                                     "PreviewWidth": 200,
                                     "Props": {
                                         "PreviewWidth": 200,
