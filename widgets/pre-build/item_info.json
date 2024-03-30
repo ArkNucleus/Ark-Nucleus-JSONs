@@ -23,28 +23,28 @@
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_TAG",
             "BindText": "ItemData.BaseData.Tag",
-            "BindIsVisible":"ItemData.BaseData.IsDino"
+            "BindIsVisible": "ItemData.BaseData.IsDino"
         }
     },
     "GROUP": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_GROUP",
             "BindText": "ItemData.BaseData.Group",
-            "BindIsVisible":"ItemData.BaseData.IsDino"
+            "BindIsVisible": "ItemData.BaseData.IsDino"
         }
     },
     "DESC": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DESC",
             "BindText": "ItemData.BaseData.Desc",
-            "BindIsVisible":"!ItemData.BaseData.IsDino"
+            "BindIsVisible": "!ItemData.BaseData.IsDino"
         }
     },
     "STACK_SIZE": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$STACK_SIZE",
             "BindText": "ItemData.BaseData.MaxQuantity",
-            "BindIsVisible":"!ItemData.BaseData.IsDino"
+            "BindIsVisible": "!ItemData.BaseData.IsDino"
         }
     },
     "CAN_BE_BLUEPRINT": {
@@ -52,7 +52,7 @@
             "Label": "$$Ark-Nucleus$:$ITEM_CAN_BE_BLUEPRINT",
             "BindText": "ItemData.BaseData.CanBeBlueprint",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"!ItemData.BaseData.IsDino"
+            "BindIsVisible": "!ItemData.BaseData.IsDino"
         }
     },
     "CAN_BE_PAINTED": {
@@ -67,7 +67,7 @@
             "Label": "$$Ark-Nucleus$:$ITEM_USES_STATS",
             "BindText": "ItemData.BaseData.UseItemStats",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"!ItemData.BaseData.IsDino"
+            "BindIsVisible": "!ItemData.BaseData.IsDino"
         }
     },
     "CAN_BE_TAMED": {
@@ -75,8 +75,8 @@
             "Label": "$$Ark-Nucleus$:$DINO_CAN_BE_TAMED",
             "BindText": "ItemData.BaseData.CanBeTamed",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed",
-            "Color":"SUCCESS_COLOR"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed",
+            "Color": "SUCCESS_COLOR"
         }
     },
     "IS_KNOCK_TAME": {
@@ -84,7 +84,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_KNOCK_TAME",
             "BindText": "ItemData.BaseData.IsKnockOutTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsKnockOutTame"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsKnockOutTame"
         }
     },
     "IS_PASSIVE_TAME": {
@@ -92,7 +92,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_PASSIVE_TAME",
             "BindText": "ItemData.BaseData.IsPassiveTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsPassiveTame"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsPassiveTame"
         }
     },
     "IS_SPECIAL_TAME": {
@@ -100,8 +100,8 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_SPECIAL_TAME",
             "BindText": "ItemData.BaseData.IsSpecialTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsSpecialTame",
-            "Color":"ALERT_COLOR"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsSpecialTame",
+            "Color": "ALERT_COLOR"
         }
     },
     "CAN_BREED": {
@@ -109,8 +109,8 @@
             "Label": "$$Ark-Nucleus$:$DINO_CAN_BREED",
             "BindText": "ItemData.BaseData.CanHaveBaby",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.CanHaveBaby",
-            "Color":"SUCCESS_COLOR"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanHaveBaby",
+            "Color": "SUCCESS_COLOR"
         }
     },
     "IS_FLAYER": {
@@ -118,8 +118,8 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_FLAYER",
             "BindText": "ItemData.BaseData.IsFlayer",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsFlayer",
-            "Color":"SUCCESS_COLOR"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsFlayer",
+            "Color": "SUCCESS_COLOR"
         }
     },
     "IS_WATER_DINO": {
@@ -127,8 +127,8 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_WATER_DINO",
             "BindText": "ItemData.BaseData.IsWaterDino",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible":"ItemData.BaseData.IsDino&&ItemData.BaseData.IsWaterDino",
-            "Color":"SUCCESS_COLOR"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsWaterDino",
+            "Color": "SUCCESS_COLOR"
         }
     },
     "TAMING_INFO": {
@@ -155,7 +155,8 @@
                             "Color": "ALERT_COLOR",
                             "Padding": [ 2, 2, 2, 2 ]
                         },
-                        "UIItems": [ {
+                        "UIItems": [
+                            {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
                                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO_INACCURACY",
@@ -163,7 +164,8 @@
                                     "FontSize": 10,
                                     "Padding": [ 2, 2, 2, 2 ]
                                 }
-                            } ]
+                            }
+                        ]
                     },
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",

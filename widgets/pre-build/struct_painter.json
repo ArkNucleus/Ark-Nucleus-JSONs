@@ -1,0 +1,28 @@
+{
+    "RANDOM_COLOR": {
+        "Props": {
+            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize"
+        },
+        "OnClickEvent": {
+            "EventUID": "Ark-Nucleus/UI/StructPainter/RandomizeColors"
+        }
+    },
+    "COLOR_REG": {
+        "Props": {
+            "ItemKey": "Index",
+            "BindItems": "Data.Colors",
+            "BindValue": "ItemData.Index"
+        },
+        "ItemWidget": {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_ColorItem.DU_DDItem_ColorItem_C",
+            "Props": {
+                "BindLabel": "ItemData.Index",
+                "BindNote": "ItemData.Name",
+                "BindValue": "ItemData.Value"
+            }
+        },
+        "OnValueChanged": {
+            "EventUID": "Ark-Nucleus/UI/StructPainter/ColorChanged"
+        }
+    }
+}

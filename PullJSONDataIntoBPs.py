@@ -84,6 +84,10 @@ with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\nucleus-cca\\main-page\\
     change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "Nucleus_DisabledServerInfoPage", json.dumps(jsonData))
 
 
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\struct-painter-uihack.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "Nucleus_StructPainter_UIConfig", json.dumps(jsonData))
+
 ############################################
 #              LOCALIZATION                #
 ############################################
@@ -157,11 +161,6 @@ with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\nucleus-cca-basic\\setti
 change_blueprint_default_value("/Ark-Nucleus/SharedContent/Ark-Nucleus_CCA_Basic.Ark-Nucleus_CCA_Basic_C", "MyMod_DefaultPlayerServerSettings", player_setting)
 
 
-# WIDGETS
-# with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\message-modal.json","r") as jsonFile:
-#     jsonData = json.load(jsonFile)
-#     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/DU_BaseWidget_v1.DU_BaseWidget_v1_C", "Nucleus_MessageModalUIConfig", json.dumps(jsonData))
-
 with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\du-edit-color.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Color_v1.DU_Edit_Color_v1_C", "N_EditColor_ColorPickerUIConfig", json.dumps(jsonData))
@@ -217,6 +216,10 @@ with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\pre-build\\spaw
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/PreBuiltComps/DU_PreBuilt_Spawn_v1.DU_PreBuilt_Spawn_v1_C", "N_BaseWidget_StaticUIConfig", json.dumps(jsonData))
 
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\pre-build\\struct_painter.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Widgets/Nucleus_W_Misc_SlotButtons.Nucleus_W_Misc_SlotButtons_C", "N_BaseWidget_StaticUIConfig", json.dumps(jsonData))
+
 with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\pre-build\\advanced3d_view.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/PreBuiltComps/DU_PreBuilt_Advanced3DView_v1.DU_PreBuilt_Advanced3DView_v1_C", "N_BaseWidget_StaticUIConfig", json.dumps(jsonData))
@@ -225,8 +228,27 @@ with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\item-modal.json
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C", "DU_Item_ModalUIConfig", json.dumps(jsonData))
 
+# BASE WIDGET
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\base-widget\\du_base-basic-error.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/DU_BaseWidget_v1.DU_BaseWidget_v1_C", "N_BaseWidget_CONST_ErrorWidget", json.dumps(jsonData))
+
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\base-widget\\du_base-basic-modal.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/DU_BaseWidget_v1.DU_BaseWidget_v1_C", "N_BaseWidget_CONST_Modal", json.dumps(jsonData))
+
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\base-widget\\du_base-basic-notif.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/DU_BaseWidget_v1.DU_BaseWidget_v1_C", "N_BaseWidget_CONST_NotifWidget", json.dumps(jsonData))
+
+# TABBED PANEL
 with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\du-panel-tabbed.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C", "Nucleus_CONST_TabButtonUIConfig", json.dumps(jsonData))
+
+
+with open("G:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\du-edit-dropdown-default-item.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    change_blueprint_default_value("/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_DropDown_v1.DU_Edit_DropDown_v1_C", "N_DropDown_DefaultItemWidget", json.dumps(jsonData))
 
 print("SCRIPT DONE!")

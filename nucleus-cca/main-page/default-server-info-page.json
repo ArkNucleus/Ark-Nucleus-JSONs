@@ -1083,7 +1083,7 @@
                                                                     },
                                                                     "UIItems": [
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                                             "Props": {
                                                                                 "Width": 700,
                                                                                 "Height": 464,
@@ -1113,7 +1113,7 @@
                                                                     },
                                                                     "UIItems": [
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                                             "Props": {
                                                                                 "Width": 700,
                                                                                 "Height": 464,
@@ -1279,7 +1279,7 @@
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Url_v1.DU_Panel_Url_v1_C",
                             "UIConfigRequest": {
-                                "Url": "https://api.jsonsilo.com/demo/9cdde870-6517-485d-ac77-7dad7fd02f8e",
+                                "Url": "https://drive.google.com/uc?id=10J_7kql8E6IX0mHtDehbDy9sp_CdZ-LL",
                                 "KeepCacheForXMinutes": 5,
                                 "UUID": "Nucleus/TestDynamicUIConfig"
                             },

@@ -6,10 +6,16 @@
         "Icon": "/Game/PrimalEarth/UI/Textures/HubSurviviorIcon.HubSurviviorIcon",
         "Fill": 1
     },
+    "ResetOnEvents": {
+        "Events": [
+            "Ark-Nucleus/NOTIFY/Encyclopedia"
+        ]
+    },
     "UICache": {
         "SaveFile": "Ark-Nucleus-Encyclopedia",
         "Props": {
-            "DinoTamingFoodLvl": 150
+            "DinoTamingFoodLvl": 150,
+            "ItemsPerPage": 20
         }
     },
     "Info": {
@@ -72,6 +78,49 @@
 
         ]
     },
+    "Buttons": [
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Game/PrimalEarth/UI/Textures/StatsIcons/CraftSpeed_Icon.CraftSpeed_Icon",
+                "Label": "$$Ark-Nucleus$:$LOGS_CONFIG_BTN",
+                "VerticalAlignment": 1,
+                "Padding": [ 2, 2, 2, 2 ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_PREFERENCES_TITLE"
+                },
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$SAVE",
+                            "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "EventUID": "Ark-Nucleus/NOTIFY/Encyclopedia",
+                            "CloseModal": true
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Int_v1.DU_Edit_Int_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEMS_NBR",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEMS_NBR_NOTE",
+                            "BindValue": "UICache.ItemsPerPage",
+                            "Min": 10,
+                            "Max": 100,
+                            "Padding": [ 2, 2, 2, 2 ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "UIItems": [
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
@@ -116,12 +165,8 @@
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                     "Props": {
                         "Fill": 1,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
+                        "Padding": [ 2, 2, 2, 2 ],
+                        "BindItemsPerPage": "UICache.ItemsPerPage",
                         "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
                         "FilterKeys": [
                             "BaseData.IsDino",
@@ -249,18 +294,14 @@
                     "Props": {
                         "PreviewWidth": 200,
                         "Fill": 2,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
+                        "Padding": [ 2, 2, 2, 2 ],
                         "BindValue": "Data.SelectedPreviewItem"
                     },
                     "ColorRegionsUIConfig": {
                         "Props": {
-                            "BindValue": "ItemData.ColorIndex",
-                            "BindIsEnabled": "ItemData.IsEnabled"
+                            "BindValue": "ItemData.Index",
+                            "BindIsEnabled": "ItemData.IsEnabled",
+                            "BindUseDye": "Data.SelectedPreviewItem.BaseData.IsDino"
                         },
                         "OnValueChanged": {
                             "EventUID": "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
@@ -268,6 +309,7 @@
                         "ColorPickerUIConfig": {
                             "Props": {
                                 "UUID": "ColorDefPicker",
+                                "BindCacheParam": "Data.SelectedPreviewItem.BaseData.IsDino",
                                 "Cache": true,
                                 "Title": "$$Ark-Nucleus$:$COLOR_DEF_PICKER"
                             },

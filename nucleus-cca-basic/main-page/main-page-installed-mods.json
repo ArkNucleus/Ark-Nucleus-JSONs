@@ -282,7 +282,7 @@
                                                                 "BindValue": "Data.SelectedMod.Value.CFData.details.screenshots"
                                                             },
                                                             "ItemWidget": {
-                                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                                 "Props": {
                                                                     "Padding": [ 2, 2, 2, 2 ],
                                                                     "BindImage": "ItemData.thumbnailUrl"
@@ -305,7 +305,7 @@
                                                                     ],
                                                                     "UIItems": [
                                                                         {
-                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                                             "Props": {
                                                                                 "Fill": 1,
                                                                                 "Padding": [ 2, 2, 2, 2 ],
@@ -339,7 +339,7 @@
                                                         {
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                                                             "Props": {
-                                                                "Padding": [ 2, 2,  2, 2 ],
+                                                                "Padding": [ 2, 2, 2, 2 ],
                                                                 "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
                                                                 "FilterKeys": [
                                                                     "BaseData.IsDino",
@@ -448,7 +448,7 @@
                                                                 },
                                                                 "UIItems": [
                                                                     {
-                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_HttpImage_v1.DU_View_HttpImage_v1_C",
+                                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_Image_v1.DU_View_Image_v1_C",
                                                                         "Props": {
                                                                             "Width": 32,
                                                                             "Height": 32,
@@ -549,6 +549,21 @@
                                     "CloseModal": true
                                 }
                             ],
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/InstalledMods/ServerSettings",
+                                "ResponseKey": "Data.ModServerSettings",
+                                "RequestParams": [
+                                    {
+                                        "RequestKey": "SelectedMod",
+                                        "ValueKey": "Data.SelectedMod"
+                                    }
+                                ]
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                ]
+                            },
                             "Buttons": [
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
@@ -804,7 +819,6 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                                     "Props": {
-                                        "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
                                         "Fill": 1
                                     },
                                     "UIItems": [
@@ -813,21 +827,6 @@
                                             "Props": {
                                                 "LockNavigationOnDirty": true,
                                                 "BindValue": "Data.ModServerSettings"
-                                            },
-                                            "DataSource": {
-                                                "Name": "Ark-Nucleus/GET/InstalledMods/ServerSettings",
-                                                "ResponseKey": "Data.ModServerSettings",
-                                                "RequestParams": [
-                                                    {
-                                                        "RequestKey": "SelectedMod",
-                                                        "ValueKey": "Data.SelectedMod"
-                                                    }
-                                                ]
-                                            },
-                                            "ResetOnEvents": {
-                                                "Events": [
-                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
-                                                ]
                                             }
                                         }
                                     ]
@@ -869,6 +868,21 @@
                                     "CloseModal": true
                                 }
                             ],
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/InstalledMods/PlayerSettings",
+                                "ResponseKey": "Data.ModPlayerSettings",
+                                "RequestParams": [
+                                    {
+                                        "RequestKey": "SelectedMod",
+                                        "ValueKey": "Data.SelectedMod"
+                                    }
+                                ]
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                ]
+                            },
                             "Buttons": [
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
@@ -1133,7 +1147,6 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                                     "Props": {
-                                        "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
                                         "Fill": 1
                                     },
                                     "UIItems": [
@@ -1142,21 +1155,6 @@
                                             "Props": {
                                                 "LockNavigationOnDirty": true,
                                                 "BindValue": "Data.ModPlayerSettings"
-                                            },
-                                            "DataSource": {
-                                                "Name": "Ark-Nucleus/GET/InstalledMods/PlayerSettings",
-                                                "ResponseKey": "Data.ModPlayerSettings",
-                                                "RequestParams": [
-                                                    {
-                                                        "RequestKey": "SelectedMod",
-                                                        "ValueKey": "Data.SelectedMod"
-                                                    }
-                                                ]
-                                            },
-                                            "ResetOnEvents": {
-                                                "Events": [
-                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
-                                                ]
                                             }
                                         }
                                     ]
@@ -1198,6 +1196,21 @@
                                     "CloseModal": true
                                 }
                             ],
+                            "DataSource": {
+                                "Name": "Ark-Nucleus/GET/InstalledMods/ClientSettings",
+                                "ResponseKey": "Data.ModClientSettings",
+                                "RequestParams": [
+                                    {
+                                        "RequestKey": "SelectedMod",
+                                        "ValueKey": "Data.SelectedMod"
+                                    }
+                                ]
+                            },
+                            "ResetOnEvents": {
+                                "Events": [
+                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
+                                ]
+                            },
                             "Buttons": [
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
@@ -1462,7 +1475,6 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
                                     "Props": {
-                                        "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
                                         "Fill": 1
                                     },
                                     "UIItems": [
@@ -1471,21 +1483,6 @@
                                             "Props": {
                                                 "LockNavigationOnDirty": true,
                                                 "BindValue": "Data.ModClientSettings"
-                                            },
-                                            "DataSource": {
-                                                "Name": "Ark-Nucleus/GET/InstalledMods/ClientSettings",
-                                                "ResponseKey": "Data.ModClientSettings",
-                                                "RequestParams": [
-                                                    {
-                                                        "RequestKey": "SelectedMod",
-                                                        "ValueKey": "Data.SelectedMod"
-                                                    }
-                                                ]
-                                            },
-                                            "ResetOnEvents": {
-                                                "Events": [
-                                                    "Ark-Nucleus/NOTIFY/InstalledMods/Settings"
-                                                ]
                                             }
                                         }
                                     ]

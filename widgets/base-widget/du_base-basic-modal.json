@@ -9,19 +9,13 @@
                 "BindText": "Data.Response.Message",
                 "FontSize": 12,
                 "Fill": 1,
-                "Padding": [
-                    2,
-                    2,
-                    2,
-                    2
-                ]
+                "Padding": [ 2, 2, 2, 2 ]
             }
         },
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Label": "$$Ark-Nucleus$:$OK",
-                "Fill": 1
+                "Label": "$$Ark-Nucleus$:$OK"
             },
             "OnClickEvent": {
                 "EventUID": "CloseModal"

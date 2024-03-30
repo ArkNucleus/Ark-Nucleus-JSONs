@@ -135,7 +135,7 @@
                     },
                     "ColorRegionsUIConfig": {
                         "Props": {
-                            "BindValue": "ItemData.ColorIndex",
+                            "BindValue": "ItemData.Index",
                             "BindIsEnabled": "ItemData.IsEnabled"
                         },
                         "OnValueChanged": {

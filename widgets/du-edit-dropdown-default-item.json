@@ -1,0 +1,7 @@
+{
+    "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
+    "Props": {
+        "BindLabel": "ItemData.Name",
+        "BindValue": "ItemData.Value"
+    }
+}

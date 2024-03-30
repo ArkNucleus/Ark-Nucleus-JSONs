@@ -1,0 +1,9 @@
+{
+    "Widget": "/Ark-Nucleus/SharedContent/Widgets/DU_ToastNotif.DU_ToastNotif_C",
+    "Props": {
+        "BindTitle": "ItemData.Title",
+        "BindText": "ItemData.Text",
+        "BindColor": "ItemData.Color",
+        "Padding": [ 2, 2, 2, 2 ]
+    }
+}
