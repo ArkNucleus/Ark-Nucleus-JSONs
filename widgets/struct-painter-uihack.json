@@ -1,3 +1,8 @@
 {
-    "Widget": "/Ark-Nucleus/PrivateContent/Widgets/Nucleus_W_Misc_SlotButtons.Nucleus_W_Misc_SlotButtons_C"
+    "Widget": "/Ark-Nucleus/PrivateContent/Widgets/Nucleus_W_Misc_SlotButtons.Nucleus_W_Misc_SlotButtons_C",
+    "ResetOnEvents": {
+        "Events": [
+            "Ark-Nucleus/UI/StructPainter/ColorChanged"
+        ]
+    }
 }

@@ -1,5 +1,5 @@
 {
-    "QUANTITY": {
+    "DINO_QUANTITY": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_QUANTITY",
             "BindValue": "ItemData.Quantity",
@@ -10,7 +10,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "LEVEL": {
+    "DINO_LEVEL": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_BASE_LVL",
             "BindValue": "ItemData.BaseLvl",
@@ -21,7 +21,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "SCALE": {
+    "DINO_SCALE": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_SCALE",
             "BindValue": "ItemData.Scale",
@@ -34,7 +34,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "STATE": {
+    "DINO_STATE": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_STATE",
             "ItemKey": "EnumID",
@@ -73,7 +73,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "IS_FEMALE": {
+    "DINO_IS_FEMALE": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_IS_FEMALE",
             "BindValue": "ItemData.IsFemale",
@@ -83,7 +83,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "IS_NEUTERED": {
+    "DINO_IS_NEUTERED": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_IS_NEUTERED",
             "BindValue": "ItemData.Neutered",
@@ -94,7 +94,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "IS_BABY": {
+    "DINO_IS_BABY": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_IS_BABY",
             "BindValue": "ItemData.IsBaby",
@@ -104,7 +104,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "MATURATION": {
+    "DINO_MATURATION": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_MATURATION",
             "BindValue": "ItemData.Maturation",
@@ -116,7 +116,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "IS_TAMED": {
+    "DINO_IS_TAMED": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_IS_TAMED",
             "BindValue": "ItemData.IsTamed",
@@ -126,7 +126,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "OWNER": {
+    "DINO_OWNER": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_OWNER",
             "ItemKey": "LinkedPlayerId",
@@ -146,7 +146,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "TAMING_EFFECT": {
+    "DINO_TAMING_EFFECT": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_TAME_EFFECT",
             "BindValue": "ItemData.TamingEffect",
@@ -159,7 +159,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "IMPRINTING": {
+    "DINO_IMPRINTING": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_IMPRINTING",
             "BindValue": "ItemData.Imprint",
@@ -171,7 +171,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "CUSTOM_NAME": {
+    "DINO_NAME": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_CUSTOM_NAME",
             "BindValue": "ItemData.CustomName",
@@ -181,13 +181,13 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "RANDOM_STATS": {
+    "DINO_RANDOM_STATS": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$UNALLOCATED_POINTS",
             "BindText": "ItemData.StatPoints"
         }
     },
-    "RESET_STATS": {
+    "DINO_RESET_STATS": {
         "Props": {
             "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRefresh.IconRefresh"
         },
@@ -195,7 +195,7 @@
             "EventUID": "Nucleus/DinoSpawner/ResetStats"
         }
     },
-    "RANDOM_STATS_BTN": {
+    "DINO_RANDOM_STATS_BTN": {
         "Props": {
             "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize"
         },
@@ -203,7 +203,7 @@
             "EventUID": "Nucleus/DinoSpawner/RandomizeStats"
         }
     },
-    "WILD_HEALTH": {
+    "DINO_WILD_HEALTH": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$HEALTH_STAT",
             "Min": 0,
@@ -215,7 +215,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "WILD_STAMINA": {
+    "DINO_WILD_STAMINA": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$STAMINA_STAT",
             "Min": 0,
@@ -227,7 +227,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "WILD_OXYGEN": {
+    "DINO_WILD_OXYGEN": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$OXYGEN_STAT",
             "Min": 0,
@@ -239,7 +239,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "WILD_FOOD": {
+    "DINO_WILD_FOOD": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$FOOD_STAT",
             "Min": 0,
@@ -251,7 +251,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "WILD_WEIGHT": {
+    "DINO_WILD_WEIGHT": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$WEIGHT_STAT",
             "Min": 0,
@@ -263,7 +263,7 @@
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
-    "WILD_SPEED": {
+    "DINO_WILD_SPEED": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$SPEED_STAT",
             "Min": 0,
@@ -275,7 +275,7 @@
             }
         }
     },
-    "WILD_DAMAGE": {
+    "DINO_WILD_DAMAGE": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$MELEE_DMG_STAT",
             "Min": 0,
