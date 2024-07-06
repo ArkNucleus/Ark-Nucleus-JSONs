@@ -6,34 +6,34 @@
             "BindValue": "ItemData.BaseData"
         }
     },
-    "PATH": {
+    "ITEM_PATH": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$PATH",
             "BindValue": "ItemData.Path",
             "IsReadOnly": true
         }
     },
-    "NAME": {
+    "ITEM_NAME": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$NAME",
             "BindText": "ItemData.BaseData.Name"
         }
     },
-    "TAG": {
+    "ITEM_TAG": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_TAG",
             "BindText": "ItemData.BaseData.Tag",
             "BindIsVisible": "ItemData.BaseData.IsDino"
         }
     },
-    "GROUP": {
+    "ITEM_GROUP": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DINO_GROUP",
             "BindText": "ItemData.BaseData.Group",
             "BindIsVisible": "ItemData.BaseData.IsDino"
         }
     },
-    "DESC": {
+    "ITEM_DESC": {
         "Props": {
             "Label": "$$Ark-Nucleus$:$DESC",
             "BindText": "ItemData.BaseData.Desc",
@@ -84,7 +84,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_KNOCK_TAME",
             "BindText": "ItemData.BaseData.IsKnockOutTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsKnockOutTame"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed&&ItemData.BaseData.IsKnockOutTame"
         }
     },
     "IS_PASSIVE_TAME": {
@@ -92,7 +92,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_PASSIVE_TAME",
             "BindText": "ItemData.BaseData.IsPassiveTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsPassiveTame"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed&&ItemData.BaseData.IsPassiveTame"
         }
     },
     "IS_SPECIAL_TAME": {
@@ -100,7 +100,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_IS_SPECIAL_TAME",
             "BindText": "ItemData.BaseData.IsSpecialTame",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.IsSpecialTame",
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed&&ItemData.BaseData.IsSpecialTame",
             "Color": "ALERT_COLOR"
         }
     },
@@ -109,7 +109,7 @@
             "Label": "$$Ark-Nucleus$:$DINO_CAN_BREED",
             "BindText": "ItemData.BaseData.CanHaveBaby",
             "ValueConverter": "BooleanToYesNo",
-            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanHaveBaby",
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed&&ItemData.BaseData.CanHaveBaby",
             "Color": "SUCCESS_COLOR"
         }
     },
@@ -135,7 +135,7 @@
         "Props": {
             "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO",
             "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DINO_TAMING_INFO_NOTE",
-            "BindIsVisible": "ItemData.BaseData.IsDino"
+            "BindIsVisible": "ItemData.BaseData.IsDino&&ItemData.BaseData.CanBeTamed"
         },
         "ResetOnEvents": {
             "Events": [
@@ -218,6 +218,11 @@
                         },
                         "ItemWidget": {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_PrimalItemDino_v2.DU_Item_PrimalItemDino_v2_C"
+                        },
+                        "ResetOnEvents": {
+                            "Events": [
+                                "Ark-Nucleus/NOTIFY/FoodTameLvlChanged"
+                            ]
                         },
                         "DataSource": {
                             "Name": "Ark-Nucleus/GET/Encyclopedia/FoodInfo",

@@ -335,12 +335,17 @@
                                                         "BindViewMode": "UICache.Encyclopedia.ViewMode",
                                                         "Padding": [ 2, 2, 2, 2 ]
                                                     },
+                                                    "ResetOnEvents": {
+                                                        "Events": [
+                                                            "Ark-Nucleus/NOTIFY/Encyclopedia"
+                                                        ]
+                                                    },
                                                     "UIItems": [
                                                         {
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                                                             "Props": {
                                                                 "Padding": [ 2, 2, 2, 2 ],
-                                                                "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
+                                                                "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source", "BaseData.Name" ],
                                                                 "FilterKeys": [
                                                                     "BaseData.IsDino",
                                                                     "BaseData.FolderPaths",
@@ -492,6 +497,9 @@
                                                         "BindViewMode": "UICache.RwaCFData.ViewMode",
                                                         "Padding": [ 2, 2, 2, 2 ]
                                                     },
+                                                    "AccessPolicy": {
+                                                        "Tags": []
+                                                    },
                                                     "UIItems": [
                                                         {
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
@@ -520,8 +528,8 @@
                                 "Icon": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_S_Settings.T_Nucleus_S_Settings",
                                 "Fill": 1
                             },
-                            "Permission": {
-                                "Tag": "Nucleus_EditModServerSettings"
+                            "AccessPolicy": {
+                                "Tags": ["Nucleus_EditModServerSettings"]
                             },
                             "OptionalPostRequests": [
                                 {

@@ -491,8 +491,10 @@
         "Props": {
             "BindIsVisible": "!ItemData.BaseData.IsDino",
             "BindIsEnabled": "ItemData.IsValid",
-            "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER",
-            "Permission": "Nucleus_SpawnItems"
+            "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER"
+        },
+        "AccessPolicy": {
+            "Tags": ["Nucleus_SpawnItems"]
         },
         "OnClickEvent": {
             "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnItem"
@@ -502,8 +504,10 @@
         "Props": {
             "BindIsEnabled": "ItemData.IsValid",
             "BindIsVisible": "ItemData.BaseData.IsDino",
-            "Label": "$$Ark-Nucleus$:$SPAWN_IN_FRONT",
-            "Permission": "Nucleus_SpawnDinos"
+            "Label": "$$Ark-Nucleus$:$SPAWN_IN_FRONT"
+        },
+        "AccessPolicy": {
+            "Tags": ["Nucleus_SpawnDinos"]
         },
         "OnClickEvent": {
             "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnByPlayer"
@@ -513,8 +517,10 @@
         "Props": {
             "BindIsVisible": "ItemData.IsTamed",
             "BindIsEnabled": "ItemData.IsValid",
-            "Permission": "Nucleus_SpawnDinos",
             "Label": "$$Ark-Nucleus$:$GIVE_IN_CRYO"
+        },
+        "AccessPolicy": {
+            "Tags": ["Nucleus_SpawnDinos"]
         },
         "OnClickEvent": {
             "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnCryo"

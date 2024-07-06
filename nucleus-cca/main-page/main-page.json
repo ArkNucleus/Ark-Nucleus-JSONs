@@ -84,6 +84,9 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "AccessPolicy": {
+                                        "Tags": ["Nucleus_ViewEncyclopedia"]
+                                    },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA",
                                         "UUID": "Encyclopedia",
@@ -130,8 +133,8 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "Permission": {
-                                        "Tag": "Nucleus_ViewSurvivorsHub"
+                                    "AccessPolicy": {
+                                        "Tags": ["Nucleus_ViewSurvivorsHub"]
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_COMMUNITY",
@@ -156,13 +159,39 @@
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
-                                    "Permission": {
-                                        "Tag": "Nucleus_EditServerLocalization"
+                                    "AccessPolicy": {
+                                        "Tags": ["Nucleus_EditServerLocalization"]
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION",
                                         "UUID": "AllLocalization",
                                         "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "AccessPolicy": {
+                                        "Tags": []
+                                    },
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$PERMISSIONS",
+                                        "UUID": "AllPermissions",
+                                        "Image": "/Game/PrimalEarth/UI/Textures/IconLockedEngrams.IconLockedEngrams",
                                         "BindSelectedItem": "UICache.ActiveUUID",
                                         "Padding": [
                                             0,
@@ -189,6 +218,15 @@
                                             0,
                                             5
                                         ]
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Props": {
+                                        "Text": "$$Ark-Nucleus$:$MENU_ITEM_PROVIDED_BY_OTHER_MODS",
+                                        "FontSize": 8,
+                                        "Color": "PRIMARY_COLOR_LIGHT",
+                                        "Padding": [ 2,2,2,2 ]
                                     }
                                 },
                                 {

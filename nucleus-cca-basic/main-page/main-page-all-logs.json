@@ -7,7 +7,16 @@
         "Fill": 1
     },
     "UICache": {
-        "SaveFile": "Ark-Nucleus-Logs"
+        "SaveFile": "Ark-Nucleus-Logs",
+        "Props": {
+            "ClientLogsViewMode": true,
+            "ServerLogsViewMode": true,
+            "ClearServerLogs": false,
+            "ClearClientLogs": false,
+            "XDaysOld": 7,
+            "ServerXDaysOld": 7,
+            "ClientXDaysOld": 7
+        }
     },
     "Info": {
         "Props": {
@@ -64,7 +73,7 @@
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconDelete.IconDelete",
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Clear.T_Nucleus_Clear",
                 "Label": "$$Ark-Nucleus$:$CLEAR_LOGS_BTN",
                 "VerticalAlignment": 1,
                 "Padding": [
@@ -78,20 +87,15 @@
                 "Props": {
                     "Title": "$$Ark-Nucleus$:$CLEAR_LOGS"
                 },
-                "DataSource": {
-                    "Name": "Ark-Nucleus/GET/Logs/DeleteConfig",
-                    "ResponseKey": "Data.DeleteLogsConfig"
-                },
                 "OptionalPostRequests": [
                     {
                         "Name": "Ark-Nucleus/DELETE/Logs",
                         "RequestParams": [
                             {
                                 "RequestKey": "LogConfig",
-                                "ValueKey": "Data.DeleteLogsConfig"
+                                "ValueKey": "UICache"
                             }
                         ],
-                        "ResponseKey": "Data.DeleteLogsConfig",
                         "CloseModal": true
                     }
                 ],
@@ -116,7 +120,7 @@
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$CLEAR_SERVER_LOGS",
                             "Note": "$$Ark-Nucleus$:$CLEAR_SERVER_LOGS_NOTE",
-                            "BindValue": "Data.DeleteLogsConfig.ClearServerLogs",
+                            "BindValue": "UICache.ClearServerLogs",
                             "Padding": [
                                 0,
                                 0,
@@ -124,8 +128,8 @@
                                 2
                             ]
                         },
-                        "Permission": {
-                            "Tag": "Nucleus_ClearServerLogs"
+                        "AccessPolicy": {
+                            "Tags": [ "Nucleus_ClearServerLogs" ]
                         }
                     },
                     {
@@ -133,7 +137,7 @@
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$CLEAR_CLIENT_LOGS",
                             "Note": "$$Ark-Nucleus$:$CLEAR_CLIENT_LOGS_NOTE",
-                            "BindValue": "Data.DeleteLogsConfig.ClearClientLogs",
+                            "BindValue": "UICache.ClearClientLogs",
                             "Padding": [
                                 0,
                                 0,
@@ -147,7 +151,7 @@
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$CLEAR_LOGS_DAYS_OLD",
                             "Note": "$$Ark-Nucleus$:$CLEAR_LOGS_DAYS_OLD_NOTE",
-                            "BindValue": "Data.DeleteLogsConfig.XDaysOld",
+                            "BindValue": "UICache.XDaysOld",
                             "Min": 7,
                             "Max": 700,
                             "Padding": [
@@ -165,7 +169,7 @@
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
                 "Image": "/Game/PrimalEarth/UI/Textures/StatsIcons/CraftSpeed_Icon.CraftSpeed_Icon",
-                "Label": "$$Ark-Nucleus$:$LOGS_CONFIG_BTN",
+                "Label": "$$Ark-Nucleus$:$CONFIG_BTN",
                 "VerticalAlignment": 1,
                 "Padding": [
                     2,
@@ -178,23 +182,6 @@
                 "Props": {
                     "Title": "$$Ark-Nucleus$:$LOGS_CONFIG_AMOUNT"
                 },
-                "DataSource": {
-                    "Name": "Ark-Nucleus/GET/Logs/Config",
-                    "ResponseKey": "Data.LogConfigs"
-                },
-                "OptionalPostRequests": [
-                    {
-                        "Name": "Ark-Nucleus/POST/Logs/Config",
-                        "RequestParams": [
-                            {
-                                "RequestKey": "LogConfig",
-                                "ValueKey": "Data.LogConfigs"
-                            }
-                        ],
-                        "ResponseKey": "Data.LogConfigs",
-                        "CloseModal": true
-                    }
-                ],
                 "Buttons": [
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
@@ -204,7 +191,8 @@
                             "Fill": 1
                         },
                         "OnClickEvent": {
-                            "PostData": "Ark-Nucleus/POST/Logs/Config"
+                            "EventUID": "Ark-Nucleus/NOTIFY/Logs",
+                            "CloseModal": true
                         }
                     }
                 ],
@@ -214,18 +202,13 @@
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOGS_SERVER_NBR",
                             "Note": "$$Ark-Nucleus$:$LOGS_SERVER_NBR_NOTE",
-                            "BindValue": "Data.LogConfigs.ServerXDaysOld",
+                            "BindValue": "UICache.ServerXDaysOld",
                             "Min": 1,
                             "Max": 50,
-                            "Padding": [
-                                0,
-                                0,
-                                0,
-                                2
-                            ]
+                            "Padding": [ 2, 2, 2, 2 ]
                         },
-                        "Permission": {
-                            "Tag": "Nucleus_ViewServerLogs"
+                        "AccessPolicy": {
+                            "Tags": [ "Nucleus_ViewServerLogs" ]
                         }
                     },
                     {
@@ -233,15 +216,10 @@
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$LOGS_CLIENT_NBR",
                             "Note": "$$Ark-Nucleus$:$LOGS_CLIENT_NBR_NOTE",
-                            "BindValue": "Data.LogConfigs.ClientXDaysOld",
+                            "BindValue": "UICache.ClientXDaysOld",
                             "Min": 1,
                             "Max": 100,
-                            "Padding": [
-                                0,
-                                0,
-                                0,
-                                2
-                            ]
+                            "Padding": [ 2, 2, 2, 2 ]
                         }
                     }
                 ]
@@ -259,34 +237,30 @@
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                     "Props": {
                         "Fill": 1,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ]
+                        "Padding": [ 2, 2, 2, 2 ]
                     },
                     "UIItems": [
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "UUID": "ServerLogsGroup",
-                                "BindViewMode": "UICache.ServerLogs.ViewMode",
+                                "BindViewMode": "UICache.ServerLogsViewMode",
                                 "Title": "$$Ark-Nucleus$:$SERVER_LOGS",
                                 "Note": "$$Ark-Nucleus$:$SERVER_LOGS_NOTE",
-                                "Padding": [
-                                    2,
-                                    2,
-                                    2,
-                                    2
-                                ]
+                                "Padding": [ 2, 2, 2, 2 ]
                             },
                             "DataSource": {
                                 "Name": "Ark-Nucleus/GET/Logs/Server",
-                                "ResponseKey": "Data.ServerLogs"
+                                "ResponseKey": "Data.ServerLogs",
+                                "RequestParams": [
+                                    {
+                                        "RequestKey": "LogConfig",
+                                        "ValueKey": "UICache"
+                                    }
+                                ]
                             },
-                            "Permission": {
-                                "Tag": "Nucleus_ViewServerLogs"
+                            "AccessPolicy": {
+                                "Tags": [ "Nucleus_ViewServerLogs" ]
                             },
                             "ResetOnEvents": {
                                 "Events": [
@@ -341,7 +315,7 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "UUID": "ClientLogsGroup",
-                                "BindViewMode": "UICache.ClientLogs.ViewMode",
+                                "BindViewMode": "UICache.ClientLogsViewMode",
                                 "Title": "$$Ark-Nucleus$:$CLIENT_LOGS",
                                 "Note": "$$Ark-Nucleus$:$CLIENT_LOGS_NOTE",
                                 "Padding": [
@@ -353,7 +327,13 @@
                             },
                             "DataSource": {
                                 "Name": "Ark-Nucleus/GET/Logs/Client",
-                                "ResponseKey": "Data.ClientLogs"
+                                "ResponseKey": "Data.ClientLogs",
+                                "RequestParams": [
+                                    {
+                                        "RequestKey": "LogConfig",
+                                        "ValueKey": "UICache"
+                                    }
+                                ]
                             },
                             "ResetOnEvents": {
                                 "Events": [
@@ -409,24 +389,14 @@
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ]
+                        "Padding": [ 2, 2, 2, 2 ]
                     }
                 },
                 {
-                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
+                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                     "Props": {
                         "Fill": 3,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ]
+                        "Padding": [ 2, 2, 2, 2 ]
                     },
                     "UpdateOnEvents": {
                         "Events": [
@@ -435,143 +405,71 @@
                     },
                     "UIItems": [
                         {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                             "Props": {
-                                "Padding": [
-                                    2,
-                                    2,
-                                    2,
-                                    2
-                                ]
+                                "Fill": 1
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Label": "$$Ark-Nucleus$:$TITLE",
                                         "BindText": "Data.SelectedLog.Title",
-                                        "FontSize": 14,
                                         "BindColor": "Data.SelectedLog.Type",
-                                        "ColorValueConverter": "LogTypeToColor",
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ]
+                                        "ColorValueConverter": "LogTypeToColor"
                                     }
-                                }
-                            ]
-                        },
-                        {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                            "UIItems": [
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                    "Props": {
-                                        "Fill": 1,
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ]
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$LOG_CATEGORY",
-                                                "BindText": "Data.SelectedLog.Category"
-                                            }
-                                        }
-                                    ]
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
-                                        "Fill": 1,
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ]
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$LOG_TYPE",
-                                                "BindText": "Data.SelectedLog.Type",
-                                                "ValueConverter": "LogTypeToString"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                            "UIItems": [
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
-                                    "Props": {
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ],
-                                        "Fill": 1
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$LOG_DATE_TIME",
-                                                "BindText": "Data.SelectedLog.DateTime",
-                                                "ValueConverter": "SecondsToDateTimeString"
-                                            }
-                                        }
-                                    ]
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Label": "$$Ark-Nucleus$:$LOG_TYPE",
+                                        "BindText": "Data.SelectedLog.Type",
+                                        "ValueConverter": "LogTypeToString",
+                                        "BindColor": "Data.SelectedLog.Type",
+                                        "ColorValueConverter": "LogTypeToColor"
+                                    }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                     "Props": {
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ],
-                                        "Fill": 1
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
-                                            "Props": {
-                                                "Label": "$$Ark-Nucleus$:$SESSION_NAME",
-                                                "BindText": "Data.SelectedLog.SessionName"
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                            "UIItems": [
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Label": "$$Ark-Nucleus$:$LOG_CATEGORY",
+                                        "BindText": "Data.SelectedLog.Category"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Label": "$$Ark-Nucleus$:$LOG_DATE_TIME",
+                                        "BindText": "Data.SelectedLog.DateTime",
+                                        "ValueConverter": "SecondsToDateTimeString"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
+                                    "Props": {
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Label": "$$Ark-Nucleus$:$SESSION_NAME",
+                                        "BindText": "Data.SelectedLog.SessionName"
+                                    }
+                                },
+                                {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithReadOnlyValue_v1.DU_View_LabelWithReadOnlyValue_v1_C",
+                                    "Props": {
+                                        "Padding": [ 2, 2, 2, 2 ],
+                                        "Fill": 1,
+                                        "Label": "$$Ark-Nucleus$:$LOG_MESSAGE",
+                                        "BindText": "Data.SelectedLog.Message"
+                                    }
+                                },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                     "Props": {
                                         "Title": "$$Ark-Nucleus$:$LOG_TRIGGER_BY_USER",
-                                        "Fill": 1,
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ]
+                                        "Padding": [ 2, 2, 2, 2 ]
                                     },
                                     "UIItems": [
                                         {
@@ -594,13 +492,7 @@
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
                                     "Props": {
                                         "Title": "$$Ark-Nucleus$:$LOG_RELATED_TO_USER",
-                                        "Fill": 1,
-                                        "Padding": [
-                                            2,
-                                            2,
-                                            2,
-                                            2
-                                        ]
+                                        "Padding": [ 2, 2, 2, 2 ]
                                     },
                                     "UIItems": [
                                         {
@@ -622,44 +514,24 @@
                             ]
                         },
                         {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
-                                "Title": "$$Ark-Nucleus$:$LOG_MESSAGE",
-                                "Padding": [
-                                    2,
-                                    2,
-                                    2,
-                                    2
-                                ]
-                            },
-                            "UIItems": [
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
-                                    "Props": {
-                                        "BindText": "Data.SelectedLog.Message",
-                                        "FontSize": 10
-                                    }
-                                }
-                            ]
+                                "Padding": [ 2, 2, 2, 2 ]
+                            }
                         },
                         {
-                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                             "Props": {
-                                "Fill": 1,
-                                "Padding": [
-                                    2,
-                                    2,
-                                    2,
-                                    2
-                                ]
+                                "Fill": 1
                             },
                             "UIItems": [
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                                     "Props": {
+                                        "Padding": [ 2, 2, 2, 2 ],
                                         "Label": "$$Ark-Nucleus$:$LOG_EXTRA_DATA",
                                         "IsReadOnly": true,
-                                        "Fill":1,
+                                        "Fill": 1,
                                         "BindValue": "Data.SelectedLog.ExtraData"
                                     }
                                 }

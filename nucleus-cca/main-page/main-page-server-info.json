@@ -69,12 +69,12 @@
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRename.IconRename",
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_EditJsonUI.T_Nucleus_EditJsonUI",
                 "VerticalAlignment": 1,
                 "Padding": [ 2, 2, 2, 2 ]
             },
-            "Permission": {
-                "Tag": "Nucleus_EditServerInfoPage"
+            "AccessPolicy": {
+                "Tags": ["Nucleus_EditServerInfoPage"]
             },
             "Modal": {
                 "Props": {
@@ -141,8 +141,8 @@
                 "Color": "ALERT_COLOR",
                 "Padding": [ 0, 0, 0, 10 ]
             },
-            "Permission": {
-                "Tag": "Nucleus_EditServerInfoPage"
+            "AccessPolicy": {
+                "Tags": ["Nucleus_EditServerInfoPage"]
             },
             "UIItems": [
                 {

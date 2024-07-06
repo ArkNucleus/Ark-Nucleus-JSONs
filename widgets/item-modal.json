@@ -3,9 +3,12 @@
         "Title": "$$Ark-Nucleus$:$INSTALLED_MODS_INFO_TITLE"
     },
     "UICache": {
-        "SaveFile": "Ark-Nucleus-ItemModal",
+        "SaveFile": "Ark-Nucleus-Encyclopedia",
         "Props": {
-            "DinoTamingFoodLvl": 150
+            "DinoTamingFoodLvl": 150,
+            "LiveDataLoadMode": 0,
+            "ItemModalDefaultViewMode": true,
+            "Disable3DView": false
         }
     },
     "UIItems": [
@@ -60,7 +63,7 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "UUID": "EncyclopediaBaseInfo",
-                                "BindViewMode": "UICache.BaseInfo.ViewMode",
+                                "BindViewMode": "UICache.ItemModalDefaultViewMode",
                                 "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_BASE_INFO",
                                 "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_BASE_INFO_NOTE",
                                 "Padding": [ 0, 0, 0, 2 ]
@@ -88,8 +91,8 @@
                                 "Title": "$$Ark-Nucleus$:$SPAWN_MENU",
                                 "Note": "$$Ark-Nucleus$:$SPAWN_MENU_NOTE"
                             },
-                            "Permission": {
-                                "Tag": "Nucleus_ViewSpawnWidget"
+                            "AccessPolicy": {
+                                "Tags": [ "Nucleus_SpawnDinos", "Nucleus_SpawnItems" ]
                             },
                             "UIItems": [
                                 {
@@ -111,6 +114,7 @@
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
+                        "BindIsVisible": "!UICache.Disable3DView",
                         "Padding": [
                             2,
                             2,
@@ -125,18 +129,15 @@
                     "Props": {
                         "PreviewWidth": 200,
                         "Fill": 1,
-                        "Padding": [
-                            2,
-                            2,
-                            2,
-                            2
-                        ],
+                        "Padding": [2,2,2,2],
+                        "BindIsVisible": "!UICache.Disable3DView",
                         "BindValue": "ItemData"
                     },
                     "ColorRegionsUIConfig": {
                         "Props": {
                             "BindValue": "ItemData.Index",
-                            "BindIsEnabled": "ItemData.IsEnabled"
+                            "BindIsEnabled": "ItemData.IsEnabled",
+                            "BindUseDye": "Data.BaseData.IsDino"
                         },
                         "OnValueChanged": {
                             "EventUID": "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
@@ -144,6 +145,7 @@
                         "ColorPickerUIConfig": {
                             "Props": {
                                 "UUID": "ColorDefPicker",
+                                "BindCacheParam": "Data.BaseData.IsDino",
                                 "Cache": true,
                                 "Title": "$$Ark-Nucleus$:$COLOR_DEF_PICKER"
                             },

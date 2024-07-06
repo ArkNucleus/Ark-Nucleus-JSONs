@@ -15,7 +15,15 @@
         "SaveFile": "Ark-Nucleus-Encyclopedia",
         "Props": {
             "DinoTamingFoodLvl": 150,
-            "ItemsPerPage": 20
+            "ItemsPerPage": 10,
+            "LoadCachedDataOnGameStart": false,
+            "ScanForModItemsOnGameStart": false,
+            "LiveDataLoadMode": 0,
+            "Disable3DView": false,
+            "BaseInfoViewMode": true,
+            "SpawnUIViewMode": true,
+            "ImportData": "",
+            "IndexIgnoreList": ""
         }
     },
     "Info": {
@@ -40,7 +48,12 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE0",
                     "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
+                    "Padding": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
                 }
             },
             {
@@ -48,7 +61,12 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE1",
                     "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
+                    "Padding": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
                 }
             },
             {
@@ -56,7 +74,12 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE2",
                     "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
+                    "Padding": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
                 }
             },
             {
@@ -64,7 +87,12 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE3",
                     "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
+                    "Padding": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
                 }
             },
             {
@@ -72,20 +100,253 @@
                 "Props": {
                     "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INFO_LINE4",
                     "FontSize": 14,
-                    "Padding": [ 4, 4, 4, 4 ]
+                    "Padding": [
+                        4,
+                        4,
+                        4,
+                        4
+                    ]
                 }
             }
-
         ]
     },
     "Buttons": [
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
-                "Image": "/Game/PrimalEarth/UI/Textures/StatsIcons/CraftSpeed_Icon.CraftSpeed_Icon",
-                "Label": "$$Ark-Nucleus$:$LOGS_CONFIG_BTN",
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IMPORT_BTN",
                 "VerticalAlignment": 1,
-                "Padding": [ 2, 2, 2, 2 ]
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IMPORT_TITLE"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Encyclopedia/Import",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "PostData",
+                                "ValueKey": "UICache"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$IMPORT",
+                            "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "PostData": "Ark-Nucleus/POST/Encyclopedia/Import"
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringMultiLine_v1.DU_Edit_StringMultiLine_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_PATHS_TO_IMPORT",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_PATHS_TO_IMPORT_NOTE",
+                            "BindValue": "UICache.ImportData",
+                            "Fill": 1,
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Indexing.T_Nucleus_Indexing",
+                "VerticalAlignment": 1,
+                "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INDEXING_BTN",
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INDEXING_TITLE"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Encyclopedia/Import",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "ImportData",
+                                "ValueKey": "UICache"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
+                        "UIItems": [
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Padding": [
+                                        2,
+                                        2,
+                                        2,
+                                        2
+                                    ],
+                                    "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_UPDATE_EVER_ITEM",
+                                    "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Indexing.T_Nucleus_Indexing",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/Encyclopedia/ReloadCache"
+                                }
+                            },
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Padding": [
+                                        2,
+                                        2,
+                                        2,
+                                        2
+                                    ],
+                                    "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INDEX_MODS_1",
+                                    "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Indexing.T_Nucleus_Indexing",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/Encyclopedia/IndexMods1"
+                                }
+                            },
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Padding": [
+                                        2,
+                                        2,
+                                        2,
+                                        2
+                                    ],
+                                    "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_INDEX_MODS_2",
+                                    "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Indexing.T_Nucleus_Indexing",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/Encyclopedia/IndexMods2"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                        "Props": {
+                            "Text": "WARNING: This will take a while and may cause client lag (no impact to server). It is recommended to do this when you are in a safe place. This may end up loading every single item/dino into memory to pull data and depending on your device or if the file is corrupted could cause a crash.",
+                            "FontSize": 14,
+                            "Color": "ALERT_COLOR",
+                            "Padding": [
+                                4,
+                                4,
+                                4,
+                                4
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_ExcludeIndexing.T_Nucleus_ExcludeIndexing",
+                "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IGNORE_BTN",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IGNORE_LIST_TITLE"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Encyclopedia/IgnoreList",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "PostData",
+                                "ValueKey": "UICache"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$CLOSE",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "PostData": "Ark-Nucleus/POST/Encyclopedia/IgnoreList"
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringMultiLine_v1.DU_Edit_StringMultiLine_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IGNORE_LIST",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_IGNORE_LIST_NOTE",
+                            "BindValue": "UICache.IndexIgnoreList",
+                            "Fill": 1,
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Game/PrimalEarth/UI/Textures/StatsIcons/CraftSpeed_Icon.CraftSpeed_Icon",
+                "Label": "$$Ark-Nucleus$:$CONFIG_BTN",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
             },
             "Modal": {
                 "Props": {
@@ -95,8 +356,7 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$SAVE",
-                            "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
+                            "Label": "$$Ark-Nucleus$:$CLOSE",
                             "Fill": 1
                         },
                         "OnClickEvent": {
@@ -114,7 +374,122 @@
                             "BindValue": "UICache.ItemsPerPage",
                             "Min": 10,
                             "Max": 100,
-                            "Padding": [ 2, 2, 2, 2 ]
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_CACHED_DATA",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_CACHED_DATA_NOTE",
+                            "BindValue": "UICache.LoadCachedDataOnGameStart",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_REFRESH_MOD_INDEX",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_REFRESH_MOD_INDEX_NOTE",
+                            "BindValue": "UICache.ScanForModItemsOnGameStart",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_DropDown_v1.DU_Edit_DropDown_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_LOADING_MODE",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_LOADING_MODE_NOTE",
+                            "BindValue": "UICache.LiveDataLoadMode",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ],
+                            "ItemKey": "EnumID",
+                            "Items": [
+                                {
+                                    "EnumID": "0",
+                                    "Name": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_MANUAL"
+                                },
+                                {
+                                    "EnumID": "1",
+                                    "Name": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO_FIRST"
+                                },
+                                {
+                                    "EnumID": "2",
+                                    "Name": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithReadOnlyValue_v1.DU_View_LabelWithReadOnlyValue_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_MANUAL",
+                            "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_MANUAL_NOTE",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithReadOnlyValue_v1.DU_View_LabelWithReadOnlyValue_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO_FIRST",
+                            "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO_FIRST_NOTE",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithReadOnlyValue_v1.DU_View_LabelWithReadOnlyValue_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO",
+                            "Text": "$$Ark-Nucleus$:$ENCYCLOPEDIA_LOAD_AUTO_NOTE",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DISABLE_3D_VIEW",
+                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DISABLE_3D_VIEW_NOTE",
+                            "BindValue": "UICache.Disable3DView",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
                         }
                     }
                 ]
@@ -165,9 +540,18 @@
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
                     "Props": {
                         "Fill": 1,
-                        "Padding": [ 2, 2, 2, 2 ],
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ],
                         "BindItemsPerPage": "UICache.ItemsPerPage",
-                        "SearchKeys": [ "Path", "BaseData.FolderPaths", "BaseData.Source" ],
+                        "SearchKeys": [
+                            "Path",
+                            "BaseData.FolderPaths",
+                            "BaseData.Source"
+                        ],
                         "FilterKeys": [
                             "BaseData.IsDino",
                             "BaseData.FolderPaths",
@@ -229,10 +613,15 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "UUID": "EncyclopediaBaseInfo",
-                                "BindViewMode": "UICache.BaseInfo.ViewMode",
+                                "BindViewMode": "UICache.BaseInfoViewMode",
                                 "Title": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_BASE_INFO",
                                 "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_ITEM_BASE_INFO_NOTE",
-                                "Padding": [ 0, 0, 0, 2 ]
+                                "Padding": [
+                                    0,
+                                    0,
+                                    0,
+                                    2
+                                ]
                             },
                             "UIItems": [
                                 {
@@ -253,12 +642,15 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                             "Props": {
                                 "UUID": "EncyclopediaSpawn",
-                                "BindViewMode": "UICache.SpawnUI.ViewMode",
+                                "BindViewMode": "UICache.SpawnUIViewMode",
                                 "Title": "$$Ark-Nucleus$:$SPAWN_MENU",
                                 "Note": "$$Ark-Nucleus$:$SPAWN_MENU_NOTE"
                             },
-                            "Permission": {
-                                "Tag": "Nucleus_ViewSpawnWidget"
+                            "AccessPolicy": {
+                                "Tags": [
+                                    "Nucleus_SpawnDinos",
+                                    "Nucleus_SpawnItems"
+                                ]
                             },
                             "UIItems": [
                                 {
@@ -280,6 +672,7 @@
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
+                        "BindIsVisible": "!UICache.Disable3DView",
                         "Padding": [
                             2,
                             2,
@@ -294,7 +687,13 @@
                     "Props": {
                         "PreviewWidth": 200,
                         "Fill": 2,
-                        "Padding": [ 2, 2, 2, 2 ],
+                        "Padding": [
+                            2,
+                            2,
+                            2,
+                            2
+                        ],
+                        "BindIsVisible": "!UICache.Disable3DView",
                         "BindValue": "Data.SelectedPreviewItem"
                     },
                     "ColorRegionsUIConfig": {

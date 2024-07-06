@@ -129,6 +129,29 @@
                                     }
                                 },
                                 {
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
+                                    "Props": {
+                                        "Label": "$$Ark-Nucleus$:$PERMISSIONS",
+                                        "UUID": "AllPermissions",
+                                        "Image": "/Game/PrimalEarth/UI/Textures/IconLockedEngrams.IconLockedEngrams",
+                                        "BindSelectedItem": "UICache.ActiveUUID",
+                                        "Padding": [
+                                            0,
+                                            5,
+                                            0,
+                                            5
+                                        ]
+                                    },
+                                    "OnClickEvent": {
+                                        "PostUrl": "Ark-Nucleus/POST/MainPage"
+                                    },
+                                    "UpdateOnEvents": {
+                                        "Events": [
+                                            "Ark-Nucleus/NOTIFY/MainPage"
+                                        ]
+                                    }
+                                },
+                                {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                                     "Props": {
                                         "Padding": [

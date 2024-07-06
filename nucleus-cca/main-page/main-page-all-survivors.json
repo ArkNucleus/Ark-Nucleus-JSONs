@@ -48,8 +48,8 @@
                                     "IsOnline"
                                 ]
                             },
-                            "Permission": {
-                                "Tag": "Nucleus_ViewPlayerList"
+                            "AccessPolicy": {
+                                "Tags": ["Nucleus_ViewPlayerList"]
                             },
                             "ResetOnEvents": {
                                 "Events": [

@@ -1,0 +1,31 @@
+{
+    "Admins": {
+        "LinkedPlayerIds": [ ],
+        "PermissionTags": [
+            "Nucleus_ViewEncyclopedia",
+            "Nucleus_SpawnItems",
+            "Nucleus_SpawnDinos",
+            "Nucleus_ViewServerLogs",
+            "Nucleus_ClearServerLogs",
+            "Nucleus_ViewSurvivorsHub",
+            "Nucleus_EditServerInfoPage",
+            "Nucleus_EditServerLocalization",
+            "Nucleus_ViewPlayerStatsInInventory",
+            "Nucleus_ViewDinoStatsInInventory",
+            "Nucleus_PlacePaintedStructures",
+            "Nucleus_PlacePaintedStructuresInfinitePaint"
+        ]
+    },
+    "Moderators": {
+        "LinkedPlayerIds": [ ],
+        "PermissionTags": [ ]
+    },
+    "All Players": {
+        "LinkedPlayerIds": [ "*" ],
+        "PermissionTags": [
+            "Nucleus_ViewEncyclopedia",
+            "Nucleus_ViewPlayerStatsInInventory",
+            "Nucleus_ViewDinoStatsInInventory"
+        ]
+    }
+}
