@@ -1,10 +1,9 @@
 {
-    "RequestUID":"Ark-Nucleus/WebUI",
     "UIItems": [
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
             "Props": {
-                "UUID":"MainTab",
+                "UUID": "MainTab",
                 "Fill": 1
             },
             "UICache": {
@@ -30,15 +29,25 @@
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                     "Props": {
                                         "Fill": 1,
-                                        "Padding": [ 30, 30, 30, 30 ]
+                                        "Padding": [
+                                            30,
+                                            30,
+                                            30,
+                                            30
+                                        ]
                                     },
-                                    "UIItems": [ ]
+                                    "UIItems": []
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Border_v1.DU_Panel_Border_v1_C",
                                     "Props": {
                                         "VerticalAlignment": 2,
-                                        "Padding": [ 30, 30, 30, 30 ]
+                                        "Padding": [
+                                            30,
+                                            30,
+                                            30,
+                                            30
+                                        ]
                                     },
                                     "UIItems": [
                                         {
@@ -46,7 +55,12 @@
                                             "Props": {
                                                 "Fill": 2,
                                                 "VerticalAlignment": 2,
-                                                "Padding": [ 10, 10, 10, 10 ]
+                                                "Padding": [
+                                                    10,
+                                                    10,
+                                                    10,
+                                                    10
+                                                ]
                                             },
                                             "UIItems": [
                                                 {
@@ -54,7 +68,12 @@
                                                     "Props": {
                                                         "Text": "$$SERVER$:$WELCOME_TO_SERVER",
                                                         "FontSize": 32,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     }
                                                 },
                                                 {
@@ -62,7 +81,12 @@
                                                     "Props": {
                                                         "Text": "$$SERVER$:$SERVER_SLOGAN",
                                                         "FontSize": 16,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     }
                                                 },
                                                 {
@@ -72,7 +96,12 @@
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Link to a Twitter Page",
-                                                                "Padding": [ 5, 5, 5, 5 ]
+                                                                "Padding": [
+                                                                    5,
+                                                                    5,
+                                                                    5,
+                                                                    5
+                                                                ]
                                                             },
                                                             "OnClickEvent": {
                                                                 "Url": "https://twitter.com/"
@@ -83,7 +112,12 @@
                                                             "Props": {
                                                                 "Label": "Invite to a Discord Server",
                                                                 "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_DiscordLogo.T_Nucleus_DiscordLogo",
-                                                                "Padding": [ 5, 5, 5, 5 ]
+                                                                "Padding": [
+                                                                    5,
+                                                                    5,
+                                                                    5,
+                                                                    5
+                                                                ]
                                                             },
                                                             "OnClickEvent": {
                                                                 "Url": "https://discord.gg/"
@@ -101,7 +135,12 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                             "Props": {
                                 "HorizontalAlignment": 0,
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             },
                             "UIItems": [
                                 {
@@ -125,7 +164,12 @@
                                         {
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                             "Props": {
-                                                "Padding": [ 5, 5, 5, 5 ]
+                                                "Padding": [
+                                                    5,
+                                                    5,
+                                                    5,
+                                                    5
+                                                ]
                                             },
                                             "UIItems": [
                                                 {
@@ -134,14 +178,24 @@
                                                         "Image": "/Ark-Nucleus/Assets/Materials/M_NewLogo.M_NewLogo",
                                                         "Width": 120,
                                                         "Height": 120,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                     "Props": {
                                                         "Fill": 1,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     },
                                                     "UIItems": [
                                                         {
@@ -150,7 +204,12 @@
                                                                 "Text": "Q: What is this About?",
                                                                 "FontSize": 14,
                                                                 "Justification": "Center",
-                                                                "Padding": [ 0, 0, 0, 5 ]
+                                                                "Padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    5
+                                                                ]
                                                             }
                                                         },
                                                         {
@@ -160,14 +219,24 @@
                                                                 "FontSize": 11,
                                                                 "Justification": "Center",
                                                                 "Fill": 1,
-                                                                "Padding": [ 0, 0, 0, 5 ]
+                                                                "Padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    5
+                                                                ]
                                                             }
                                                         },
                                                         {
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
                                                                 "Label": "Learn More",
-                                                                "Padding": [ 5, 5, 5, 5 ]
+                                                                "Padding": [
+                                                                    5,
+                                                                    5,
+                                                                    5,
+                                                                    5
+                                                                ]
                                                             },
                                                             "Modal": {
                                                                 "Props": {
@@ -221,7 +290,12 @@
                                         {
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
                                             "Props": {
-                                                "Padding": [ 5, 5, 5, 5 ]
+                                                "Padding": [
+                                                    5,
+                                                    5,
+                                                    5,
+                                                    5
+                                                ]
                                             },
                                             "UIItems": [
                                                 {
@@ -230,14 +304,24 @@
                                                         "Image": "/Ark-Nucleus/Assets/Materials/M_NewLogo.M_NewLogo",
                                                         "Width": 120,
                                                         "Height": 120,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     }
                                                 },
                                                 {
                                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                                     "Props": {
                                                         "Fill": 1,
-                                                        "Padding": [ 5, 5, 5, 5 ]
+                                                        "Padding": [
+                                                            5,
+                                                            5,
+                                                            5,
+                                                            5
+                                                        ]
                                                     },
                                                     "UIItems": [
                                                         {
@@ -455,8 +539,17 @@
                                 "Text": "THIS IS A DEMO PAGE!!!",
                                 "FontSize": 24,
                                 "Justification": "Center",
-                                "Color": [ 1, 0, 0 ],
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Color": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             }
                         },
                         {
@@ -465,14 +558,28 @@
                                 "Text": "The Question and Answers are just an example until replaced by an admin with their own.",
                                 "FontSize": 22,
                                 "Justification": "Center",
-                                "Color": [ 1, 0, 0 ],
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Color": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             }
                         },
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
-                                "Padding": [ 2, 2, 2, 2 ]
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
                             }
                         },
                         {
@@ -486,7 +593,12 @@
                                     "Props": {
                                         "Text": "Q: What mods are installed on the server?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -494,7 +606,12 @@
                                     "Props": {
                                         "Text": "A: We have carefully selected mods to enhance your gaming experience. You can find a list of installed mods by clicking the \"INSTALLED MODS\" on the left side menu.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -502,7 +619,12 @@
                                     "Props": {
                                         "Text": "Q: How often is the server wiped?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -510,7 +632,12 @@
                                     "Props": {
                                         "Text": "A: We aim to provide a stable and enjoyable gaming environment, so server wipes are infrequent. However, wipes may occur during major game updates or if necessary for maintenance purposes. We will notify players in advance if a wipe is scheduled.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -518,7 +645,12 @@
                                     "Props": {
                                         "Text": "Q: Are there any rules I need to follow?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -526,7 +658,12 @@
                                     "Props": {
                                         "Text": "A: Yes, we have a set of rules in place to ensure fair play and a positive community experience. These rules typically cover areas such as harassment, cheating, and griefing. You can find our server rules posted in the above \"Rules\" tab or in our Discord server.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -534,7 +671,12 @@
                                     "Props": {
                                         "Text": "Q: How do I report a player for breaking the rules?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -542,7 +684,12 @@
                                     "Props": {
                                         "Text": "A: If you encounter a player violating server rules, please report them to one of our moderators or admins. You can do this through the in-game chat, Discord server, or by using the \"SURVIVORS HUB\" on the left side menu. Be sure to provide as much detail as possible, including the player's name and a description of the incident.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -550,7 +697,12 @@
                                     "Props": {
                                         "Text": "Q: Can I bring my friends to the server?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -558,7 +710,12 @@
                                     "Props": {
                                         "Text": "A: Absolutely! We encourage you to invite your friends to join our server and embark on adventures together. Just make sure they also adhere to our server rules to maintain a friendly gaming environment.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -566,7 +723,12 @@
                                     "Props": {
                                         "Text": "Q: Is there a Discord server for the community?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -574,7 +736,12 @@
                                     "Props": {
                                         "Text": "A: Yes, we have a Discord server where players can chat, share tips, and participate in events. You can find the link to our Discord server in the game's chat or on our server information page.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -582,7 +749,12 @@
                                     "Props": {
                                         "Text": "Q: Can I suggest changes or improvements for the server?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -590,7 +762,12 @@
                                     "Props": {
                                         "Text": "A: Absolutely! We value feedback from our community and are always open to suggestions for improving the server experience. Whether it's a mod recommendation, gameplay adjustment, or general feedback, we encourage players to share their ideas with us through our Discord server or other communication channels.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -598,7 +775,12 @@
                                     "Props": {
                                         "Text": "Q: How do I contact the server admins?",
                                         "FontSize": 16,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -606,7 +788,12 @@
                                     "Props": {
                                         "Text": "A: If you need assistance or have any concerns, you can reach out to our server admins via Discord. They are here to help resolve any issues and ensure everyone has an enjoyable gaming experience.",
                                         "FontSize": 12,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 }
                             ]
@@ -614,7 +801,12 @@
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
-                                "Padding": [ 2, 2, 2, 2 ]
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
                             }
                         },
                         {
@@ -622,7 +814,12 @@
                             "Props": {
                                 "Text": "We hope this FAQ helps address any questions you may have about our Ark game server. If you have any further inquiries, don't hesitate to ask our friendly community or server staff. Happy gaming!",
                                 "FontSize": 16,
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             }
                         }
                     ]
@@ -641,8 +838,17 @@
                                 "Text": "THIS IS A DEMO PAGE!!!",
                                 "FontSize": 24,
                                 "Justification": "Center",
-                                "Color": [ 1, 0, 0 ],
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Color": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             }
                         },
                         {
@@ -651,14 +857,28 @@
                                 "Text": "The listed Ruels and Guids are just an example until replaced by an admin with their own.",
                                 "FontSize": 22,
                                 "Justification": "Center",
-                                "Color": [ 1, 0, 0 ],
-                                "Padding": [ 5, 5, 5, 5 ]
+                                "Color": [
+                                    1,
+                                    0,
+                                    0
+                                ],
+                                "Padding": [
+                                    5,
+                                    5,
+                                    5,
+                                    5
+                                ]
                             }
                         },
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                             "Props": {
-                                "Padding": [ 2, 2, 2, 2 ]
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
                             }
                         },
                         {
@@ -672,7 +892,12 @@
                                     "Props": {
                                         "Text": "1. Respect thy Neighbor: Treat your fellow Survivors with courtesy and respect. No harassment, hate speech, or toxic behavior will be tolerated.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -680,7 +905,12 @@
                                     "Props": {
                                         "Text": "2. Base Raiding: While PvP is encouraged, senseless destruction is not. Raiding is allowed, but don't wipe out entire bases. Leave something for your opponents to rebuild with.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -688,7 +918,12 @@
                                     "Props": {
                                         "Text": "3. Cheating and Exploits: Any form of cheating, exploiting, or hacking will result in swift and severe consequences. We're here for fair play and a fun experience for everyone.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -696,7 +931,12 @@
                                     "Props": {
                                         "Text": "4. Building Limits: Keep your structures reasonable in size to maintain server performance. Excessive building or pillar spamming is not allowed.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -704,7 +944,12 @@
                                     "Props": {
                                         "Text": "5. Wildlife Conservation: Avoid unnecessary killing of passive tames and wildlife. Let's strive for ecological balance on the Ark.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -712,7 +957,12 @@
                                     "Props": {
                                         "Text": "6. Roleplay Encouraged: Engage in immersive roleplay if that's your style! Whether you're a lone survivor, a tribal leader, or a dino tamer, bring your character to life.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 },
                                 {
@@ -720,7 +970,12 @@
                                     "Props": {
                                         "Text": "7. Community Events: Join in on server-wide events for a chance to earn rewards, make new friends, and test your skills against the challenges we throw your way.",
                                         "FontSize": 14,
-                                        "Padding": [ 5, 5, 5, 5 ]
+                                        "Padding": [
+                                            5,
+                                            5,
+                                            5,
+                                            5
+                                        ]
                                     }
                                 }
                             ]
@@ -1020,7 +1275,7 @@
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
                             "Props": {
-                                "UUID":"SecondTab"
+                                "UUID": "SecondTab"
                             },
                             "Tabs": [
                                 {
@@ -1048,7 +1303,7 @@
                                         {
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
                                             "Props": {
-                                                "UUID":"ThirdTab",
+                                                "UUID": "ThirdTab",
                                                 "Padding": [
                                                     10,
                                                     10,
@@ -1250,7 +1505,12 @@
                                             "Props": {
                                                 "Text": "New to Ark? Check out our newbie guide in the Discord for tips on surviving your first days.",
                                                 "FontSize": 14,
-                                                "Padding": [ 4, 4, 4, 4 ]
+                                                "Padding": [
+                                                    4,
+                                                    4,
+                                                    4,
+                                                    4
+                                                ]
                                             }
                                         },
                                         {

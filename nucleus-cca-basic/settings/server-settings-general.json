@@ -7,30 +7,6 @@
             "DEFAULT_VALUE": false,
             "LABEL": "$$Ark-Nucleus$:$ALLOW_SERVER_INFO_PAGE",
             "DESCRIPTION": "$$Ark-Nucleus$:$ALLOW_SERVER_INFO_PAGE_DESC"
-        },
-        "ALLOW_PLAYER_ALLOCATED_STAT_POINTS": {
-            "TYPE": "BOOLEAN",
-            "DEFAULT_VALUE": true,
-            "LABEL": "$$Ark-Nucleus$:$ALLOW_PLAYER_ALLOCATED_STAT_POINTS",
-            "DESCRIPTION": "$$Ark-Nucleus$:$ALLOW_PLAYER_ALLOCATED_STAT_POINTS_DESC"
-        },
-        "ALLOW_DINO_ALLOCATED_STAT_POINTS": {
-            "TYPE": "BOOLEAN",
-            "DEFAULT_VALUE": true,
-            "LABEL": "$$Ark-Nucleus$:$ALLOW_DINO_ALLOCATED_STAT_POINTS",
-            "DESCRIPTION": "$$Ark-Nucleus$:$ALLOW_DINO_ALLOCATED_STAT_POINTS_DESC"
-        },
-        "ALLOW_STRUCT_PAINTER_FOR_PLAYERS": {
-            "TYPE": "BOOLEAN",
-            "DEFAULT_VALUE": true,
-            "LABEL": "$$Ark-Nucleus$:$ALLOW_STRUCT_PAINTER_FOR_PLAYERS",
-            "DESCRIPTION": "$$Ark-Nucleus$:$ALLOW_STRUCT_PAINTER_FOR_PLAYERS_DESC"
-        },
-        "STRUCT_PAINTER_CONSUME_DYE_FOR_PLAYERS": {
-            "TYPE": "BOOLEAN",
-            "DEFAULT_VALUE": true,
-            "LABEL": "$$Ark-Nucleus$:$STRUCT_PAINTER_CONSUME_DYE_FOR_PLAYERS",
-            "DESCRIPTION": "$$Ark-Nucleus$:$STRUCT_PAINTER_CONSUME_DYE_FOR_PLAYERS_DESC"
         }
     }
 }
