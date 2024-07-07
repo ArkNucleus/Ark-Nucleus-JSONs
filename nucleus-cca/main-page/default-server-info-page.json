@@ -1,4 +1,5 @@
 {
+    "RequestUID":"Ark-Nucleus/WebUI",
     "UIItems": [
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Tabbed_v1.DU_Panel_Tabbed_v1_C",
