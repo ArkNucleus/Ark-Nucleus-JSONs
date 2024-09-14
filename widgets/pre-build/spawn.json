@@ -1,10 +1,16 @@
 {
     "DINO_QUANTITY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_QUANTITY",
-            "BindValue": "ItemData.Quantity",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_QUANTITY_LBL",
+            "BindValue": "UICache.Dino.Quantity",
             "Min": 1,
-            "MaxSlide": 50
+            "MaxSlide": 50,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -12,10 +18,16 @@
     },
     "DINO_LEVEL": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_BASE_LVL",
-            "BindValue": "ItemData.BaseLvl",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_WILD_LVL_LBL",
+            "BindValue": "UICache.Dino.BaseLvl",
             "Min": 1,
-            "MaxSlide": 500
+            "MaxSlide": 500,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -23,12 +35,18 @@
     },
     "DINO_SCALE": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_SCALE",
-            "BindValue": "ItemData.Scale",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_SCALE_LBL",
+            "BindValue": "UICache.Dino.Scale",
             "HideIfBroken": true,
-            "BindIsVisible": "ItemData.UseRandomScale",
+            "BindIsVisible": "ItemData.BP.UseRandomScale",
             "Min": 0.1,
-            "MaxSlide": 10
+            "MaxSlide": 10,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -36,31 +54,37 @@
     },
     "DINO_STATE": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_STATE",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_LBL",
             "ItemKey": "EnumID",
             "Items": [
                 {
                     "EnumID": "0",
-                    "Name": "$$Ark-Nucleus$:$DINO_STATE_PASSIVE"
+                    "Name": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_PASSIVE"
                 },
                 {
                     "EnumID": "8",
-                    "Name": "$$Ark-Nucleus$:$DINO_STATE_PASSIVE_FLEE"
+                    "Name": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_PASSIVE_FLEE"
                 },
                 {
                     "EnumID": "1",
-                    "Name": "$$Ark-Nucleus$:$DINO_STATE_NEUTRAL"
+                    "Name": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_NEUTRAL"
                 },
                 {
                     "EnumID": "2",
-                    "Name": "$$Ark-Nucleus$:$DINO_STATE_AGGRESSIVE"
+                    "Name": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_AGGRESSIVE"
                 },
                 {
                     "EnumID": "3",
-                    "Name": "$$Ark-Nucleus$:$DINO_STATE_ATTACK_TARGET"
+                    "Name": "$$Ark-Nucleus$:$SPAWN_DINO_STATE_ATTACK_TARGET"
                 }
             ],
-            "BindValue": "ItemData.State"
+            "BindValue": "UICache.Dino.State",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "ItemWidget": {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
@@ -71,13 +95,25 @@
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
-        }
+        },
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
     },
     "DINO_IS_FEMALE": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_IS_FEMALE",
-            "BindValue": "ItemData.IsFemale",
-            "HideIfBroken": true
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IS_FEMALE_LBL",
+            "BindValue": "UICache.Dino.IsFemale",
+            "HideIfBroken": true,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -85,10 +121,16 @@
     },
     "DINO_IS_NEUTERED": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_IS_NEUTERED",
-            "BindValue": "ItemData.Neutered",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IS_NEUTERED_LBL",
+            "BindValue": "UICache.Dino.Neutered",
             "HideIfBroken": true,
-            "BindIsVisible": "ItemData.CanHaveBaby"
+            "BindIsVisible": "ItemData.BP.CanHaveBaby",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -96,9 +138,15 @@
     },
     "DINO_IS_BABY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_IS_BABY",
-            "BindValue": "ItemData.IsBaby",
-            "HideIfBroken": true
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IS_BABY_LBL",
+            "BindValue": "UICache.Dino.IsBaby",
+            "HideIfBroken": true,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -106,11 +154,17 @@
     },
     "DINO_MATURATION": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_MATURATION",
-            "BindValue": "ItemData.Maturation",
-            "BindIsVisible": "ItemData.IsBaby",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_MATURATION_LBL",
+            "BindValue": "UICache.Dino.Maturation",
+            "BindIsVisible": "UICache.Dino.IsBaby",
             "Min": 0,
-            "Max": 100
+            "Max": 100,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -118,9 +172,15 @@
     },
     "DINO_IS_TAMED": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_IS_TAMED",
-            "BindValue": "ItemData.IsTamed",
-            "HideIfBroken": true
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IS_TAMED_LBL",
+            "BindValue": "UICache.Dino.IsTamed",
+            "HideIfBroken": true,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -128,11 +188,17 @@
     },
     "DINO_OWNER": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_OWNER",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_OWNER_LBL",
             "ItemKey": "LinkedPlayerId",
             "BindItems": "BaseData.Players",
-            "BindValue": "ItemData.OwnerId",
-            "BindIsVisible": "ItemData.IsTamed"
+            "BindValue": "UICache.Dino.OwnerId",
+            "BindIsVisible": "UICache.Dino.IsTamed",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "ItemWidget": {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
@@ -148,12 +214,18 @@
     },
     "DINO_TAMING_EFFECT": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_TAME_EFFECT",
-            "BindValue": "ItemData.TamingEffect",
-            "BindIsVisible": "ItemData.IsTamed",
-            "BindNote": "ItemData.TamingEffectNote",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_TAME_EFFECT_LBL",
+            "BindValue": "UICache.Dino.TamingEffect",
+            "BindIsVisible": "UICache.Dino.IsTamed",
+            "BindNote": "UICache.Dino.TamingEffectNote",
             "Min": 0,
-            "Max": 100
+            "Max": 100,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -161,11 +233,17 @@
     },
     "DINO_IMPRINTING": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_IMPRINTING",
-            "BindValue": "ItemData.Imprint",
-            "BindIsVisible": "ItemData.IsTamed",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IMPRINTING_LBL",
+            "BindValue": "UICache.Dino.Imprint",
+            "BindIsVisible": "UICache.Dino.IsTamed",
             "Min": 0,
-            "Max": 100
+            "Max": 100,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -173,9 +251,15 @@
     },
     "DINO_NAME": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$DINO_CUSTOM_NAME",
-            "BindValue": "ItemData.CustomName",
-            "BindIsVisible": "ItemData.IsTamed"
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_CUSTOM_NAME_LBL",
+            "BindValue": "UICache.Dino.CustomName",
+            "BindIsVisible": "UICache.Dino.IsTamed",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -183,13 +267,26 @@
     },
     "DINO_RANDOM_STATS": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$UNALLOCATED_POINTS",
-            "BindText": "ItemData.StatPoints"
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_UNALLOCATED_POINTS_LBL",
+            "BindText": "UICache.Dino.StatPoints",
+            "Color": "ALERT_COLOR",
+            "Padding": [
+                2,
+                2,
+                2,
+                2
+            ]
         }
     },
-    "DINO_RESET_STATS": {
+    "DINO_RESET_STATS_BTN": {
         "Props": {
-            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRefresh.IconRefresh"
+            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRefresh.IconRefresh",
+            "Padding": [
+                2,
+                2,
+                2,
+                2
+            ]
         },
         "OnClickEvent": {
             "EventUID": "Nucleus/DinoSpawner/ResetStats"
@@ -197,7 +294,13 @@
     },
     "DINO_RANDOM_STATS_BTN": {
         "Props": {
-            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize"
+            "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize",
+            "Padding": [
+                2,
+                2,
+                2,
+                2
+            ]
         },
         "OnClickEvent": {
             "EventUID": "Nucleus/DinoSpawner/RandomizeStats"
@@ -205,11 +308,17 @@
     },
     "DINO_WILD_HEALTH": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$HEALTH_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_HEALTH_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.Health_Locked",
-            "BindValue": "ItemData.Health",
-            "BindMax": "ItemData.Health_Max"
+            "BindLocked": "UICache.Dino.Health_Locked",
+            "BindValue": "UICache.Dino.Health",
+            "BindMax": "UICache.Dino.Health_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -217,11 +326,17 @@
     },
     "DINO_WILD_STAMINA": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$STAMINA_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_STAMINA_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.Stamina_Locked",
-            "BindValue": "ItemData.Stamina",
-            "BindMax": "ItemData.Stamina_Max"
+            "BindLocked": "UICache.Dino.Stamina_Locked",
+            "BindValue": "UICache.Dino.Stamina",
+            "BindMax": "UICache.Dino.Stamina_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -229,11 +344,17 @@
     },
     "DINO_WILD_OXYGEN": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$OXYGEN_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_OXYGEN_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.Oxygen_Locked",
-            "BindValue": "ItemData.Oxygen",
-            "BindMax": "ItemData.Oxygen_Max"
+            "BindLocked": "UICache.Dino.Oxygen_Locked",
+            "BindValue": "UICache.Dino.Oxygen",
+            "BindMax": "UICache.Dino.Oxygen_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -241,11 +362,35 @@
     },
     "DINO_WILD_FOOD": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$FOOD_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_FOOD_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.Food_Locked",
-            "BindValue": "ItemData.Food",
-            "BindMax": "ItemData.Food_Max"
+            "BindLocked": "UICache.Dino.Food_Locked",
+            "BindValue": "UICache.Dino.Food",
+            "BindMax": "UICache.Dino.Food_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
+        },
+        "OnValueChanged": {
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
+        }
+    },
+    "DINO_WILD_WATER": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_WATER_LBL",
+            "Min": 0,
+            "BindLocked": "UICache.Dino.Water_Locked",
+            "BindValue": "UICache.Dino.Water",
+            "BindMax": "UICache.Dino.Water_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -253,11 +398,17 @@
     },
     "DINO_WILD_WEIGHT": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$WEIGHT_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_WEIGHT_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.Weight_Locked",
-            "BindValue": "ItemData.Weight",
-            "BindMax": "ItemData.Weight_Max"
+            "BindLocked": "UICache.Dino.Weight_Locked",
+            "BindValue": "UICache.Dino.Weight",
+            "BindMax": "UICache.Dino.Weight_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
@@ -265,34 +416,100 @@
     },
     "DINO_WILD_SPEED": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$SPEED_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_MOVEMENT_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.SpeedMultiplier_Locked",
-            "BindValue": "ItemData.SpeedMultiplier",
-            "BindMax": "ItemData.SpeedMultiplier_Max",
+            "BindLocked": "UICache.Dino.SpeedMultiplier_Locked",
+            "BindValue": "UICache.Dino.SpeedMultiplier",
+            "BindMax": "UICache.Dino.SpeedMultiplier_Max",
             "OnValueChanged": {
                 "EventUID": "Nucleus/DinoSpawner/StatChange"
-            }
+            },
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         }
     },
     "DINO_WILD_DAMAGE": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$MELEE_DMG_STAT",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_MELEE_LBL",
             "Min": 0,
-            "BindLocked": "ItemData.MeleeDamageMultiplier_Locked",
-            "BindValue": "ItemData.MeleeDamageMultiplier",
-            "BindMax": "ItemData.MeleeDamageMultiplier_Max"
+            "BindLocked": "UICache.Dino.MeleeDamageMultiplier_Locked",
+            "BindValue": "UICache.Dino.MeleeDamageMultiplier",
+            "BindMax": "UICache.Dino.MeleeDamageMultiplier_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/DinoSpawner/StatChange"
         }
     },
+    "DINO_WILD_CRAFTING_SPEED": {
+        "Props": {
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_CRAFTING_SPEED_LBL",
+            "Min": 0,
+            "BindLocked": "UICache.Dino.CraftingSpeedMultiplier_Locked",
+            "BindValue": "UICache.Dino.CraftingSpeedMultiplier",
+            "BindMax": "UICache.Dino.CraftingSpeedMultiplier_Max",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
+        },
+        "OnValueChanged": {
+            "EventUID": "Nucleus/DinoSpawner/StatChange"
+        }
+    },
+    "SPAWN_BTN": {
+        "Props": {
+            "BindIsEnabled": "UICache.Dino.IsValid",
+            "BindIsVisible": "ItemData.BP.IsDino",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IN_FRONT_OF_OWNER_BTN"
+        },
+        "AccessPolicy": {
+            "Tags": [
+                "Nucleus_SpawnDinos"
+            ]
+        },
+        "OnClickEvent": {
+            "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnByPlayer"
+        }
+    },
+    "CRYO_BTN": {
+        "Props": {
+            "BindIsVisible": "ItemData.BP.IsDino&&UICache.Dino.IsTamed",
+            "BindIsEnabled": "UICache.Dino.IsValid",
+            "Label": "$$Ark-Nucleus$:$SPAWN_DINO_IN_CRYO_BTN"
+        },
+        "AccessPolicy": {
+            "Tags": [
+                "Nucleus_SpawnDinos"
+            ]
+        },
+        "OnClickEvent": {
+            "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnCryo"
+        }
+    },
     "ITEM_QUANTITY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_QUANTITY",
-            "BindValue": "ItemData.Quantity",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_QUANTITY_LBL",
+            "BindValue": "UICache.Item.Quantity",
             "Min": 1,
-            "MaxSlide": 1000
+            "MaxSlide": 1000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
@@ -300,8 +517,8 @@
     },
     "ITEM_QUALITY_INDEX": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_QUALITY_INDEX",
-            "HideIfBroken": true,
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_QUALITY_INDEX_LBL",
+            "Note": "$$Ark-Nucleus$:$SPAWN_ITEM_QUALITY_INDEX_NOTE",
             "ItemKey": "EnumID",
             "Items": [
                 {
@@ -329,7 +546,14 @@
                     "Name": "Ascendant"
                 }
             ],
-            "BindValue": "ItemData.QualityIndex"
+            "BindValue": "UICache.Item.QualityIndex",
+            "BindIsVisible":"ItemData.BP.UseItemStats",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "ItemWidget": {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
@@ -344,11 +568,18 @@
     },
     "ITEM_QUALITY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_QUALITY",
-            "BindValue": "ItemData.Quality",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_QUALITY_LBL",
+            "Note": "$$Ark-Nucleus$:$SPAWN_ITEM_QUALITY_NOTE",
+            "BindValue": "UICache.Item.Quality",
+            "BindIsVisible":"ItemData.BP.UseItemStats",
             "Min": 0,
             "MaxSlide": 100,
-            "HideIfBroken": true
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
@@ -356,9 +587,15 @@
     },
     "ITEM_IS_BP": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_IS_BP",
-            "BindValue": "ItemData.IsBlueprint",
-            "HideIfBroken": true
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_IS_BLUEPRINT_LBL",
+            "BindValue": "UICache.Item.IsBlueprint",
+            "BindIsVisible": "ItemData.BP.CanBeBlueprint",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
@@ -366,8 +603,14 @@
     },
     "ITEM_CUSTOM_NAME": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_CUSTOM_NAME",
-            "BindValue": "ItemData.CustomName"
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_CUSTOM_NAME_LBL",
+            "BindValue": "UICache.Item.CustomName",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
@@ -375,10 +618,16 @@
     },
     "ITEM_OWNER": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_OWNER",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_OWNER_LBL",
             "ItemKey": "LinkedPlayerId",
             "BindItems": "BaseData.Players",
-            "BindValue": "ItemData.OwnerId"
+            "BindValue": "UICache.Item.OwnerId",
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "ItemWidget": {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_BasicItem.DU_DDItem_BasicItem_C",
@@ -392,96 +641,144 @@
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_GENERIC_QUALITY": {
+    "ITEM_STAT_GENERIC_QUALITY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_GENERIC_QUALITY",
-            "BindValue": "ItemData.GenericQuality",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_QUALITY_LBL",
+            "BindValue": "UICache.Item.GenericQuality",
             "HideIfBroken": true,
-            "MaxSlide": 1000
+            "MaxSlide": 1000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_ARMOR": {
+    "ITEM_STAT_ARMOR": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_ARMOR",
-            "BindMin": "ItemData.Armor_Min",
-            "BindValue": "ItemData.Armor",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_ARMOR_LBL",
+            "BindMin": "ItemData.BP.Stats.Armor",
+            "BindValue": "UICache.Item.Armor",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 2000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_MAX_DURABILITY": {
+    "ITEM_STAT_MAX_DURABILITY": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_MAX_DURABILITY",
-            "BindMin": "ItemData.MaxDurability_Min",
-            "BindValue": "ItemData.MaxDurability",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_DURABILITY_LBL",
+            "BindMin": "ItemData.BP.Stats.MaxDurability",
+            "BindValue": "UICache.Item.MaxDurability",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 2000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_DMG": {
+    "ITEM_STAT_DMG": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_DMG",
-            "BindMin": "ItemData.WeaponDamagePercent_Min",
-            "BindValue": "ItemData.WeaponDamagePercent",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_DAMAGE_LBL",
+            "BindMin": "ItemData.BP.Stats.WeaponDamagePercent",
+            "BindValue": "UICache.Item.WeaponDamagePercent",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 756,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_CLIP_AMMO": {
+    "ITEM_STAT_CLIP_AMMO": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_CLIP_AMMO",
-            "BindMin": "ItemData.WeaponClipAmmo_Min",
-            "BindValue": "ItemData.WeaponClipAmmo",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_CLIP_AMMO_LBL",
+            "BindMin": "ItemData.BP.Stats.WeaponClipAmmo",
+            "BindValue": "UICache.Item.WeaponClipAmmo",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 2000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_HYPOTHERMAL": {
+    "ITEM_STAT_HYPOTHERMAL": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_COLD_RES",
-            "BindValue": "ItemData.HypothermalInsulation",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_HYPOTHERMAL_LBL",
+            "BindValue": "UICache.Item.HypothermalInsulation",
             "HideIfBroken": true,
             "MaxSlide": 200,
-            "MinSlide": -200
+            "MinSlide": -200,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_HYPERTHERMIA": {
+    "ITEM_STAT_HYPERTHERMIA": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_HEAT_RES",
-            "BindValue": "ItemData.HyperthermalInsulation",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_HYPERTHERMAL_LBL",
+            "BindValue": "UICache.Item.HyperthermalInsulation",
             "HideIfBroken": true,
             "MaxSlide": 200,
-            "MinSlide": -200
+            "MinSlide": -200,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
         }
     },
-    "ITEM_WEIGHT": {
+    "ITEM_STAT_WEIGHT": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$ITEM_WEIGHT",
-            "BindMin": "ItemData.Weight_Min",
-            "BindValue": "ItemData.Weight",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_STAT_WEIGHT_LBL",
+            "BindMin": "ItemData.BP.Stats.Weight",
+            "BindValue": "UICache.Item.Weight",
             "HideIfBroken": true,
-            "MaxSlide": 2000
+            "MaxSlide": 2000,
+            "Padding": [
+                2,
+                0,
+                2,
+                0
+            ]
         },
         "OnValueChanged": {
             "EventUID": "Nucleus/ItemSpawner/StatChange"
@@ -489,41 +786,17 @@
     },
     "SPAWN_ITEM_BTN": {
         "Props": {
-            "BindIsVisible": "!ItemData.BaseData.IsDino",
-            "BindIsEnabled": "ItemData.IsValid",
-            "Label": "$$Ark-Nucleus$:$GIVE_TO_PLAYER"
+            "BindIsVisible": "!ItemData.BP.IsDino",
+            "BindIsEnabled": "UICache.Item.IsValid",
+            "Label": "$$Ark-Nucleus$:$SPAWN_ITEM_TO_PLAYER_BTN"
         },
         "AccessPolicy": {
-            "Tags": ["Nucleus_SpawnItems"]
+            "Tags": [
+                "Nucleus_SpawnItems"
+            ]
         },
         "OnClickEvent": {
             "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnItem"
-        }
-    },
-    "SPAWN_BTN": {
-        "Props": {
-            "BindIsEnabled": "ItemData.IsValid",
-            "BindIsVisible": "ItemData.BaseData.IsDino",
-            "Label": "$$Ark-Nucleus$:$SPAWN_IN_FRONT"
-        },
-        "AccessPolicy": {
-            "Tags": ["Nucleus_SpawnDinos"]
-        },
-        "OnClickEvent": {
-            "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnByPlayer"
-        }
-    },
-    "CRYO_BTN": {
-        "Props": {
-            "BindIsVisible": "ItemData.IsTamed",
-            "BindIsEnabled": "ItemData.IsValid",
-            "Label": "$$Ark-Nucleus$:$GIVE_IN_CRYO"
-        },
-        "AccessPolicy": {
-            "Tags": ["Nucleus_SpawnDinos"]
-        },
-        "OnClickEvent": {
-            "PostData": "Ark-Nucleus/POST/Encyclopedia/SpawnCryo"
         }
     }
 }

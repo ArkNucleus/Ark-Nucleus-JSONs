@@ -137,7 +137,7 @@
                         "Props": {
                             "BindValue": "ItemData.Index",
                             "BindIsEnabled": "ItemData.IsEnabled",
-                            "BindUseDye": "Data.BaseData.IsDino"
+                            "BindUseDye": "Data.BP.IsDino"
                         },
                         "OnValueChanged": {
                             "EventUID": "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
@@ -145,7 +145,7 @@
                         "ColorPickerUIConfig": {
                             "Props": {
                                 "UUID": "ColorDefPicker",
-                                "BindCacheParam": "Data.BaseData.IsDino",
+                                "BindCacheParam": "Data.BP.IsDino",
                                 "Cache": true,
                                 "Title": "$$Ark-Nucleus$:$COLOR_DEF_PICKER"
                             },

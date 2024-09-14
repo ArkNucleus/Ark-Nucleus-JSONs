@@ -18,7 +18,7 @@
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                 "Props": {
                     "Fill": 1,
-                    "Label": "$$Ark-Nucleus$:$OK"
+                    "Label": "$$Ark-Nucleus$:$OK_BTN"
                 },
                 "OnClickEvent": {
                     "EventUID": "CloseModal"
@@ -133,9 +133,9 @@
                                     "CCAData.IntegrationFlags.Logs"
                                 ],
                                 "FilterKeysDisplayText": {
-                                    "Localization": "$$Ark-Nucleus$:$MOD_SUP_LOC",
-                                    "Configuration": "$$Ark-Nucleus$:$MOD_SUP_CONF",
-                                    "Logs": "$$Ark-Nucleus$:$MOD_SUP_LOG"
+                                    "Localization": "$$Ark-Nucleus$:$MOD_SUP_LOC_LBL",
+                                    "Configuration": "$$Ark-Nucleus$:$MOD_SUP_CONFIG_LBL",
+                                    "Logs": "$$Ark-Nucleus$:$MOD_SUP_LOG_LBL"
                                 }
                             },
                             "ItemWidget": {
@@ -252,7 +252,7 @@
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                             "Props": {
                                                 "Color": "ATTENTION_COLOR",
-                                                "Label": "$$Ark-Nucleus$:$MOD_PRICE",
+                                                "Label": "$$Ark-Nucleus$:$MOD_PRICE_LBL",
                                                 "LabelColor": "DANGER_COLOR",
                                                 "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.tierPrice",
                                                 "Padding": [
@@ -267,7 +267,7 @@
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_LabelWithValue_v1.DU_View_LabelWithValue_v1_C",
                                             "Props": {
                                                 "Color": "ATTENTION_COLOR",
-                                                "Label": "$$Ark-Nucleus$:$MOD_CURRENCY",
+                                                "Label": "$$Ark-Nucleus$:$MOD_CURRENCY_LBL",
                                                 "LabelColor": "DANGER_COLOR",
                                                 "BindText": "Data.SelectedMod.Value.CFData.details.premiumDetails.currencySymbol",
                                                 "Padding": [
@@ -330,7 +330,7 @@
                                                         {
                                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                             "Props": {
-                                                                "Label": "$$Ark-Nucleus$:$OK",
+                                                                "Label": "$$Ark-Nucleus$:$OK_BTN",
                                                                 "Fill": 1
                                                             },
                                                             "OnClickEvent": {
@@ -402,21 +402,21 @@
                                                 ],
                                                 "SearchKeys": [
                                                     "Path",
-                                                    "BaseData.FolderPaths",
-                                                    "BaseData.Source",
-                                                    "BaseData.Name"
+                                                    "BP.FolderPaths",
+                                                    "Source",
+                                                    "BP.Name"
                                                 ],
                                                 "FilterKeys": [
-                                                    "BaseData.IsDino",
-                                                    "BaseData.FolderPaths",
-                                                    "BaseData.CanBeBlueprint",
-                                                    "BaseData.CanBeTamed",
-                                                    "BaseData.CanHaveBaby",
-                                                    "BaseData.IsFlayer",
-                                                    "BaseData.Group"
+                                                    "BP.IsDino",
+                                                    "BP.FolderPaths",
+                                                    "BP.CanBeBlueprint",
+                                                    "BP.CanBeTamed",
+                                                    "BP.CanHaveBaby",
+                                                    "BP.IsFlayer",
+                                                    "BP.Group"
                                                 ],
                                                 "TextValues": {
-                                                    "BaseData.IsDino": [
+                                                    "BP.IsDino": [
                                                         "$$Ark-Nucleus$:$ITEM",
                                                         "$$Ark-Nucleus$:$DINO"
                                                     ]
@@ -443,8 +443,8 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                                     "Props": {
-                                        "Title": "$$Ark-Nucleus$:$MOD_CUSTOM_INFO",
-                                        "Note": "$$Ark-Nucleus$:$MOD_CUSTOM_INFO_NOTE",
+                                        "Title": "$$Ark-Nucleus$:$MOD_DESCRIPTION",
+                                        "Note": "$$Ark-Nucleus$:$MOD_DESCRIPTION_NOTE",
                                         "BindViewMode": "UICache.CustomInfo.ViewMode",
                                         "Padding": [
                                             2,
@@ -562,7 +562,7 @@
                                                     {
                                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                         "Props": {
-                                                            "Label": "$$Ark-Nucleus$:$MORE_MODS_WITH_SAME_CATEGORY",
+                                                            "Label": "$$Ark-Nucleus$:$BTN_MORE_MODS_WITH_SAME_CATEGORY",
                                                             "Padding": [
                                                                 2,
                                                                 2,
@@ -585,8 +585,8 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Group_v1.DU_Panel_Group_v1_C",
                                     "Props": {
-                                        "Title": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA",
-                                        "Note": "$$Ark-Nucleus$:$MOD_RAW_CF_DATA_NOTE",
+                                        "Title": "$$Ark-Nucleus$:$MOD_DEBUG_DATA",
+                                        "Note": "$$Ark-Nucleus$:$MOD_DEBUG_DATA_NOTE",
                                         "BindViewMode": "UICache.RwaCFData.ViewMode",
                                         "Padding": [
                                             2,
@@ -603,9 +603,8 @@
                                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                                             "Props": {
                                                 "Label": "$$Ark-Nucleus$:$RAW_JSON",
-                                                "Note": "$$Ark-Nucleus$:$RAW_JSON",
                                                 "IsReadOnly": true,
-                                                "BindValue": "Data.SelectedMod.Value.CFData",
+                                                "BindValue": "Data.SelectedMod.Value",
                                                 "Padding": [
                                                     2,
                                                     2,

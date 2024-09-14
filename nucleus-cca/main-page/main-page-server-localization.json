@@ -43,7 +43,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                 "Props": {
-                    "Label": "$$Ark-Nucleus$:$OK",
+                    "Label": "$$Ark-Nucleus$:$OK_BTN",
                     "Fill": 1
                 },
                 "OnClickEvent": {
@@ -166,7 +166,7 @@
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
                 "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
-                "Label": "$$Ark-Nucleus$:$IMPORT",
+                "Label": "$$Ark-Nucleus$:$IMPORT_BTN",
                 "VerticalAlignment": 1,
                 "Padding": [
                     2,
@@ -187,7 +187,7 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$IMPORT",
+                            "Label": "$$Ark-Nucleus$:$IMPORT_BTN",
                             "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
                             "Fill": 1
                         },
@@ -233,7 +233,7 @@
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
                 "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Export.T_Nucleus_Export",
-                "Label": "$$Ark-Nucleus$:$EXPORT",
+                "Label": "$$Ark-Nucleus$:$EXPORT_BTN",
                 "VerticalAlignment": 1,
                 "Padding": [
                     2,
@@ -266,7 +266,7 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$OK",
+                            "Label": "$$Ark-Nucleus$:$OK_BTN",
                             "Fill": 1
                         },
                         "OnClickEvent": {
@@ -379,7 +379,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$CANCEL",
+                                        "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                         "Fill": 1
                                     },
                                     "OnClickEvent": {
@@ -506,7 +506,7 @@
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                             "Props": {
-                                "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE",
+                                "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE_BTN",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
                                 "Color": "ACCENT_COLOR_DARK",
                                 "ContentColor": "ACCENT_COLOR_LIGHT",

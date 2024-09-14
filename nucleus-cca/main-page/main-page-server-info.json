@@ -14,7 +14,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                 "Props": {
-                    "Label": "$$Ark-Nucleus$:$OK",
+                    "Label": "$$Ark-Nucleus$:$OK_BTN",
                     "Fill": 1
                 },
                 "OnClickEvent": {
@@ -69,6 +69,7 @@
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
+                "Label": "$$Ark-Nucleus$:$EDIT_BTN",
                 "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_EditJsonUI.T_Nucleus_EditJsonUI",
                 "VerticalAlignment": 1,
                 "Padding": [ 2, 2, 2, 2 ]
@@ -97,7 +98,7 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE",
+                            "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE_BTN",
                             "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
                             "Fill": 1,
                             "Color": "ATTENTION_COLOR_DARK",
@@ -110,7 +111,7 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                            "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                             "Fill": 1
                         },
                         "OnClickEvent": {
@@ -154,7 +155,7 @@
                                 "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED",
                                 "Color": "ALERT_COLOR",
                                 "FontSize": 16,
-                                "HorizontalAlignment": 2,
+                                "Justification": "Center",
                                 "Padding": [ 10, 10, 10, 0 ]
                             }
                         },
@@ -163,7 +164,7 @@
                             "Props": {
                                 "Text": "$$Ark-Nucleus$:$SERVER_INFO_PAGE_DISABLED_NOTE_ADMIN",
                                 "FontSize": 16,
-                                "HorizontalAlignment": 2,
+                                "Justification": "Center",
                                 "Padding": [ 10, 10, 10, 10 ]
                             }
                         }

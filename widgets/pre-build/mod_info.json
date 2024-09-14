@@ -54,7 +54,7 @@
     },
     "MOD_URL": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$GO_TO_MOD_PAGE"
+            "Label": "$$Ark-Nucleus$:$BTN_GO_TO_MOD_PAGE"
         },
         "OnClickEvent": {
             "BindUrl": "ItemData.CFData.details.links.websiteUrl"
@@ -62,7 +62,7 @@
     },
     "SERVER_SETTINGS": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$SERVER_SETTINGS",
+            "Label": "$$Ark-Nucleus$:$BTN_MOD_SERVER_SETTINGS",
             "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_S_Settings.T_Nucleus_S_Settings",
             "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
             "Color": "DANGER_COLOR_DARK",
@@ -139,7 +139,7 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                 "Props": {
-                                    "Label": "$$Ark-Nucleus$:$CANCEL",
+                                    "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                     "Fill": 1
                                 },
                                 "OnClickEvent": {
@@ -221,7 +221,7 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                 "Props": {
-                                    "Label": "$$Ark-Nucleus$:$CANCEL",
+                                    "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                     "Fill": 1
                                 },
                                 "OnClickEvent": {
@@ -291,7 +291,7 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                 "Props": {
-                                    "Label": "$$Ark-Nucleus$:$CANCEL",
+                                    "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                     "Fill": 1
                                 },
                                 "OnClickEvent": {
@@ -347,7 +347,7 @@
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Fill": 1,
-                            "Label": "$$Ark-Nucleus$:$OK"
+                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                         },
                         "OnClickEvent": {
                             "EventUID": "CloseModal"
@@ -414,7 +414,7 @@
     },
     "PLAYER_SETTINGS": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$PLAYER_SETTINGS",
+            "Label": "$$Ark-Nucleus$:$BTN_MOD_PLAYER_SETTINGS",
             "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
             "Color": "ATTENTION_COLOR_DARK",
             "ContentColor": "ATTENTION_COLOR_LIGHT",
@@ -468,13 +468,37 @@
                     },
                     "Modal": {
                         "Props": {
-                            "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                            "Title": "$$Ark-Nucleus$:$SETTINGS_APPLY_TITLE"
                         },
+                        "Buttons": [
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                    "Fill": 1,
+                                    "Color": "ACCENT_COLOR_DARK",
+                                    "ContentColor": "ACCENT_COLOR_LIGHT"
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/InstalledMods/PlayerSettings"
+                                }
+                            },
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "EventUID": "CloseModal"
+                                }
+                            }
+                        ],
                         "UIItems": [
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE0",
                                     "FontSize": 15,
                                     "Padding": [
                                         0,
@@ -487,7 +511,7 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE1",
                                     "FontSize": 15,
                                     "Padding": [
                                         0,
@@ -500,37 +524,10 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE2",
                                     "FontSize": 15,
                                     "Fill": 1
                                 }
-                            },
-                            {
-                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                "UIItems": [
-                                    {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                        "Props": {
-                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
-                                            "Fill": 1,
-                                            "Color": "ACCENT_COLOR_DARK",
-                                            "ContentColor": "ACCENT_COLOR_LIGHT"
-                                        },
-                                        "OnClickEvent": {
-                                            "PostData": "Ark-Nucleus/POST/InstalledMods/PlayerSettings"
-                                        }
-                                    },
-                                    {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                        "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
-                                            "Fill": 1
-                                        },
-                                        "OnClickEvent": {
-                                            "EventUID": "CloseModal"
-                                        }
-                                    }
-                                ]
                             }
                         ]
                     }
@@ -596,7 +593,7 @@
                                     {
                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                         "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                            "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                             "Fill": 1
                                         },
                                         "OnClickEvent": {
@@ -681,7 +678,7 @@
                                     {
                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                         "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                            "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                             "Fill": 1
                                         },
                                         "OnClickEvent": {
@@ -718,7 +715,7 @@
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Fill": 1,
-                            "Label": "$$Ark-Nucleus$:$OK"
+                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                         },
                         "OnClickEvent": {
                             "EventUID": "CloseModal"
@@ -770,7 +767,7 @@
     },
     "CLIENT_SETTINGS": {
         "Props": {
-            "Label": "$$Ark-Nucleus$:$CLIENT_SETTINGS",
+            "Label": "$$Ark-Nucleus$:$BTN_MOD_CLIENT_SETTINGS",
             "BindIsVisible": "Data.SelectedMod.Value.CCAData.IntegrationFlags.Configuration",
             "Color": "ACCENT_COLOR_DARK",
             "ContentColor": "ACCENT_COLOR_LIGHT",
@@ -824,13 +821,37 @@
                     },
                     "Modal": {
                         "Props": {
-                            "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                            "Title": "$$Ark-Nucleus$:$SETTINGS_APPLY_TITLE"
                         },
+                        "Buttons": [
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
+                                    "Fill": 1,
+                                    "Color": "ACCENT_COLOR_DARK",
+                                    "ContentColor": "ACCENT_COLOR_LIGHT"
+                                },
+                                "OnClickEvent": {
+                                    "PostData": "Ark-Nucleus/POST/InstalledMods/ClientSettings"
+                                }
+                            },
+                            {
+                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                "Props": {
+                                    "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
+                                    "Fill": 1
+                                },
+                                "OnClickEvent": {
+                                    "EventUID": "CloseModal"
+                                }
+                            }
+                        ],
                         "UIItems": [
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE0",
                                     "FontSize": 15,
                                     "Padding": [
                                         0,
@@ -843,7 +864,7 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE1",
                                     "FontSize": 15,
                                     "Padding": [
                                         0,
@@ -856,37 +877,10 @@
                             {
                                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                 "Props": {
-                                    "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                    "Text": "$$Ark-Nucleus$:$SETTINGS_APPLY_LINE2",
                                     "FontSize": 15,
                                     "Fill": 1
                                 }
-                            },
-                            {
-                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
-                                "UIItems": [
-                                    {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                        "Props": {
-                                            "Label": "$$Ark-Nucleus$:$APPLY_SAVE",
-                                            "Fill": 1,
-                                            "Color": "ACCENT_COLOR_DARK",
-                                            "ContentColor": "ACCENT_COLOR_LIGHT"
-                                        },
-                                        "OnClickEvent": {
-                                            "PostData": "Ark-Nucleus/POST/InstalledMods/ClientSettings"
-                                        }
-                                    },
-                                    {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
-                                        "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
-                                            "Fill": 1
-                                        },
-                                        "OnClickEvent": {
-                                            "EventUID": "CloseModal"
-                                        }
-                                    }
-                                ]
                             }
                         ]
                     }
@@ -952,7 +946,7 @@
                                     {
                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                         "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                            "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                             "Fill": 1
                                         },
                                         "OnClickEvent": {
@@ -1037,7 +1031,7 @@
                                     {
                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                         "Props": {
-                                            "Label": "$$Ark-Nucleus$:$CANCEL",
+                                            "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                             "Fill": 1
                                         },
                                         "OnClickEvent": {
@@ -1074,7 +1068,7 @@
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Fill": 1,
-                            "Label": "$$Ark-Nucleus$:$OK"
+                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                         },
                         "OnClickEvent": {
                             "EventUID": "CloseModal"

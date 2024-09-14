@@ -105,22 +105,56 @@ with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\widgets\\struct-painter-
 #              LOCALIZATION                #
 ############################################
 
-with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization.json","r", encoding="utf8") as jsonFile:
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\shared-cca\\localization-example.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
-    change_blueprint_default_value("/Ark-Nucleus/SharedContent/Ark-Nucleus_CCA_Basic.Ark-Nucleus_CCA_Basic_C", "MyMod_LocalizationStrings", json.dumps(jsonData))
-    change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "MyMod_LocalizationStrings", json.dumps(jsonData))
+
+    example_localizations = {}
+    example_localizations["EXAMPLE"] = json.dumps(jsonData)
+
+    change_blueprint_default_value("/Ark-Nucleus/BaseContent/ArkNucleus_CCA_Base.ArkNucleus_CCA_Base_C", "MyMod_LocStrings", example_localizations)
+
+
+default_localizations = {}
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-general.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["GENERAL"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-colors.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["COLORS"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-server-info.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["SERVER_INFO"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-installed-mods.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["INSTALLED_MODS"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-encyclopedia.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["ENCYCLOPEDIA"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-items-dinos.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["ITEMS_DINOS"] = json.dumps(jsonData)
+
+with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\localization-spawn-widget.json","r", encoding="utf8") as jsonFile:
+    jsonData = json.load(jsonFile)
+    default_localizations["SPAWN_WIDGET"] = json.dumps(jsonData)
+
+change_blueprint_default_value("/Ark-Nucleus/SharedContent/Ark-Nucleus_CCA_Basic.Ark-Nucleus_CCA_Basic_C", "MyMod_LocStrings", default_localizations)
+change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "MyMod_LocStrings", default_localizations)
+
 
 with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-Localization\\nucleus-cca\\server-localization.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "Nucleus_ServerLocalization_Default", json.dumps(jsonData))
 
-
 with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\temp.json","r", encoding="utf8") as jsonFile:
     jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/SharedContent/Ark-Nucleus_CCA_Basic.Ark-Nucleus_CCA_Basic_C", "N_Basic_Mods_FakeCFData", json.dumps(jsonData))
-
-with open("F:\\GitRepos\\ArkModding\\Ark-Nucleus-JSONs\\temp.json","r", encoding="utf8") as jsonFile:
-    jsonData = json.load(jsonFile)
     change_blueprint_default_value("/Ark-Nucleus/PrivateContent/Ark-Nucleus_CCA.Ark-Nucleus_CCA_C", "N_Basic_Mods_FakeCFData", json.dumps(jsonData))
 
 

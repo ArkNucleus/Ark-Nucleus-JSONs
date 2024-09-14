@@ -33,7 +33,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                 "Props": {
-                    "Label": "$$Ark-Nucleus$:$OK",
+                    "Label": "$$Ark-Nucleus$:$OK_BTN",
                     "Fill": 1
                 },
                 "OnClickEvent": {
@@ -177,7 +177,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$CANCEL",
+                                        "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
                                         "Fill": 1
                                     },
                                     "OnClickEvent": {
@@ -368,7 +368,7 @@
                         {
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                             "Props": {
-                                "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE",
+                                "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE_BTN",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
                                 "Color": "ACCENT_COLOR_DARK",
                                 "ContentColor": "ACCENT_COLOR_LIGHT",

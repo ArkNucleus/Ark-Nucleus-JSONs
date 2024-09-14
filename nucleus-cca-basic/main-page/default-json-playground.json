@@ -152,7 +152,7 @@
                                                                     {
                                                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
-                                                                            "Label": "$$Ark-Nucleus$:$OK"
+                                                                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                                                                         },
                                                                         "OnClickEvent": {
                                                                             "EventUID": "CloseModal"
@@ -254,7 +254,7 @@
                                                                     {
                                                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
-                                                                            "Label": "$$Ark-Nucleus$:$OK"
+                                                                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                                                                         },
                                                                         "OnClickEvent": {
                                                                             "EventUID": "CloseModal"
@@ -380,7 +380,7 @@
                                                                     {
                                                                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                                                         "Props": {
-                                                                            "Label": "$$Ark-Nucleus$:$OK"
+                                                                            "Label": "$$Ark-Nucleus$:$OK_BTN"
                                                                         },
                                                                         "OnClickEvent": {
                                                                             "EventUID": "CloseModal"
