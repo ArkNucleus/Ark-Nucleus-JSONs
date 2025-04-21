@@ -1,10 +1,13 @@
 {
     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
-        "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
-        "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
+        "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_TITLE",
+        "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
         "Fill": 1
+    },
+    "AccessPolicy": {
+        "Tags": [ "Nucleus_EditServerLocalization", "Nucleus_ViewServerLocalization" ]
     },
     "UICache": {
         "SaveFile": "Ark-Nucleus-ServerLoc"
@@ -13,31 +16,9 @@
         "Name": "Ark-Nucleus/GET/Localization/ServerLoc",
         "ResponseKey": "Data.Localization"
     },
-    "OptionalPostRequests": [
-        {
-            "Name": "Ark-Nucleus/POST/Localization/AddNew",
-            "RequestParams": [
-                {
-                    "RequestKey": "NewLocItem",
-                    "ValueKey": "Data.NewLocItem"
-                }
-            ],
-            "CloseModal": true
-        },
-        {
-            "Name": "Ark-Nucleus/POST/Localization/Import",
-            "RequestParams": [
-                {
-                    "RequestKey": "LocImport",
-                    "ValueKey": "Data.LocImportData"
-                }
-            ],
-            "CloseModal": true
-        }
-    ],
     "Info": {
         "Props": {
-            "Title": "$$Ark-Nucleus$:$LOC_INFO_TITLE"
+            "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_TITLE"
         },
         "Buttons": [
             {
@@ -55,7 +36,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE0",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -63,7 +44,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE1",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -71,7 +52,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE2",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -79,7 +60,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE3",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -87,7 +68,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE4",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -99,7 +80,7 @@
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
             "Props": {
                 "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
-                "Label": "$$Ark-Nucleus$:$ADD_NEW",
+                "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_NEW",
                 "VerticalAlignment": 1,
                 "Padding": [
                     2,
@@ -108,20 +89,37 @@
                     2
                 ]
             },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_EditServerLocalization" ]
+            },
             "Modal": {
                 "Props": {
-                    "Title": "$$Ark-Nucleus$:$LOC_ADD_TITLE"
+                    "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_TITLE"
                 },
                 "DataSource": {
                     "Name": "Ark-Nucleus/GET/Localization/AddNew",
                     "ResponseKey": "Data.NewLocItem"
                 },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Localization/AddNew",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "NewLocItem",
+                                "ValueKey": "Data.NewLocItem"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
                 "Buttons": [
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$ADD",
+                            "Label": "$$Ark-Nucleus$:$ADD_BTN",
                             "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
+                            "Color":"ACCENT_COLOR_DARK",
+                            "ContentColor":"ACCENT_COLOR_LIGHT",
                             "Fill": 1
                         },
                         "OnClickEvent": {
@@ -134,8 +132,8 @@
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
                         "Props": {
                             "BindValue": "Data.NewLocItem.__KEY__",
-                            "Label": "$$Ark-Nucleus$:$LOC_ADD_KEY",
-                            "Note": "$$Ark-Nucleus$:$LOC_ADD_KEY_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_KEY",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_KEY_NOTE",
                             "Padding": [
                                 2,
                                 2,
@@ -148,8 +146,8 @@
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
                             "BindValue": "Data.NewLocItem.Value",
-                            "Label": "$$Ark-Nucleus$:$LOC_ADD_VALUE",
-                            "Note": "$$Ark-Nucleus$:$LOC_ADD_VALUE_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_VALUE",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_VALUE_NOTE",
                             "Fill": 1,
                             "Padding": [
                                 2,
@@ -175,20 +173,37 @@
                     2
                 ]
             },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_EditServerLocalization" ]
+            },
             "Modal": {
                 "Props": {
-                    "Title": "$$Ark-Nucleus$:$LOC_IMPORT_TITLE"
+                    "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_IMPORT_TITLE"
                 },
                 "DataSource": {
                     "Name": "Ark-Nucleus/GET/Localization/Import",
                     "ResponseKey": "Data.LocImportData"
                 },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/Localization/Import",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "LocImport",
+                                "ValueKey": "Data.LocImportData"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
                 "Buttons": [
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                         "Props": {
                             "Label": "$$Ark-Nucleus$:$IMPORT_BTN",
                             "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                            "Color": "ATTENTION_COLOR_DARK",
+                            "ContentColor": "ATTENTION_COLOR_LIGHT",
                             "Fill": 1
                         },
                         "OnClickEvent": {
@@ -200,8 +215,8 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$LOC_IMP_SERVER_ONLY",
-                            "Note": "$$Ark-Nucleus$:$LOC_IMP_SERVER_ONLY_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_IMP_SERVER_ONLY",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_IMP_SERVER_ONLY_NOTE",
                             "BindValue": "Data.LocImportData.ServerOnly",
                             "Padding": [
                                 2,
@@ -214,8 +229,8 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$LOC_IMP_JSON",
-                            "Note": "$$Ark-Nucleus$:$LOC_IMP_JSON_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_IMP_JSON",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_IMP_JSON_NOTE",
                             "BindValue": "Data.LocImportData.JsonData",
                             "Fill": 1,
                             "Padding": [
@@ -242,9 +257,12 @@
                     2
                 ]
             },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_ViewServerLocalization" ]
+            },
             "Modal": {
                 "Props": {
-                    "Title": "$$Ark-Nucleus$:$LOC_EXPORT_TITLE"
+                    "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_EXPORT_TITLE"
                 },
                 "DataSource": {
                     "Name": "Ark-Nucleus/GET/Localization/Export",
@@ -278,8 +296,8 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$LOC_EXP_SERVER_ONLY",
-                            "Note": "$$Ark-Nucleus$:$LOC_EXP_SERVER_ONLY_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_EXP_SERVER_ONLY",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_EXP_SERVER_ONLY_NOTE",
                             "BindValue": "Data.LocExportData.ServerOnly",
                             "Padding": [
                                 2,
@@ -295,8 +313,8 @@
                     {
                         "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                         "Props": {
-                            "Label": "$$Ark-Nucleus$:$LOC_EXP_JSON",
-                            "Note": "$$Ark-Nucleus$:$LOC_EXP_JSON_NOTE",
+                            "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_EXP_JSON",
+                            "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_EXP_JSON_NOTE",
                             "BindValue": "Data.LocExportData.JsonData",
                             "Fill": 1,
                             "Padding": [
@@ -361,13 +379,13 @@
                         ],
                         "Modal": {
                             "Props": {
-                                "Title": "$$Ark-Nucleus$:$LOC_REMOVE_TITLE"
+                                "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_REMOVE_TITLE"
                             },
                             "Buttons": [
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$DELETE",
+                                        "Label": "$$Ark-Nucleus$:$DELETE_BTN",
                                         "Fill": 1,
                                         "Color": "DANGER_COLOR_DARK",
                                         "ContentColor": "DANGER_COLOR_LIGHT"
@@ -391,7 +409,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
-                                        "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE0",
+                                        "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_REMOVE_LINE0",
                                         "FontSize": 14,
                                         "Padding": [
                                             4,
@@ -404,7 +422,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
-                                        "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE1",
+                                        "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_REMOVE_LINE1",
                                         "FontSize": 14,
                                         "Padding": [
                                             4,
@@ -417,8 +435,9 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
-                                        "Text": "$$Ark-Nucleus$:$LOC_REMOVE_LINE2",
+                                        "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_REMOVE_LINE2",
                                         "FontSize": 14,
+                                        "Color": "ALERT_COLOR",
                                         "Padding": [
                                             4,
                                             4,
@@ -475,10 +494,9 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
                             "Props": {
                                 "BindValue": "Data.SelectedServerLoc.__KEY__",
-                                "Label": "$$Ark-Nucleus$:$LOC_ADD_KEY",
-                                "Note": "$$Ark-Nucleus$:$LOC_ADD_KEY_NOTE",
+                                "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_KEY",
+                                "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_KEY_NOTE",
                                 "IsEnabled": false,
-                                "LockNavigationOnDirty": true,
                                 "Padding": [
                                     2,
                                     2,
@@ -491,9 +509,8 @@
                             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
                             "Props": {
                                 "BindValue": "Data.SelectedServerLoc.Value",
-                                "Label": "$$Ark-Nucleus$:$LOC_ADD_VALUE",
-                                "Note": "$$Ark-Nucleus$:$LOC_ADD_VALUE_NOTE",
-                                "LockNavigationOnDirty": true,
+                                "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_VALUE",
+                                "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_ADD_VALUE_NOTE",
                                 "Fill": 1,
                                 "Padding": [
                                     2,
@@ -508,14 +525,17 @@
                             "Props": {
                                 "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE_BTN",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
-                                "Color": "ACCENT_COLOR_DARK",
-                                "ContentColor": "ACCENT_COLOR_LIGHT",
+                                "Color": "ATTENTION_COLOR_DARK",
+                                "ContentColor": "ATTENTION_COLOR_LIGHT",
                                 "Padding": [
                                     4,
                                     4,
                                     4,
                                     4
                                 ]
+                            },
+                            "AccessPolicy": {
+                                "Tags": [ "Nucleus_EditServerLocalization" ]
                             },
                             "OnClickEvent": {
                                 "PostData": "Ark-Nucleus/POST/Localization/Edit"

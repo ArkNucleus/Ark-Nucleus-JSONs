@@ -11,6 +11,7 @@
     },
     "ResetOnEvents": {
         "Events": [
+            "Ark-Nucleus/NOTIFY/ServerPermissions",
             "Ark-Nucleus/NOTIFY/Localization",
             "Ark-Nucleus/NOTIFY/Settings"
         ]
@@ -160,7 +161,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
                                     "AccessPolicy": {
-                                        "Tags": ["Nucleus_EditServerLocalization"]
+                                        "Tags": ["Nucleus_ViewServerLocalization", "Nucleus_EditServerLocalization"]
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$SERVER_LOCALIZATION",
@@ -186,7 +187,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_TextButton_v1.DU_Action_TextButton_v1_C",
                                     "AccessPolicy": {
-                                        "Tags": []
+                                        "Tags": ["Nucleus_ViewPermissions", "Nucleus_EditPermissions"]
                                     },
                                     "Props": {
                                         "Label": "$$Ark-Nucleus$:$PERMISSIONS",
@@ -223,7 +224,8 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                                     "Props": {
-                                        "Text": "$$Ark-Nucleus$:$MENU_ITEM_PROVIDED_BY_OTHER_MODS",
+                                        "Text": "$$Ark-Nucleus$:$MENU_ITEMS_PROVIDED_BY_OTHER_MODS",
+                                        "BindIsVisible": "!UICache.MainMenu.ViewMode",
                                         "FontSize": 8,
                                         "Color": "PRIMARY_COLOR_LIGHT",
                                         "Padding": [ 2,2,2,2 ]

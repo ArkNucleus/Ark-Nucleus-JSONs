@@ -9,16 +9,27 @@
             "Nucleus_ClearServerLogs",
             "Nucleus_ViewSurvivorsHub",
             "Nucleus_EditServerInfoPage",
+            "Nucleus_ViewServerLocalization",
             "Nucleus_EditServerLocalization",
             "Nucleus_ViewPlayerStatsInInventory",
             "Nucleus_ViewDinoStatsInInventory",
             "Nucleus_PlacePaintedStructures",
-            "Nucleus_PlacePaintedStructuresInfinitePaint"
-        ]
+            "Nucleus_PlacePaintedStructuresInfinitePaint",
+            "Nucleus_ViewPermissions",
+            "Nucleus_EditPermissions"
+        ],
+        "CanSelfAssign": false
+
     },
     "Moderators": {
         "LinkedPlayerIds": [ ],
-        "PermissionTags": [ ]
+        "PermissionTags": [ ],
+        "CanSelfAssign": false
+    },
+    "CommunityMember": {
+        "LinkedPlayerIds": [ ],
+        "PermissionTags": [ ],
+        "CanSelfAssign": true
     },
     "All Players": {
         "LinkedPlayerIds": [ "*" ],
@@ -26,6 +37,7 @@
             "Nucleus_ViewEncyclopedia",
             "Nucleus_ViewPlayerStatsInInventory",
             "Nucleus_ViewDinoStatsInInventory"
-        ]
+        ],
+        "CanSelfAssign": false
     }
 }

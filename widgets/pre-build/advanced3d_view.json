@@ -2,7 +2,8 @@
     "RANDOM_COLOR": {
         "Props": {
             "Image": "/Game/PrimalEarth/UI/Inventory/Textures/IconRandomize.IconRandomize",
-            "BindIsEnabled": "UICache.ColorPreview.UseCustomColors"
+            "BindIsEnabled": "UICache.UseCustomColors",
+            "BindIsVisible": "UICache.UseCustomColors"
         },
         "OnClickEvent": {
             "EventUID": "Ark-Nucleus/UI/Advanced3DView/RandomizeColors"

@@ -1,14 +1,14 @@
 {
     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
-        "Title": "$$Ark-Nucleus$:$LOCALIZATION_TITLE",
-        "Note": "$$Ark-Nucleus$:$LOCALIZATION_TITLE_NOTE",
+        "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_TITLE",
+        "Note": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconRockwell.IconRockwell",
         "Fill": 1
     },
     "Info": {
         "Props": {
-            "Title": "$$Ark-Nucleus$:$LOC_INFO_TITLE"
+            "Title": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_TITLE"
         },
         "Buttons": [
             {
@@ -26,7 +26,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE0",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE0",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -34,7 +34,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE1",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE1",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -42,7 +42,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE2",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE2",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -50,7 +50,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE3",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE3",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ]
                 }
@@ -58,7 +58,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$LOC_INFO_LINE4",
+                    "Text": "$$Ark-Nucleus$:$SERVER_LOCALIZATION_INFO_LINE4",
                     "FontSize": 14,
                     "Padding": [ 4, 4, 4, 4 ],
                     "Color": "ALERT_COLOR"
@@ -292,7 +292,7 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$DELETE",
+                                        "Label": "$$Ark-Nucleus$:$DELETE_BTN",
                                         "Fill": 1,
                                         "Color": "DANGER_COLOR_DARK",
                                         "ContentColor": "DANGER_COLOR_LIGHT"

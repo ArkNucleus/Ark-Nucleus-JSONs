@@ -19,12 +19,28 @@
             "LoadCachedDataOnGameStart": true,
             "ScanForModItemsOnGameStart": false,
             "LiveDataLoadMode": 0,
-            "Disable3DView": false,
+            "Enable3DView": false,
             "BaseInfoViewMode": true,
             "SpawnUIViewMode": true,
             "ImportData": "",
             "IndexIgnoreList": "",
-            "CacheID": "123456789"
+            "CacheID": "123456789",
+            "ItemColors": [
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false}
+            ],
+            "DinoColors": [
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false},
+                {"Index": 0, "IsEnabled": false}
+            ]
         }
     },
     "Info": {
@@ -513,20 +529,6 @@
                                 2
                             ]
                         }
-                    },
-                    {
-                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
-                        "Props": {
-                            "Label": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DISABLE_3D_VIEW_LBL",
-                            "Note": "$$Ark-Nucleus$:$ENCYCLOPEDIA_DISABLE_3D_VIEW_NOTE",
-                            "BindValue": "UICache.Disable3DView",
-                            "Padding": [
-                                2,
-                                2,
-                                2,
-                                2
-                            ]
-                        }
                     }
                 ]
             }
@@ -723,7 +725,6 @@
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
-                        "BindIsVisible": "!UICache.Disable3DView",
                         "Padding": [
                             2,
                             2,
@@ -734,62 +735,43 @@
                 },
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/PreBuiltComps/DU_PreBuilt_Advanced3DView_v1.DU_PreBuilt_Advanced3DView_v1_C",
-                    "PreviewWidth": 200,
                     "Props": {
-                        "PreviewWidth": 200,
+                        "MinCollapsedWidth": 180,
                         "Fill": 2,
+                        "BindUseFill": "UICache.Enable3DView",
+                        "BindValue": "Data.SelectedPreviewItem",
                         "Padding": [
                             2,
                             2,
                             2,
                             2
-                        ],
-                        "BindIsVisible": "!UICache.Disable3DView",
-                        "BindValue": "Data.SelectedPreviewItem"
+                        ]
+                    },
+                    "3DViewConfig": {
+                        "3DConfig": {
+                            "BindUseCustomColors": "UICache.UseCustomColors",
+                            "BindDinoColors": "UICache.DinoColors",
+                            "BindItemColors": "UICache.ItemColors"
+                        }
                     },
                     "ColorRegionsUIConfig": {
                         "Props": {
+                            "ItemKey": "Index",
                             "BindValue": "ItemData.Index",
                             "BindIsEnabled": "ItemData.IsEnabled",
+                            "BindIsVisible": "UICache.UseCustomColors",
                             "BindUseDye": "Data.SelectedPreviewItem.BP.IsDino"
                         },
                         "OnValueChanged": {
                             "EventUID": "Ark-Nucleus/UI/Advanced3DView/ColorChanged"
                         },
-                        "ColorPickerUIConfig": {
+                        "ItemWidget": {
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/DropDownItems/DU_DDItem_ColorItem.DU_DDItem_ColorItem_C",
                             "Props": {
-                                "UUID": "ColorDefPicker",
-                                "BindCacheParam": "Data.SelectedPreviewItem.BP.IsDino",
-                                "Cache": true,
-                                "Title": "$$Ark-Nucleus$:$COLOR_DEF_PICKER"
-                            },
-                            "UIItems": [
-                                {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalScrollBox_v1.DU_Panel_VerticalScrollBox_v1_C",
-                                    "Props": {
-                                        "Fill": 1
-                                    },
-                                    "UIItems": [
-                                        {
-                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_UGridList_v1.DU_Panel_UGridList_v1_C",
-                                            "Props": {
-                                                "ColumnCount": 6,
-                                                "BindValue": "ItemData.Colors"
-                                            },
-                                            "ItemWidget": {
-                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_Color_v1.DU_Item_Color_v1_C",
-                                                "Props": {
-                                                    "BindLabel": "ItemData.Name",
-                                                    "BindValue": "ItemData.Index"
-                                                },
-                                                "OnClickEvent": {
-                                                    "EventUID": "Ark-Nucleus/UI/ColorPicked"
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
+                                "BindLabel": "ItemData.Index",
+                                "BindNote": "ItemData.Name",
+                                "BindValue": "ItemData.Value"                                
+                            }
                         }
                     },
                     "UpdateOnEvents": {

@@ -1,10 +1,13 @@
 {
     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_Category_v1.DU_Panel_Category_v1_C",
     "Props": {
-        "Title": "$$Ark-Nucleus$:$PERMISSIONS_TITLE",
-        "Note": "$$Ark-Nucleus$:$PERMISSIONS_TITLE_NOTE",
+        "Title": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_TITLE",
+        "Note": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_TITLE_NOTE",
         "Icon": "/Game/PrimalEarth/UI/Textures/IconLockedEngrams.IconLockedEngrams",
         "Fill": 1
+    },
+    "AccessPolicy": {
+        "Tags": [ "Nucleus_EditPermissions", "Nucleus_ViewPermissions" ]
     },
     "UICache": {
         "SaveFile": "Ark-Nucleus-ServerPermissions"
@@ -13,21 +16,14 @@
         "Name": "Ark-Nucleus/GET/ServerPermissions",
         "ResponseKey": "Data.ServerPermissions"
     },
-    "OptionalPostRequests": [
-        {
-            "Name": "Ark-Nucleus/POST/ServerPermissions/AddNew",
-            "RequestParams": [
-                {
-                    "RequestKey": "NewPermissionsItem",
-                    "ValueKey": "Data.NewPermissionsItem"
-                }
-            ],
-            "CloseModal": true
-        }
-    ],
+    "ResetOnEvents": {
+        "Events": [
+            "Ark-Nucleus/NOTIFY/ServerPermissions"
+        ]
+    },
     "Info": {
         "Props": {
-            "Title": "$$Ark-Nucleus$:$PERMISSIONS_INFO_TITLE"
+            "Title": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_TITLE"
         },
         "Buttons": [
             {
@@ -45,7 +41,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_INFO_LINE0",
+                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_LINE0",
                     "FontSize": 14,
                     "Padding": [
                         4,
@@ -58,7 +54,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_INFO_LINE1",
+                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_LINE1",
                     "FontSize": 14,
                     "Padding": [
                         4,
@@ -71,7 +67,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_INFO_LINE2",
+                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_LINE2",
                     "FontSize": 14,
                     "Padding": [
                         4,
@@ -84,7 +80,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_INFO_LINE3",
+                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_LINE3",
                     "FontSize": 14,
                     "Padding": [
                         4,
@@ -97,7 +93,7 @@
             {
                 "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
                 "Props": {
-                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_INFO_LINE4",
+                    "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_INFO_LINE4",
                     "FontSize": 14,
                     "Padding": [
                         4,
@@ -109,6 +105,245 @@
             }
         ]
     },
+    "Buttons": [
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
+                "Label": "$$Ark-Nucleus$:$PERMISSIONS_ADD_NEW",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_EditPermissions"]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$PERMISSIONS_ADD_TITLE"
+                },
+                "DataSource": {
+                    "Name": "Ark-Nucleus/GET/ServerPermissions/AddNew",
+                    "ResponseKey": "Data.NewPermissionsItem"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/ServerPermissions/AddNew",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "NewPermissionsItem",
+                                "ValueKey": "Data.NewPermissionsItem"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$ADD_BTN",
+                            "Color": "ACCENT_COLOR_DARK",
+                            "ContentColor": "ACCENT_COLOR_LIGHT",
+                            "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "PostData": "Ark-Nucleus/POST/ServerPermissions/AddNew"
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
+                        "Props": {
+                            "BindValue": "Data.NewPermissionsItem.__KEY__",
+                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_ADD_KEY",
+                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_ADD_KEY_NOTE",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Props": {
+                            "BindValue": "Data.NewPermissionsItem.Value",
+                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_ADD_VALUE",
+                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_ADD_VALUE_NOTE",
+                            "Fill": 1,
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                "Label": "$$Ark-Nucleus$:$IMPORT_BTN",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_EditPermissions"]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$PERMISSIONS_IMPORT_TITLE"
+                },
+                "DataSource": {
+                    "Name": "Ark-Nucleus/GET/ServerPermissions/Import",
+                    "ResponseKey": "Data.PermissionsImportData"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/ServerPermissions/Import",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "PermissionsImport",
+                                "ValueKey": "Data.PermissionsImportData"
+                            }
+                        ],
+                        "CloseModal": true
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$IMPORT_BTN",
+                            "Color": "ATTENTION_COLOR_DARK",
+                            "ContentColor": "ATTENTION_COLOR_LIGHT",
+                            "Icon": "/Ark-Nucleus/Assets/Textures/Icons/T_Nucleus_Import.T_Nucleus_Import",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "PostData": "Ark-Nucleus/POST/ServerPermissions/Import"
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_IMPORT_REPLACE",
+                            "LabelColor": "ATTENTION_COLOR",
+                            "NoteColor": "ATTENTION_COLOR_LIGHT",
+                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_IMPORT_REPLACE_NOTE",
+                            "BindValue": "Data.PermissionsImportData.ReplaceExisting",
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    },
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_IMPORT_JSON",
+                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_IMPORT_JSON_NOTE",
+                            "BindValue": "Data.PermissionsImportData.JsonData",
+                            "Fill": 1,
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+            "Props": {
+                "Image": "/Ark-Nucleus/SharedContent/Textures/Icons/T_Nucleus_Export.T_Nucleus_Export",
+                "Label": "$$Ark-Nucleus$:$EXPORT_BTN",
+                "VerticalAlignment": 1,
+                "Padding": [
+                    2,
+                    2,
+                    2,
+                    2
+                ]
+            },
+            "AccessPolicy": {
+                "Tags": [ "Nucleus_ViewPermissions"]
+            },
+            "Modal": {
+                "Props": {
+                    "Title": "$$Ark-Nucleus$:$PERMISSIONS_EXPORT_TITLE"
+                },
+                "DataSource": {
+                    "Name": "Ark-Nucleus/GET/ServerPermissions/Export",
+                    "ResponseKey": "Data.PermissionsExportData"
+                },
+                "OptionalPostRequests": [
+                    {
+                        "Name": "Ark-Nucleus/POST/ServerPermissions/Export",
+                        "RequestParams": [
+                            {
+                                "RequestKey": "PermissionsExport",
+                                "ValueKey": "Data.PermissionsExportData"
+                            }
+                        ],
+                        "ResponseKey": "Data.PermissionsExportData"
+                    }
+                ],
+                "Buttons": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$OK_BTN",
+                            "Fill": 1
+                        },
+                        "OnClickEvent": {
+                            "EventUID": "CloseModal"
+                        }
+                    }
+                ],
+                "UIItems": [
+                    {
+                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_RawJson_v1.DU_Edit_RawJson_v1_C",
+                        "Props": {
+                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_EXPORT_JSON",
+                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_EXPORT_JSON_NOTE",
+                            "BindValue": "Data.PermissionsExportData.JsonData",
+                            "Fill": 1,
+                            "Padding": [
+                                2,
+                                2,
+                                2,
+                                2
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "UIItems": [
         {
             "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_HorizontalBox_v1.DU_Panel_HorizontalBox_v1_C",
@@ -147,7 +382,7 @@
                         },
                         "OptionalPostRequests": [
                             {
-                                "Name": "Ark-Nucleus/DELETE/ServerPermissions",
+                                "Name": "Ark-Nucleus/DELETE/ServerPermissions/Item",
                                 "RequestParams": [
                                     {
                                         "RequestKey": "Item",
@@ -165,13 +400,13 @@
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
                                     "Props": {
-                                        "Label": "$$Ark-Nucleus$:$DELETE",
+                                        "Label": "$$Ark-Nucleus$:$DELETE_BTN",
                                         "Fill": 1,
                                         "Color": "DANGER_COLOR_DARK",
                                         "ContentColor": "DANGER_COLOR_LIGHT"
                                     },
                                     "OnClickEvent": {
-                                        "PostData": "Ark-Nucleus/DELETE/ServerPermissions"
+                                        "PostData": "Ark-Nucleus/DELETE/ServerPermissions/Item"
                                     }
                                 },
                                 {
@@ -217,6 +452,7 @@
                                     "Props": {
                                         "Text": "$$Ark-Nucleus$:$PERMISSIONS_REMOVE_LINE2",
                                         "FontSize": 14,
+                                        "Color": "ALERT_COLOR",
                                         "Padding": [
                                             4,
                                             4,
@@ -276,7 +512,20 @@
                                 "Label": "$$Ark-Nucleus$:$PERMISSIONS_ADD_KEY",
                                 "Note": "$$Ark-Nucleus$:$PERMISSIONS_ADD_KEY_NOTE",
                                 "IsEnabled": false,
-                                "LockNavigationOnDirty": true,
+                                "Padding": [
+                                    2,
+                                    2,
+                                    2,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_Boolean_v1.DU_Edit_Boolean_v1_C",
+                            "Props": {
+                                "BindValue": "Data.SelectedServerPermission.Value.CanSelfAssign",
+                                "Label": "$$Ark-Nucleus$:$PERMISSIONS_CAN_SELF_ASSIGN",
+                                "Note": "$$Ark-Nucleus$:$PERMISSIONS_CAN_SELF_ASSIGN_NOTE",
                                 "Padding": [
                                     2,
                                     2,
@@ -303,14 +552,9 @@
                             },
                             "UIItems": [
                                 {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
-                                    "DataSource": {
-                                        "Name": "Ark-Nucleus/GET/Players/WithAll",
-                                        "ResponseKey": "Data.PlayersData"
-                                    },
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                     "Props": {
                                         "Fill": 1,
-                                        "BindValue": "Data.PlayersData.Items",
                                         "Padding": [
                                             2,
                                             2,
@@ -318,13 +562,269 @@
                                             2
                                         ]
                                     },
-                                    "ItemWidget": {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_PlayerWithCheckbox_v1.DU_Item_PlayerWithCheckbox_v1_C",
-                                        "Props": {
-                                            "ItemKey": "LinkedPlayerId"
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Props": {
+                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_MOD_TAGS",
+                                                "FontSize": 10,
+                                                "Color": "PRIMARY_COLOR",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            }
                                         },
-                                        "BindIsInList": "Data.SelectedServerPermission.Value.LinkedPlayerIds"
-                                    }
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/ServerPermissions/Tags",
+                                                "ResponseKey": "Data.PermissionTags"
+                                            },
+                                            "Props": {
+                                                "Fill": 1,
+                                                "BindValue": "Data.PermissionTags.Tags",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            },
+                                            "ItemWidget": {
+                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_LabelWithCheckbox_v1.DU_Item_LabelWithCheckbox_v1_C",
+                                                "Props": {
+                                                    "ItemKey": "__KEY__",
+                                                    "BindText": "ItemData.__KEY__",
+                                                    "BindNote": "ItemData.__VALUE__"
+                                                },
+                                                "BindIsInList": "Data.SelectedServerPermission.Value.PermissionTags"
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
+                                            "Props": {
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Props": {
+                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_CUSTOM_TAGS",
+                                                "FontSize": 10,
+                                                "Color": "PRIMARY_COLOR",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                            "Props": {
+                                                "Image": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
+                                                "Label": "$$Ark-Nucleus$:$PERMISSIONS_ADD_NEW_CUSTOM_TAG",
+                                                "Color": "ACCENT_COLOR_DARK",
+                                                "ContentColor": "ACCENT_COLOR_LIGHT",
+                                                "VerticalAlignment": 1,
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            },
+                                            "AccessPolicy": {
+                                                "Tags": [ "Nucleus_EditPermissions"]
+                                            },
+                                            "Modal": {
+                                                "Props": {
+                                                    "Title": "$$Ark-Nucleus$:$PERMISSIONS_ADD_CUSTOM_TITLE"
+                                                },
+                                                "DataSource": {
+                                                    "Name": "Ark-Nucleus/GET/ServerPermissions/AddNewTag",
+                                                    "ResponseKey": "Data.NewPermissionsTag"
+                                                },
+                                                "OptionalPostRequests": [
+                                                    {
+                                                        "Name": "Ark-Nucleus/POST/ServerPermissions/AddNewTag",
+                                                        "RequestParams": [
+                                                            {
+                                                                "RequestKey": "NewPermissionsTag",
+                                                                "ValueKey": "Data.NewPermissionsTag"
+                                                            }
+                                                        ],
+                                                        "CloseModal": true
+                                                    }
+                                                ],
+                                                "Buttons": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                        "Props": {
+                                                            "Label": "$$Ark-Nucleus$:$ADD_BTN",
+                                                            "Color": "ACCENT_COLOR_DARK",
+                                                            "ContentColor": "ACCENT_COLOR_LIGHT",
+                                                            "Icon": "/Game/PrimalEarth/CoreBlueprints/StatusIcons/Health_Icon_White.Health_Icon_White",
+                                                            "Fill": 1
+                                                        },
+                                                        "OnClickEvent": {
+                                                            "PostData": "Ark-Nucleus/POST/ServerPermissions/AddNewTag"
+                                                        }
+                                                    }
+                                                ],
+                                                "UIItems": [
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
+                                                        "Props": {
+                                                            "BindValue": "Data.NewPermissionsTag.__KEY__",
+                                                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_TAG_ADD_KEY",
+                                                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_TAG_ADD_KEY_NOTE",
+                                                            "Padding": [
+                                                                2,
+                                                                2,
+                                                                2,
+                                                                2
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/Edit/DU_Edit_StringOneLine_v1.DU_Edit_StringOneLine_v1_C",
+                                                        "Props": {
+                                                            "BindValue": "Data.NewPermissionsTag.Value",
+                                                            "Label": "$$Ark-Nucleus$:$PERMISSIONS_TAG_ADD_DISPLAY_NAME",
+                                                            "Note": "$$Ark-Nucleus$:$PERMISSIONS_TAG_ADD_DISPLAY_NAME_NOTE",
+                                                            "Fill": 1,
+                                                            "Padding": [
+                                                                2,
+                                                                2,
+                                                                2,
+                                                                2
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/ServerPermissions/CustomTags",
+                                                "ResponseKey": "Data.PermissionCustomTags"
+                                            },
+                                            "Props": {
+                                                "Fill": 1,
+                                                "BindValue": "Data.PermissionCustomTags.CustomTags",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            },
+                                            "ItemWidget": {
+                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_LabelWithCheckboxDel_v1.DU_Item_LabelWithCheckboxDel_v1_C",
+                                                "Props": {
+                                                    "ItemKey": "__KEY__",
+                                                    "BindText": "ItemData.__KEY__",
+                                                    "BindNote": "ItemData.__VALUE__"
+                                                },
+                                                "BindIsInList": "Data.SelectedServerPermission.Value.PermissionTags",
+                                                "OptionalPostRequests": [
+                                                    {
+                                                        "Name": "Ark-Nucleus/DELETE/ServerPermissions/Tag",
+                                                        "RequestParams": [
+                                                            {
+                                                                "RequestKey": "Item",
+                                                                "ValueKey": "ItemData"
+                                                            }
+                                                        ],
+                                                        "CloseModal": true
+                                                    }
+                                                ],
+                                                "Modal": {
+                                                    "Props": {
+                                                        "Title": "$$Ark-Nucleus$:$PERMISSIONS_TAG_REMOVE_TITLE"
+                                                    },
+                                                    "Buttons": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Props": {
+                                                                "Label": "$$Ark-Nucleus$:$DELETE_BTN",
+                                                                "Fill": 1,
+                                                                "Color": "DANGER_COLOR_DARK",
+                                                                "ContentColor": "DANGER_COLOR_LIGHT"
+                                                            },
+                                                            "OnClickEvent": {
+                                                                "PostData": "Ark-Nucleus/DELETE/ServerPermissions/Tag"
+                                                            }
+                                                        },
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Action/DU_Action_Button_v1.DU_Action_Button_v1_C",
+                                                            "Props": {
+                                                                "Label": "$$Ark-Nucleus$:$CANCEL_BTN",
+                                                                "Fill": 1
+                                                            },
+                                                            "OnClickEvent": {
+                                                                "EventUID": "CloseModal"
+                                                            }
+                                                        }
+                                                    ],
+                                                    "UIItems": [
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Props": {
+                                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_TAG_REMOVE_LINE0",
+                                                                "FontSize": 14,
+                                                                "Padding": [
+                                                                    4,
+                                                                    4,
+                                                                    4,
+                                                                    4
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Props": {
+                                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_TAG_REMOVE_LINE1",
+                                                                "FontSize": 14,
+                                                                "Padding": [
+                                                                    4,
+                                                                    4,
+                                                                    4,
+                                                                    4
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                                            "Props": {
+                                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_TAG_REMOVE_LINE2",
+                                                                "FontSize": 14,
+                                                                "Color": "ALERT_COLOR",
+                                                                "Padding": [
+                                                                    4,
+                                                                    4,
+                                                                    4,
+                                                                    4
+                                                                ],
+                                                                "Fill": 1
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
                                 },
                                 {
                                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
@@ -338,14 +838,9 @@
                                     }
                                 },
                                 {
-                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
-                                    "DataSource": {
-                                        "Name": "Ark-Nucleus/GET/ServerPermissions/Tags",
-                                        "ResponseKey": "Data.PermissionTags"
-                                    },
+                                    "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_VerticalBox_v1.DU_Panel_VerticalBox_v1_C",
                                     "Props": {
                                         "Fill": 1,
-                                        "BindValue": "Data.PermissionTags.Tags",
                                         "Padding": [
                                             2,
                                             2,
@@ -353,15 +848,46 @@
                                             2
                                         ]
                                     },
-                                    "ItemWidget": {
-                                        "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_LabelWithCheckbox_v1.DU_Item_LabelWithCheckbox_v1_C",
-                                        "Props": {
-                                            "ItemKey": "__KEY__",
-                                            "BindText": "ItemData.__KEY__",
-                                            "BindNote": "ItemData.__VALUE__"
+                                    "UIItems": [
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Views/DU_View_SimpleText_v1.DU_View_SimpleText_v1_C",
+                                            "Props": {
+                                                "Text": "$$Ark-Nucleus$:$PERMISSIONS_MANAGER_PLAYER_LIST",
+                                                "FontSize": 10,
+                                                "Color": "PRIMARY_COLOR",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            }
                                         },
-                                        "BindIsInList": "Data.SelectedServerPermission.Value.PermissionTags"
-                                    }
+                                        {
+                                            "Widget": "/Ark-Nucleus/SharedContent/Widgets/Panels/DU_Panel_FilterList_v1.DU_Panel_FilterList_v1_C",
+                                            "DataSource": {
+                                                "Name": "Ark-Nucleus/GET/Players/WithAll",
+                                                "ResponseKey": "Data.PlayersData"
+                                            },
+                                            "Props": {
+                                                "Fill": 1,
+                                                "BindValue": "Data.PlayersData.Items",
+                                                "Padding": [
+                                                    2,
+                                                    2,
+                                                    2,
+                                                    2
+                                                ]
+                                            },
+                                            "ItemWidget": {
+                                                "Widget": "/Ark-Nucleus/SharedContent/Widgets/ListItems/DU_Item_PlayerWithCheckbox_v1.DU_Item_PlayerWithCheckbox_v1_C",
+                                                "Props": {
+                                                    "ItemKey": "LinkedPlayerId"
+                                                },
+                                                "BindIsInList": "Data.SelectedServerPermission.Value.LinkedPlayerIds"
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -370,14 +896,17 @@
                             "Props": {
                                 "Label": "$$Ark-Nucleus$:$VERIFY_AND_SAVE_BTN",
                                 "Icon": "/Game/PrimalEarth/UI/Inventory/Textures/IconSave.IconSave",
-                                "Color": "ACCENT_COLOR_DARK",
-                                "ContentColor": "ACCENT_COLOR_LIGHT",
+                                "Color": "ATTENTION_COLOR_DARK",
+                                "ContentColor": "ATTENTION_COLOR_LIGHT",
                                 "Padding": [
                                     4,
                                     4,
                                     4,
                                     4
                                 ]
+                            },
+                            "AccessPolicy": {
+                                "Tags": [ "Nucleus_EditPermissions"]
                             },
                             "OnClickEvent": {
                                 "PostData": "Ark-Nucleus/POST/ServerPermissions/Edit"

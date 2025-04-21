@@ -8,7 +8,7 @@
             "DinoTamingFoodLvl": 150,
             "LiveDataLoadMode": 0,
             "ItemModalDefaultViewMode": true,
-            "Disable3DView": false
+            "Enable3DView": false
         }
     },
     "UIItems": [
@@ -114,7 +114,6 @@
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/Misc/DU_Misc_Line_v1.DU_Misc_Line_v1_C",
                     "Props": {
-                        "BindIsVisible": "!UICache.Disable3DView",
                         "Padding": [
                             2,
                             2,
@@ -125,12 +124,10 @@
                 },
                 {
                     "Widget": "/Ark-Nucleus/SharedContent/Widgets/PreBuiltComps/DU_PreBuilt_Advanced3DView_v1.DU_PreBuilt_Advanced3DView_v1_C",
-                    "PreviewWidth": 200,
                     "Props": {
                         "PreviewWidth": 200,
                         "Fill": 1,
                         "Padding": [2,2,2,2],
-                        "BindIsVisible": "!UICache.Disable3DView",
                         "BindValue": "ItemData"
                     },
                     "ColorRegionsUIConfig": {
